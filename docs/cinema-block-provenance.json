@@ -1,0 +1,104 @@
+{
+  "area": "West 42nd Street: 11 Times Square, AMC Empire 25, Regal Times Square and neighboring storefronts",
+  "references": [
+    {
+      "filename": "Screenshot 2026-10-03 at 7.40.00 PM.png",
+      "sha256": "6a0f138d1a43e36ba5787eabaecccc819bf551e2b4e25ff088d8375face373e9",
+      "use": "Visual design reference only. Screenshot pixels are not embedded in the prototype."
+    },
+    {
+      "filename": "Screenshot 2026-10-03 at 7.40.31 PM.png",
+      "sha256": "372ed3f0fb38ce003389d7b335c1739d3de682571806c86943bd998300812551",
+      "use": "Visual design reference only. Screenshot pixels are not embedded in the prototype."
+    },
+    {
+      "filename": "Screenshot 2026-10-03 at 7.41.12 PM.png",
+      "sha256": "63e15ed303d86ee11712c956ee5c30ef12a3311edafbdf4ca701d3f2cb1e2c91",
+      "use": "Visual design reference only. Screenshot pixels are not embedded in the prototype."
+    },
+    {
+      "filename": "Screenshot 2026-10-03 at 7.41.57 PM.png",
+      "sha256": "90e4fde9c38af0244066c9c2498116c32ad7029f798a7dce99f5e1b866ebc8f5",
+      "use": "Visual design reference only. Screenshot pixels are not embedded in the prototype."
+    },
+    {
+      "filename": "Screenshot 2026-10-03 at 7.42.10 PM.png",
+      "sha256": "d1f118d4d2a0cc0fc89235742285b849e46c3ad2c1f414992c835af10c18d121",
+      "use": "Visual design reference only. Screenshot pixels are not embedded in the prototype."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.amctheatres.com/movie-theatres/new-york/amc-empire-25",
+      "publisher": "AMC Theatres",
+      "supports": "AMC Empire 25, 234 West 42nd Street."
+    },
+    {
+      "url": "https://www.regmovies.com/theatres/regal-times-square-1929",
+      "publisher": "Regal",
+      "supports": "Regal Times Square, 247 West 42nd Street."
+    },
+    {
+      "url": "https://www.chinaconstruction.us/project/times-square-office-building/",
+      "publisher": "China Construction America",
+      "supports": "11 Times Square glass office tower, tall glazed lobby and retail street frontage."
+    },
+    {
+      "url": "https://www.cbre.com/properties/properties-for-lease/office/details/US-SMPL-169503/eleven-x-11-times-square-new-york-ny-10036",
+      "publisher": "CBRE",
+      "supports": "11 Times Square at the southeast corner of Eighth Avenue and West 42nd Street."
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-73.9911,40.7560,-73.9880,40.7582",
+      "archive": "docs/source-data/cinema-block-osm.json",
+      "license": "© OpenStreetMap contributors, ODbL",
+      "supports": "Building footprints and tagged cinema/store addresses."
+    },
+    {
+      "url": "https://github.com/JoeThunyathep/NYC3D_CesiumJS",
+      "commit": "df20a24582520dd856e56e99ae44e3ff43ab3269",
+      "supports": "Unchanged surveyed building geometry, source wall/roof heights, and triangle collision."
+    }
+  ],
+  "placement": {
+    "method": "Fifteen surveyed wall segments ray-fitted in local east/north/up metres. Detail planes sit 0.16 m outside the original walls. Low, middle and high samples constrain width and height to original triangle surfaces. Source building vertices and packaged tile files are unchanged.",
+    "sourceFitResidualMeters": "under 0.008 for automatically fitted planes; corner also checked against the original mesh",
+    "streetExtentMeters": [
+      19.1,
+      134.0
+    ],
+    "officeUpperFinishMeters": 172.1,
+    "cinemaEntranceStationing": {
+      "AMC": 67.6,
+      "Regal": 73.2
+    }
+  },
+  "features": [
+    "11 Times Square street-facing glass tower elevations, silver ribbon bands, corner entry, canopy, ads and white planters",
+    "Empire Theatre stone arch, archivolts, relief, cornices, mullions, bronze doors, bulb-lit canopy and two-sided EMPIRE blade",
+    "AMC modern red-framed glazing and movie advertising",
+    "Regal fluted sandstone piers, orange projecting canopy and tall red REGAL panel",
+    "Five Guys, NY Gifts, Dallas BBQ and neighboring attraction signs",
+    "Continuous sidewalks, red bus lanes and 56 solid red/blue/gray concrete barriers"
+  ],
+  "approximations": [
+    "This is reference-guided authored architectural detail, not photogrammetry or a current signage survey.",
+    "The 11 Times Square source model has a chamfered podium corner; bands follow that real silhouette instead of introducing a replacement rounded building.",
+    "Storefront dimensions, canopy structure, light placement, material patterns and curb furniture are visual interpretations.",
+    "Existing fictional movie, food and retail atlases supply 12 advertising panels. No current showtimes, ticket offers or live advertising are represented.",
+    "Door banks are closed exteriors; interiors are not built."
+  ],
+  "performance": {
+    "primitives": 10,
+    "geometryVertices": 126264,
+    "collisionTriangles": 1256,
+    "signAtlasSize": [
+      2048,
+      2048
+    ],
+    "uniqueSignAtlasEntries": 29,
+    "additionalCityTiles": 0,
+    "perFrameUpdates": 0
+  },
+  "verification": "Source-wall fit at full height, arrow walking and Shift running in both directions along sidewalks/street, clear visit starts, entry approaches, closed doors and solid barriers, actual Cesium Material/Primitive construction, native Canvas sign drawing and production build. Browser/WebGL visual verification and live FPS measurement unavailable."
+}

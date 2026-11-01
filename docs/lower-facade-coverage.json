@@ -1,0 +1,78 @@
+{
+  "scope": "All street-facing source walls throughout W42–W49 and Sixth–Eighth Avenues, including boundary building faces",
+  "method": "One-metre road probes toward both sides at five elevations; source-only NYC wall hits. Original geometry, curated overlays and collision remain unchanged. outsideGenericPanels counts samples outside the generic district rectangles; these include existing detailed landmarks and are not all previously visible holes.",
+  "finish": {
+    "top": 14.2,
+    "padding": 35,
+    "storeHeight": 3.7,
+    "bayWidth": 3.3,
+    "floorHeight": 3.3
+  },
+  "streets": {
+    "West 49th Street": {
+      "samples": 4766,
+      "covered": 4766,
+      "outsideGenericPanels": 3441
+    },
+    "West 45th Street": {
+      "samples": 5287,
+      "covered": 5287,
+      "outsideGenericPanels": 2533
+    },
+    "West 48th Street": {
+      "samples": 4958,
+      "covered": 4958,
+      "outsideGenericPanels": 2350
+    },
+    "West 47th Street": {
+      "samples": 5196,
+      "covered": 5196,
+      "outsideGenericPanels": 2515
+    },
+    "West 43rd Street": {
+      "samples": 4965,
+      "covered": 4965,
+      "outsideGenericPanels": 2775
+    },
+    "Broadway": {
+      "samples": 3479,
+      "covered": 3479,
+      "outsideGenericPanels": 3113
+    },
+    "West 46th Street": {
+      "samples": 4957,
+      "covered": 4957,
+      "outsideGenericPanels": 2152
+    },
+    "West 44th Street": {
+      "samples": 5363,
+      "covered": 5363,
+      "outsideGenericPanels": 2361
+    },
+    "8th Avenue": {
+      "samples": 4446,
+      "covered": 4446,
+      "outsideGenericPanels": 3181
+    },
+    "6th Avenue": {
+      "samples": 3934,
+      "covered": 3934,
+      "outsideGenericPanels": 2875
+    },
+    "7th Avenue": {
+      "samples": 4562,
+      "covered": 4562,
+      "outsideGenericPanels": 3719
+    },
+    "West 42nd Street": {
+      "samples": 4929,
+      "covered": 4929,
+      "outsideGenericPanels": 4924
+    }
+  },
+  "samples": 56842,
+  "covered": 56842,
+  "uncovered": 0,
+  "outsideGenericPanels": 35939,
+  "verificationLimit": "Material coverage and real Cesium shader pipeline validation; live WebGL appearance and FPS remain unverified."
+}

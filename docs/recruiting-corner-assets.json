@@ -1,0 +1,38 @@
+{
+  "created": "2026-10-03",
+  "references": [
+    {
+      "description": "Hard Rock W43 food-cart row, supplied screenshot 5:08 PM",
+      "use": "Visual design only; no screenshot pixels distributed."
+    },
+    {
+      "description": "Recruiting pavilion, supplied screenshot 5:09 PM",
+      "use": "Visual design only; no screenshot pixels distributed."
+    },
+    {
+      "url": "https://www.openstreetmap.org/way/258646144",
+      "use": "Exact pavilion footprint, 5.5 m height and north entrance location",
+      "license": "Open Database License; © OpenStreetMap contributors"
+    },
+    {
+      "url": "https://www.aro.net/u-s-armed-forces-recruiting-station/",
+      "use": "Architectural reference for glass/stainless pavilion and integrated flag walls"
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/storefronts/food-menu-photos.webp",
+      "absolutePath": "/workspace/scratch/f94b89fbe58c/times-square/public/storefronts/food-menu-photos.webp",
+      "origin": "Built-in image_gen tool",
+      "prompt": "Use case: product-mockup. Asset type: game texture atlas of food photographs for stainless-steel New York street vendor menu boards. Generate one square 2048x2048 image, exactly 2 columns by 2 rows of equal square photographs with clean straight boundaries, no gutters, no text, no logos, no border and no watermark. Every quadrant has a dark charcoal background and realistic commercial food photography with natural subtle studio highlights, full dish centered inside the cell with generous 15 percent safe margins. Top left: chicken and yellow rice in a shallow white takeout platter with lettuce, tomatoes, creamy white sauce and a thin hot sauce drizzle. Top right: lamb gyro pita sandwich with sliced grilled meat, lettuce and tomato on a small white plate. Bottom left: New York hot dog in golden bun, mustard zigzag, fries in a small tray. Bottom right: grilled chicken kebab skewers on rice with peppers, a falafel ball and side salad. Food must be photographically convincing with varied texture, grilled edges, individual rice grains, not illustration. No people, buildings, signage, utensil handles crossing cells, duplicate dishes or perspective frame. This atlas is applied only to small food menu photographs, not to any building or city geometry.",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "layout": "2 columns × 2 rows: chicken/rice, gyro, hot dog/fries, kebab plate",
+      "postprocessing": "WebP encoding only, quality 88; no source screenshot pixels",
+      "use": "Small menu photographs on physical vendor carts, never city geometry"
+    }
+  ],
+  "notes": "Original NYC3D tiles remain unchanged. The recruiting pavilion is absent from the bundled older source mesh; its separately attributed OSM footprint is modeled as an exterior architectural landmark. Facade details, vendor locations, prices and medallions are reference-inspired interpretations, not a current site survey. The military medallions are stylized and the Air Force/Space Force entrance lettering is authored."
+}

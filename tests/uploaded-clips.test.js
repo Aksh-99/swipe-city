@@ -1,0 +1,50 @@
+import './helpers/loaded-rigs.js';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {EntityCollection,Event,Matrix4,JulianDate} from 'cesium';
+import {createAvatar} from '../src/avatar.js';
+import motion from '../public/data/african_fem-motion.json' with {type:'json'};
+
+test('uploaded Urban Grace uses exactly walking, running and angry standing',()=>{
+ const bytes=fs.readFileSync('public/characters/african_fem-meshy.glb');
+ const g=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));
+ assert.deepEqual(g.animations.map(a=>a.name),['Running','Walking','Stand_Talking_Angry']);
+ assert.equal(motion.clips.walking.name,'Walking');
+ assert.equal(motion.clips.running.name,'Running');
+ const root=motion.clips.walking.tracks['mixamorig:Hips'].translation.values.map(v=>v[2]);
+ assert(Math.max(...root)-Math.min(...root)<.06,'walk does not move the visual character away from its controller');
+ const color=g.materials[0].pbrMetallicRoughness.baseColorTexture.index;
+ assert.equal(g.images[g.textures[color].source].mimeType,'image/jpeg');
+ assert.equal(g.images[g.textures[g.materials[0].normalTexture.index].source].mimeType,'image/png');
+ const player={position:{x:0,y:0,z:0},gaitPhase:0,poseWeight:1,runBlend:0};
+ const viewer={entities:new EntityCollection(),scene:{preRender:new Event()},camera:{inverseViewMatrix:Matrix4.IDENTITY}};
+ const avatar=createAvatar(viewer,()=>player,{designId:'african_fem',characterId:'explorer'});
+ try{
+  const pose=()=>avatar.entity.model.nodeTransformations.getValue(JulianDate.now());
+  assert.match(avatar.entity.model.uri.getValue(),/african_fem-meshy/);
+  const walk=pose()['mixamorig:LeftForeArm'].rotation;
+  player.runBlend=1;
+  assert.notDeepEqual(pose()['mixamorig:LeftForeArm'].rotation,walk);
+  player.gaitPhase=Math.PI;
+  assert.notDeepEqual(pose()['mixamorig:LeftForeArm'].rotation,walk);
+  player.poseWeight=0;
+  const idle=pose()['mixamorig:LeftArm'].rotation;
+  assert.notDeepEqual(Object.values(idle),[0,0,0,1],'stop lowers arms from the bind T-pose');
+  player.gaitPhase=1.2;
+  assert.deepEqual(pose()['mixamorig:LeftArm'].rotation,idle,'standing does not depend on gait phase');
+  player.animationTime=3;
+  assert.deepEqual(pose()['mixamorig:LeftArm'].rotation,idle,'normal idle never plays angry standing');
+  player.carHitAt=2.5;
+  assert.notDeepEqual(pose()['mixamorig:LeftArm'].rotation,idle,'car contact triggers angry standing');
+  const reaction=pose()['mixamorig:LeftArm'].rotation;
+  player.animationTime=3.5;
+  assert.notDeepEqual(pose()['mixamorig:LeftArm'].rotation,reaction,'reaction plays the clip from impact');
+  player.animationTime=7;
+  assert.deepEqual(pose()['mixamorig:LeftArm'].rotation,idle,'reaction ends and returns to neutral');
+  avatar.select('pedestrian');
+  viewer.scene.preRender.raiseEvent();
+  assert.match(avatar.entity.model.uri.getValue(),/african_fem_officer/);
+  assert.equal(avatar.entity.model.customShader.getValue().uniforms.u_skeletal.value,1);
+ }finally{avatar.destroy();}
+});

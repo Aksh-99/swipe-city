@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {Vector3} from 'three';import {CollisionWorld} from '../src/collision.js';import {WEST45} from '../src/west45-config.js';import {SHUBERT} from '../src/shubert-config.js';import {createShubertGeometry} from '../src/shubert-alley.js';
+test('Shubert Alley reference details fit source walls and preserve the mapped walking route',async()=>{
+ const prior=globalThis.fetch;globalThis.fetch=async u=>new Response(await readFile('public'+u));
+ try{const world=new CollisionWorld(JSON.parse(await readFile('public/data/nyc/manifest.json')).files);world.radius=500;await world.stream(new Vector3(-120,20,0));const g=createShubertGeometry();world.addStatic('shubert-test',new Float32Array(g.mesh.collision));assert(g.tables>=3);assert(g.posters.length>20);assert.equal(g.bollards.length,4);assert(g.windows.length>10);
+ for(const f of SHUBERT.fronts){const c=new Vector3(...f.center),n=new Vector3(...f.normal),r=new Vector3(-n.y,n.x,0);for(const x of [-.4,0,.4]){const p=c.clone().addScaledVector(r,x*f.width).setZ(3),hit=world.ray(p.clone().addScaledVector(n,.8),n.clone().negate(),1.2,true);assert(hit&&Math.abs(hit.distance-.98)<.045,'detail plane sits on original wall');}}
+ const o=new Vector3(...WEST45.origin),e=new Vector3(...WEST45.east),n=new Vector3(...WEST45.north);for(let d=-9;d>-69;d-=.25){const p=o.clone().addScaledVector(e,159.9).addScaledVector(n,d).setZ(.17),resolved=world.resolve(p.clone());assert(resolved.sub(p).setZ(0).length()<.025,'clear centerline at '+d);const hit=world.ray(p.clone().setZ(1.1),n.clone().negate(),.2);assert(!hit,'no waist-height obstruction at '+d);}
+ assert.equal(SHUBERT.visit.normal.length,3,'landmark camera requires a normal even with an explicit view');const spawn=new Vector3(...SHUBERT.visit.view.position);assert(world.resolve(spawn.clone()).sub(spawn).setZ(0).length()<.02,'shortcut spawn clear');
+ for(const [color,positions]of g.mesh.batches)assert(positions.every(Number.isFinite),color);
+ }finally{globalThis.fetch=prior;}
+});

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+public/cesium/
+.sites-runtime/
+*.log
+.local/
+
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json

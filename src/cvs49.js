@@ -1,0 +1,36 @@
+import{Vector3}from'three';import{Material}from'cesium';import{DetailMesh}from'./detail-mesh.js';import{addFaces,addBatches}from'./street-details.js';import{WEST48 as W}from'./west48-config.js';import{west48SignAtlas}from'./west48.js';
+const V=a=>new Vector3(...a);
+export function createCvs49(){const mesh=new DetailMesh(),glow=new DetailMesh(),labels=[],glass=[],ads=[],windows=[],scaffoldPosts=[],o=V(W.origin),e=V(W.east),N=V(W.north),at=(t,d,z)=>o.clone().addScaledVector(e,t).addScaledVector(N,d).setZ(z);
+ const fronts=[{a:[153.0,167.61],b:[187.0,167.51],normal:N.clone().negate(),side:'W49'},{a:[187.59,167.65],b:[185.82,207.0],normal:e.clone(),side:'Broadway'}];
+ const text=(center,normal,right,width,height,text,theme='letters')=>labels.push({center,normal,right,width,height,text,theme});
+ for(const f of fronts){const A=at(...f.a,0),B=at(...f.b,0),r=B.clone().sub(A).normalize(),n=new Vector3(r.y,-r.x,0),c=A.clone().lerp(B,.5),w=A.distanceTo(B),p=(x,y,z)=>c.clone().addScaledVector(r,x).addScaledVector(n,y).setZ(z),box=(x,y,z,a,d,h,col,solid=false)=>mesh.box(p(x,y,z),r,n,a,d,h,col,solid);
+  // Full-height warm ivory masonry with individually recessed window reveals.
+  box(0,-.05,23.2,w,.22,31.7,'#b9b7a2');
+  const cols=f.side==='W49'?10:12,step=w/cols;
+  for(let row=0;row<10;row++){const z=9.5+row*3.03;for(let j=0;j<cols;j++){const x=-w/2+(j+.5)*step,ww=step*.56;box(x,.08,z,ww+.23,.10,2.16,'#777f73');glass.push({center:p(x,.145,z),normal:n,right:r,width:ww,height:1.93});box(x,.21,z-1.10,ww+.35,.34,.15,'#dad5bc');for(const dx of[-ww/2,ww/2])box(x+dx,.20,z,.07,.13,2.0,'#c2c1aa');box(x,.22,z+.04,ww,.08,.06,'#a5ac9c');windows.push(p(x,.16,z));}}
+  for(const z of[7.6,38.8,39.25])box(0,.13,z,w,.44,z===38.8?.35:.16,'#d1cdb5');
+  // Storefront glass, dark bronze piers and the wrapping ribbed metal canopy.
+  box(0,.03,3.15,w,.25,6.0,'#2c3430');for(let x=-w/2+1.3;x<w/2;x+=2.65){glass.push({center:p(x,.22,2.8),normal:n,right:r,width:2.40,height:4.85});box(x-1.28,.31,2.85,.16,.28,5.5,'#a69e75');text(p(x,.30,3.7),n,r,1.7,.68,'♥ CVS','cvsletters');box(x,.29,1.2,2.4,.05,.08,'#737b69');}
+  box(0,.95,5.74,w+1.1,2.1,.22,'#ada98b');box(0,1.94,5.6,w+1.1,.15,.50,'#8b947f');for(let x=-w/2-.45;x<w/2+.5;x+=.12)box(x,2.04,5.61,.033,.08,.46,'#c2c0a5');for(let x=-w/2+1;x<w/2;x+=1.9)glow.box(p(x,.97,5.59),r,n,1.0,.055,.028,'#ddc48a');
+  const signX=f.side==='W49'?-w*.26:-w*.28;text(p(signX,1.90,6.53),n,r,w*.44,1.18,'♥ CVS pharmacy','cvsletters');
+  // Black lower display strips and blue paint campaign panels above.
+  box(0,.25,9.2,w-.5,.30,2.5,'#202a28');
+  const ad=(x,z,a,h,kind)=>{box(x,.46,z,a+.22,.32,h+.22,'#5e685a');ads.push({center:p(x,.65,z),normal:n,right:r,width:a,height:h,kind});};
+  if(f.side==='W49'){ad(-w*.31,15.1,w*.24,3.1,'brand');ad(0,17.0,w*.37,5.2,'room');ad(w*.36,18.6,w*.25,10.7,'portrait');}
+  else ad(-w*.35,18.6,w*.23,10.7,'portrait');
+  // White sidewalk shed, full deck, repeated slender posts and diagonal forks.
+  const clearCorner=f.side==='W49'?w*.55:w*.50;
+  for(let x=-w/2+.5;x<w/2;x+=2.6){if(x>0&&x<clearCorner*.5)continue;box(x,3.0,2.47,.115,.115,4.7,'#c4cebd',true);scaffoldPosts.push(p(x,3.0,.15));for(const side of[-1,1])mesh.tube(p(x,3.0,3.4),p(x+side*.8,3.0,4.85),.045,'#d1d7c6',false,8);mesh.tube(p(x,3.0,4.87),p(x,.4,4.87),.04,'#c3cdbc',false,8);}
+  box(0,1.7,4.96,w,2.9,.12,'#9ca792');for(const y of[.4,3.0])mesh.tube(p(-w/2,y,5.05),p(w/2,y,5.05),.055,'#cdd6c3',false,8);
+ }
+ // Two recessed corner doors, with a warm vertical welcome panel.
+ mesh.box(at(187.35,168.9,2.5),e,N,.15,2.0,4.5,'#46513f');text(at(187.56,169.6,2.6),e,N,1.15,3.8,'Health\nHUB\nWelcome','gold');
+ for(const t of[0,190,274.7,548]){const n=N.clone().negate();for(const dx of[-5,0,5]){mesh.box(at(t+dx,150.0,.75),e,N,4.5,.35,.75,'#b7b6a2',true);for(let j=0;j<6;j++)mesh.box(at(t+dx-1.8+j*.65,149.80,.75),e,N,.32,.04,.60,j%2?'#d2cdb4':'#a94b3e');for(const xx of[-1.65,1.65])mesh.box(at(t+dx+xx,150,.28),e,N,.14,.65,.55,'#7f8b7c',true);}text(at(t,149.74,1.46),n,e,5.2,.53,'W49 STREET CLOSED','letters');}
+ return{mesh,glow,labels,glass,ads,windows,scaffoldPosts,fronts,view:{position:at(200,149,.17).toArray(),yaw:Math.atan2(-e.x+N.x,-e.y+N.y),pitch:-.29}};
+}
+export function cvs49Campaign(kind){const c=document.createElement('canvas');c.width=kind==='portrait'?768:1536;c.height=kind==='portrait'?1536:768;const x=c.getContext('2d'),w=c.width,h=c.height;const bg=x.createLinearGradient(0,0,w,h);bg.addColorStop(0,'#275b80');bg.addColorStop(1,'#326f7c');x.fillStyle=bg;x.fillRect(0,0,w,h);x.textAlign='center';x.fillStyle='#e3e9dd';if(kind==='brand'){x.font='bold 92px Georgia';x.fillText('△',w/2,230);x.font='70px Georgia';x.fillText('Benjamin Moore',w/2,390,w-90);x.font='35px Arial';x.fillText('PAINT LIKE NO OTHER',w/2,500);}else{x.fillStyle='#668d8e';for(let a=0;a<w;a+=w/7)x.fillRect(a,0,7,h*.72);x.fillStyle='#b49d70';x.fillRect(0,h*.73,w,h*.27);x.fillStyle='#739096';x.fillRect(w*.06,h*.45,w*.67,h*.32);x.fillStyle='#d1c7a7';for(let j=0;j<5;j++)x.fillRect(w*.08,h*(.48+j*.044),w*.60,h*.017);x.fillStyle='#a17643';x.fillRect(w*.75,h*.54,w*.2,h*.17);x.fillStyle='#c14b3c';x.beginPath();x.arc(w*.71,h*.44,w*.066,0,Math.PI*2);x.fill();x.fillStyle='#dbdfd2';x.font=(kind==='portrait'?'43':'58')+'px Georgia';x.fillText('Paint that lasts',w/2,h*.11,w-50);x.fillText('even as you change.',w/2,h*.16,w-50);x.fillStyle='#d1d5c2';x.beginPath();x.arc(w*.44,h*.61,w*.045,0,Math.PI*2);x.fill();x.fillRect(w*.4,h*.64,w*.16,h*.08);x.fillStyle='#9a784c';x.fillRect(w*.53,h*.7,w*.29,h*.05);}return c;}
+export function addCvs49(viewer,collision){const g=createCvs49();collision?.addStatic('cvs49-white-scaffolding',new Float32Array(g.mesh.collision));addBatches(viewer,g.mesh.batches);addBatches(viewer,g.glow.batches);
+ const glass=new Material({translucent:false,fabric:{type:'Cvs49RecessedWindows',source:'czm_material czm_getMaterial(czm_materialInput i){czm_material m=czm_getDefaultMaterial(i);vec3 c=mix(vec3(.09,.16,.16),vec3(.34,.39,.33),.5+.5*sin(i.st.x*4.+i.st.y*2.));m.diffuse=c*.3;m.emission=c*.4;m.specular=.4;m.alpha=1.;return m;}'}});addFaces(viewer,g.glass,glass,(f,u,v)=>[u,v]);
+ // Dedicated red brand lettering remains transparent over the bronze fascia.
+ const atlas=west48SignAtlas(g.labels),ids=new Map(g.labels.map((f,i)=>[f,i]));const sign=new Material({translucent:true,fabric:{type:'Cvs49PharmacyLetters',uniforms:{image:Material.DefaultImageId},source:'czm_material czm_getMaterial(czm_materialInput i){czm_material m=czm_getDefaultMaterial(i);vec4 c=texture(image,i.st);m.diffuse=c.rgb*.2;m.emission=c.rgb*.8;m.alpha=c.a;return m;}'}});sign.uniforms.image=atlas.canvas;addFaces(viewer,g.labels,sign,(f,u,v)=>{const a=atlas.rects[ids.get(f)];return[(a.x+.5+u*(a.w-1))/atlas.canvas.width,(atlas.canvas.height-a.y-a.h+.5+v*(a.h-1))/atlas.canvas.height];},true);
+ for(const kind of['brand','room','portrait']){const m=new Material({translucent:false,fabric:{type:'Cvs49PaintCampaign'+kind,uniforms:{image:Material.DefaultImageId},source:'czm_material czm_getMaterial(czm_materialInput i){czm_material m=czm_getDefaultMaterial(i);m.diffuse=vec3(0.);m.emission=texture(image,i.st).rgb*.72;m.alpha=1.;return m;}'}});m.uniforms.image=cvs49Campaign(kind);addFaces(viewer,g.ads.filter(f=>f.kind===kind),m,(f,u,v)=>[u,v],false,{depthMask:true,blending:{enabled:false}});}return g;}

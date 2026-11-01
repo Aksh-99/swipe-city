@@ -1,0 +1,53 @@
+{
+  "landmark": "Port Authority Bus Terminal / Midtown Bus Terminal",
+  "address": "625 Eighth Avenue, New York, NY 10018",
+  "reference": {
+    "type": "user-provided screenshot",
+    "filename": "Screenshot 2026-10-03 at 7.32.44\u202fPM.png",
+    "sha256": "3fb78ac8eb77b81b42a90b981f3cd65e15a243ef9686ae0ae7a0296896835b81",
+    "use": "Visual reference only; pixels are not embedded in the game. Sign artwork and structural details are authored in native code."
+  },
+  "sources": [
+    {
+      "url": "https://www.panynj.gov/bus-terminals/en/index.html",
+      "publisher": "Port Authority of New York and New Jersey",
+      "supports": "Terminal spans West 40th\u201342nd Streets between Eighth and Ninth Avenues."
+    },
+    {
+      "url": "https://portauthoritybuilds.com/content/redevelopment/us/en/mbt/news/Port-Authoritys-Transformational-Project-to-Replace-Midtown-Bus-Terminal-Receives-Critical-Loan-from-Federal-Build-America-Program.html",
+      "publisher": "Port Authority",
+      "supports": "North Wing expansion and diagonal girder facade."
+    },
+    {
+      "url": "https://github.com/JoeThunyathep/NYC3D_CesiumJS",
+      "commit": "df20a24582520dd856e56e99ae44e3ff43ab3269",
+      "supports": "Unchanged NYC3D geometry and exact source-triangle collision."
+    }
+  ],
+  "placement": {
+    "method": "Eighth Avenue and West 42nd Street planes ray-fitted to the bundled NYC3D collision triangles. Source plane intersection identifies the northeast corner. Thin detail layers sit 0.18 metres outside the source walls; fit residual is under 0.013 metres. Roof height is constrained by original source triangles.",
+    "osmSidewalkWayIds": [
+      1035187233,
+      1035187237,
+      1035187257
+    ]
+  },
+  "scope": "North Wing corner plus the Eighth Avenue south frontage, all within existing bundled city coverage. No additional Manhattan tiles, source-mesh edits, vehicles, interiors or gameplay systems.",
+  "approximations": [
+    "Street-level detail dimensions, storefront finish, canopy shapes, brick supports and bollard spacing are visual interpretations of the photograph.",
+    "Blue construction wrap is an authored interpretation of the reference, not a live sign survey.",
+    "South frontage finish is generalized to continue the same terminal material palette.",
+    "The historical NYC building shell does not represent recessed concourse interiors or a traversable West 41st Street vehicle portal."
+  ],
+  "performance": {
+    "primitives": 7,
+    "atlasSize": [
+      2048,
+      2048
+    ],
+    "geometryVertices": 195876,
+    "collisionTriangles": 8099,
+    "perFrameUpdates": 0
+  },
+  "verification": "Source-wall/roof fitting, walking and running routes, corner turn, covered entrances, cylindrical obstacle separation and actual Cesium initialization are checked offline. WebGL/browser visual verification unavailable."
+}

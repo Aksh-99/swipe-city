@@ -1,0 +1,42 @@
+{
+  "scope": "W42 from existing Avenue / 4 Times Square to the west edge of Sixth Avenue, plus Knickerbocker's Broadway face and its immediate southern neighbor.",
+  "geometrySource": {
+    "repository": "https://github.com/JoeThunyathep/NYC3D_CesiumJS",
+    "commit": "df20a24582520dd856e56e99ae44e3ff43ab3269",
+    "method": "Short source-only rays against the existing streamed NYC collision triangles. Thin facade skins are offset 0.16m from the measured planes; added finishes project from those skins. Building vertices, street centerlines and roof silhouettes are not moved.",
+    "sourceSurvey": "29 original surfaces, 2871 samples, no missing ray hits, maximum 0.00284m residual. The runtime splits one plane into four shopfronts for 32 finish surfaces; tests re-check every finish against the source."
+  },
+  "userReferences": [
+    "Screenshot 2026-10-04 at 12.07.16 AM.png",
+    "Screenshot 2026-10-04 at 1.02.08 AM.png",
+    "Screenshot 2026-10-04 at 1.02.34 AM.png",
+    "Screenshot 2026-10-04 at 1.02.58 AM.png",
+    "Screenshot 2026-10-04 at 1.03.25 AM.png",
+    "Screenshot 2026-10-04 at 1.03.40 AM.png",
+    "Screenshot 2026-10-04 at 1.04.00 AM.png",
+    "Screenshot 2026-10-04 at 1.04.28 AM.png",
+    "Screenshot 2026-10-04 at 1.04.48 AM.png",
+    "Screenshot 2026-10-04 at 1.05.45 AM.png"
+  ],
+  "referenceUse": "User-supplied pictures inform colors, facade rhythms, signage proportions, scaffold netting and street furniture. No screenshot pixels are embedded, and no Google service, imagery endpoint or 3D dataset was requested or scraped.",
+  "primaryLocationSources": [
+    {"url": "https://www.theknickerbocker.com/about/getting-here/", "supports": "6 Times Square, southeast corner of 42nd Street and Broadway."},
+    {"url": "https://www.hilton.com/en/hotels/nycssgi-hilton-garden-inn-new-york-times-square-central/hotel-info/", "supports": "Hilton Garden Inn at 136 West 42nd Street."},
+    {"url": "https://planethollywoodnyc.com/accessibility/", "supports": "Planet Hollywood NYC at 136 West 42nd Street."},
+    {"url": "https://stores.pandora.net/en-us/ny/newyork/pandora-jewelry-us15ee52c8.html", "supports": "Jewelry retail at 110 West 42nd Street; the prototype uses fictional Aurelia branding."},
+    {"url": "https://151w42.durst.org/main.cfm?pid=aboutdurst&sid=welcome", "supports": "One Five One office property at 151 West 42nd Street."},
+    {"url": "https://obp.durst.org/", "supports": "One Bryant Park property identity."},
+    {"url": "https://www.roundabouttheatre.org/theatre/stephen-sondheim-theatre/", "supports": "Sondheim Theatre's primary entrance is 124 West 43rd Street; the W42 office entrance is not mislabeled as the theater."},
+    {"url": "https://bryantpark.org/the-park/hours-and-directions", "supports": "Bryant Park boundary at Sixth Avenue and 42nd Street."}
+  ],
+  "historicalModelLimits": [
+    "South station 403.98–419.20 has no source street-front wall. Its original recessed walls remain 30–42m behind the sidewalk. Only their lower 5.75m receive finishes; the street-front orange advertisement is a scaffold banner, not a new building shell.",
+    "South station 442.27–496.78 remains an 8.68m podium with finishes below 8.46m. Its taller advertising uses the original setback plane.",
+    "The Knickerbocker central face retains its 36.60m lower wall and separate upper setback. Netting and pipework follow the surrounding 47m structure.",
+    "North Sixth frontage retains the original low front and separate upper setback. No additional tower or roof volume is generated.",
+    "The mta77 and mta57 functional stairways are preserved. Raw MTA54/55/58 coordinates are retained as clearance references, not advertised as newly modeled entrances."
+  ],
+  "authoredElements": "Storefront windows use the existing retail-interiors atlas. Movie, jewelry and retail campaigns use the existing portrait atlas plus one 2048px code-drawn sign atlas. Advertisements and some store names are fictional. Facade detail, canopies, scaffold dimensions and street furniture are visual interpretations rather than a current measured survey.",
+  "performance": "Bounded static triangle batches and shared materials, no per-frame facade updates or dynamic lights. Original city-source streaming and cache budgets are unchanged. Live browser FPS was not measured in this environment.",
+  "verification": "Original-wall fit and roof limits; finite geometry; both directions of walking/running on both full sidewalks and covered passages; visit positions; physical shop walls and silver bollards; scaffold/canopy headroom and clear camera sightlines; mta77/mta82 descent and return with new scenery; real Cesium Material/Primitive initialization; native Canvas atlas inspection; full automated suite and production build."
+}

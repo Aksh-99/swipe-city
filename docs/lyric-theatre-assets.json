@@ -1,0 +1,35 @@
+{
+  "created": "2026-10-03",
+  "references": [
+    {
+      "description": "Seven user-supplied W43 street screenshots, October 3 at 6:19:50, 6:24:05, 6:24:17, 6:24:42, 6:25:01, 6:25:31 and 6:25:52 PM",
+      "use": "Visual reference for facade proportions, wing relief, fire escape, canopy, door colors, neighboring frontages, rail barricades, cones, scaffolding and construction barriers. No screenshot pixels are embedded, cropped, projected or distributed."
+    },
+    {
+      "url": "https://us.atgtickets.com/venues/lyric-broadway/venue-info/",
+      "use": "Official theatre identity and 214 West 43rd Street main entrance address"
+    },
+    {
+      "url": "https://www.openstreetmap.org/way/266034050",
+      "archive": "docs/source-data/lyric-osm.json",
+      "use": "Identify the theatre parcel and its W43 frontage. No replacement building extrusion.",
+      "license": "Open Database License; © OpenStreetMap contributors"
+    },
+    {
+      "url": "https://www.soniafriedman.com/news/new-york%E2%80%99s-lyric-theatre-marquee-takes-flight-ahead-of-the-broadway-premiere-of-harry-potter-and-the-cursed-child-parts-one-and-two",
+      "use": "Producer's architectural description of the 150-foot / 45.72 m wing sculpture; authored mesh interpretation, not a scan"
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/assets/lyric/cursed-child-logo.png",
+      "source": "https://broadway.harrypottertheplay.com/content/themes/harry-potter-broadway/build/images/logo-large1.png",
+      "origin": "Official Harry Potter and the Cursed Child Broadway website",
+      "dimensions": [800, 333],
+      "use": "Transparent gold lettering on the exterior theatre marquee",
+      "copyright": "Third-party show branding; all rights remain with their respective owners. Not represented as public-domain artwork.",
+      "postprocessing": "None"
+    }
+  ],
+  "implementation": "Native 3D relief and Canvas sign/illustration atlas. Masonry, glass, scaffold netting and chain-link use small procedural materials. Actual original NYC3D triangles supply all five building volumes, positions, proportions and roof heights. Detail layers are checked against these triangles by prepare-lyric.mjs. Temporary construction arrangement and small architectural details are reference-based approximations. No Google data was scraped, no screenshot textures were used, and no vehicles, NPCs or gameplay were added."
+}

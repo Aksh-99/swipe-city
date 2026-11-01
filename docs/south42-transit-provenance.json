@@ -1,0 +1,94 @@
+{
+  "reference": {
+    "filename": "Screenshot 2026-10-03 at 11.47.42 PM.png",
+    "sha256": "20878ccfc7ea2a5e92953dc765b174fe2a2d58855aa97395e0f8096e5c54a35e",
+    "use": "Visual reference for authored architecture and typography; screenshot pixels are not embedded. No Google imagery was fetched."
+  },
+  "scope": "Opposite subway exterior at 7 Times Square, southeast W42/Seventh, and facing One Times Square storefront/scaffolding. Previous north W42 storefronts and original city geometry remain unchanged.",
+  "sources": [
+    {
+      "url": "https://www.fxcollaborative.com/projects/48/times-square-subway-station/",
+      "publisher": "FXCollaborative",
+      "supports": "Architect's wave-shaped canopy and illuminated signage design."
+    },
+    {
+      "url": "https://archinect.com/hitoshi.amano/project/subway-station-entrance",
+      "publisher": "Hitoshi Amano, project designer",
+      "supports": "Corrugated stainless steel canopy design."
+    },
+    {
+      "url": "https://www.bxp.com/properties/7-times-square",
+      "publisher": "BXP",
+      "supports": "7 Times Square / Times Square Tower location bounded by Broadway, Seventh Avenue and W42."
+    },
+    {
+      "url": "https://www.outfront.com/times-square",
+      "publisher": "OUTFRONT",
+      "supports": "Large poster advertising on multiple faces of Times Square Tower. Existing fictional advertisements are reused."
+    },
+    {
+      "url": "https://data.ny.gov/Transportation/MTA-Subway-Entrances-and-Exits-2024/i9wp-a4ja",
+      "archive": "public/data/subway-entrances-mta.json",
+      "supports": "Easement records 76, 78 and 79 around the red station frontage. Row 79 is exit-only in the source."
+    },
+    {
+      "archive": "public/data/streets-osm.json",
+      "license": "OpenStreetMap contributors, ODbL",
+      "supports": "Existing W42 and Seventh Avenue sidewalks and crosswalk placement."
+    },
+    {
+      "url": "https://github.com/JoeThunyathep/NYC3D_CesiumJS",
+      "commit": "df20a24582520dd856e56e99ae44e3ff43ab3269",
+      "supports": "Original NYC building positions, walls and roofs, unchanged."
+    }
+  ],
+  "placement": {
+    "config": "public/data/south42-transit.json",
+    "sourceTile": "c/10/12.b3dm",
+    "facadePlanes": 4,
+    "skinOffsetMeters": 0.16,
+    "sevenTimesWidthsMeters": [26.164432624, 25.98907075533709],
+    "oneTimesDetailWidthsMeters": [18.181607462, 16.704825743],
+    "detailTopMeters": 34,
+    "maxRecordedSourceFitResidualMeters": 0.001093964,
+    "scaffoldLengthMeters": 34.886433205,
+    "scaffoldWidthMeters": 3.4,
+    "scaffoldRoofBaseMeters": 3.35,
+    "preservedExistingScaffold": "One Times Square east/Broadway face from the NYPD plaza module",
+    "entranceMode": "exterior",
+    "sourceWallClosed": true,
+    "preservedFunctionalStairs": ["mta-77", "mta-82"]
+  },
+  "details": [
+    "Red mullioned station/storefront glazing across the unchanged corner footprint",
+    "Corrugated wave canopy, double pink-red rim, warm bulb-lit Subway letters and route medallions",
+    "Four large poster panels, steel frames, maintenance catwalks and floodlight fixtures",
+    "One Times Square green construction base, two blue/white stripe screens and ribbon signs",
+    "Two sidewalk sheds with pipe scaffolding, diagonal braces, notice boards and open passages",
+    "Five silver cylindrical bollards, six orange/white barriers and clipped pavement aprons",
+    "Visit opposite subway button and phone map marker"
+  ],
+  "performance": {
+    "newStaticPrimitives": 8,
+    "physicalRenderVertices": 50298,
+    "newCollisionTriangles": 3598,
+    "signAtlas": [2048, 2048],
+    "newCityTiles": 0,
+    "newDownloadedTextures": 0,
+    "perFrameGeometryUpdates": 0
+  },
+  "movementFix": "CollisionWorld.ground optionally accounts for capsule radius on walkable slopes: radius * (1 / abs(normal.z) - 1). Player uses this support height to remain grounded without snapping the rounded foot into a stair ramp. Contact tolerance, step limits, gravity and movement speeds remain unchanged.",
+  "verification": [
+    "Source-only wall rays at multiple heights, outward lettering and finite geometry",
+    "Walk/run both directions on frontage sidewalks, corner turn and scaffold passages with nearby source/detail colliders",
+    "Clear arrival and door approaches, crosswalk traversal, physical doors/posts and canopy camera clearance",
+    "Descend and return via both nearby mta-77 and mta-82 stairways",
+    "Native Canvas sign drawing and actual Cesium Material/Primitive initialization"
+  ],
+  "limitations": [
+    "Exterior architectural interpretation, not photographic reconstruction or a current tenant survey. Detail dimensions are authored within the original surveyed wall envelope.",
+    "New integrated subway frontage is exterior-only because the original wall is solid. Existing descendable stairs remain available; no station network is added.",
+    "Station information graphics are decorative, not navigational maps. Poster advertisements are existing fictional artwork.",
+    "Browser/WebGL visual verification and live FPS measurement were unavailable."
+  ]
+}

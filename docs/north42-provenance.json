@@ -1,0 +1,81 @@
+{
+  "reference": {
+    "filename": "Screenshot 2026-10-03 at 11.34.06 PM.png",
+    "sha256": "b8bd50162020bf1401b2859c64dbf5727f184430706b09fa4edfa1b377c831e7",
+    "use": "Visual reference only; screenshot pixels are not embedded or used as textures. No Google imagery was fetched."
+  },
+  "scope": "North West 42nd Street, opposite the Madame Tussauds block: finish the strip east of Regal, New Victory Theater, subway exterior and the rounded 3 Times Square retail podium. User permits fictional shop names.",
+  "sources": [
+    {
+      "url": "https://www.rudin.com/properties/retail-spaces/3-times-square",
+      "publisher": "Rudin",
+      "supports": "3 Times Square wraparound retail frontage on W42 and Seventh Avenue; Chase and Steve Madden tenants. Fictional Civic and Citysole names are used for this reference-era design."
+    },
+    {
+      "url": "https://data.ny.gov/Transportation/MTA-Subway-Entrances-and-Exits-2024/i9wp-a4ja",
+      "archive": "public/data/subway-entrances-mta.json",
+      "supports": "Times Sq-42 St MTA easement row74 at40.7563493,-73.9872942."
+    },
+    {
+      "archive": "docs/source-data/cinema-block-osm.json",
+      "license": "OpenStreetMap contributors, ODbL",
+      "supports": "Street alignment and New Victory/Lyric block context."
+    },
+    {
+      "url": "https://github.com/JoeThunyathep/NYC3D_CesiumJS",
+      "commit": "df20a24582520dd856e56e99ae44e3ff43ab3269",
+      "supports": "Original NYC building geometry, unchanged."
+    }
+  ],
+  "placement": {
+    "plainFacades": 7,
+    "curveFacets": 44,
+    "skinOffsetMeters": 0.16,
+    "curveRadiusMeters": 12.688349158,
+    "curveSafeTopMeters": 36.4,
+    "curveSourceTopMeters": 36.6366,
+    "maxSampledPlainResidualMeters": 0.001688,
+    "maxSampledCurveResidualMeters": 0.001058,
+    "subway": {
+      "rawMtaIndex": 74,
+      "position": [
+        -151.509870827,
+        -183.307394078,
+        0
+      ],
+      "station": 232.087353996,
+      "offset": 15.620790808,
+      "sourceWallOffset": 18.193708195,
+      "clearance": "Original source mesh is continuous at the doorway. The exterior canopy and closed gate are recreated; no doorway is cut through original city geometry and no new subterranean pit is introduced.",
+      "preservedFunctionalEntrance": "mta-82 at its unchanged original position, approximately78.5m away"
+    }
+  },
+  "details": [
+    "New Victory stone pilasters, window bays, cornice, paired blue/gold vertical banners and shallow steps",
+    "Angled gray subway canopy with red letters, wavy neon edge, route medallions and closed metal grille",
+    "Warm Citysole shoe windows, bronze mullions and continuous original shoe-campaign ribbon around real curved footprint",
+    "Repeated Civic bank-style signs, ribbed sign bases, stone piers and dark blue upper glazing",
+    "Large curved blue City Nights LED wrap; existing authored movie/fashion posters in neighboring frames",
+    "Lyric entrance label and neighboring historic theater frontage, aligned to source elevations",
+    "25 red/blue/concrete curb barriers, 8 silver cylindrical bollards, two bins and joined pavement",
+    "Visit new stores starts at this corner then New Victory; phone map has named markers"
+  ],
+  "performance": {
+    "newStaticPrimitives": 10,
+    "physicalRenderVertices": 56418,
+    "newCollisionTriangles": 1770,
+    "signAtlas": [
+      2048,
+      2048
+    ],
+    "newCityTiles": 0,
+    "newDownloadedTextures": 0,
+    "perFrameGeometryUpdates": 0
+  },
+  "cameraFix": "Downward-only camera floor probe prevents canopy underside from being treated as a step and pushing the camera through the roof. Player curb stepping is unchanged.",
+  "limitations": [
+    "Exterior architectural interpretation, not photographic reconstruction or a current tenant survey. Detail dimensions are authored within the original surveyed wall envelope.",
+    "The building-integrated subway portal is exterior-only because the source wall is solid. Existing descendable subway stairs remain unchanged.",
+    "Native Canvas drawing, actual Cesium Material/Primitive initialization, source fits and physics tests were checked. Browser/WebGL visual QA and live FPS unavailable."
+  ]
+}

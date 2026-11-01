@@ -1,0 +1,700 @@
+{
+  "source": "https://www.openstreetmap.org/api/0.6/map?bbox=-73.9911,40.7560,-73.9880,40.7582",
+  "license": "ODbL; \u00a9 OpenStreetMap contributors",
+  "retrieved": "2026-10-04",
+  "elements": [
+    {
+      "type": "way",
+      "id": 266034054,
+      "tags": {
+        "building": "yes",
+        "height": "82.7",
+        "nycdoitt:bin": "1085096"
+      },
+      "geometry": [
+        {
+          "lat": 40.7570979,
+          "lon": -73.9883637
+        },
+        {
+          "lat": 40.7572914,
+          "lon": -73.9888197
+        },
+        {
+          "lat": 40.7575376,
+          "lon": -73.988639
+        },
+        {
+          "lat": 40.7573441,
+          "lon": -73.988183
+        },
+        {
+          "lat": 40.7570979,
+          "lon": -73.9883637
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 266034056,
+      "tags": {
+        "addr:city": "New York",
+        "addr:housenumber": "270",
+        "addr:postcode": "10036",
+        "addr:state": "NY",
+        "addr:street": "West 43nd Street",
+        "brand": "Westin",
+        "brand:wikidata": "Q1969162",
+        "building": "hotel",
+        "dog": "yes",
+        "fax": "+1 212-201-2799",
+        "fitness_centre": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "The Westin",
+        "nycdoitt:bin": "1087141",
+        "official_name": "The Westin New York at Times Square",
+        "operator": "Marriott International",
+        "phone": "+1 212-201-2700",
+        "service:bicycle:rental": "yes",
+        "smoking": "no",
+        "start_date": "2002",
+        "tourism": "hotel",
+        "website": "https://www.marriott.com/hotels/travel/nycsw-the-westin-new-york-at-times-square/",
+        "wikidata": "Q123516111"
+      },
+      "geometry": [
+        {
+          "lat": 40.7572914,
+          "lon": -73.9888197
+        },
+        {
+          "lat": 40.7573351,
+          "lon": -73.9889226
+        },
+        {
+          "lat": 40.7571428,
+          "lon": -73.9890641
+        },
+        {
+          "lat": 40.7570996,
+          "lon": -73.989096
+        },
+        {
+          "lat": 40.7572874,
+          "lon": -73.9895385
+        },
+        {
+          "lat": 40.7573298,
+          "lon": -73.9895074
+        },
+        {
+          "lat": 40.7574006,
+          "lon": -73.9894559
+        },
+        {
+          "lat": 40.7576167,
+          "lon": -73.9892964
+        },
+        {
+          "lat": 40.7577692,
+          "lon": -73.9891849
+        },
+        {
+          "lat": 40.7577573,
+          "lon": -73.9891587
+        },
+        {
+          "lat": 40.7576579,
+          "lon": -73.9889231
+        },
+        {
+          "lat": 40.7575947,
+          "lon": -73.9887735
+        },
+        {
+          "lat": 40.7575376,
+          "lon": -73.988639
+        },
+        {
+          "lat": 40.7572914,
+          "lon": -73.9888197
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 266034071,
+      "tags": {
+        "building": "yes",
+        "height": "35",
+        "nycdoitt:bin": "1087142"
+      },
+      "geometry": [
+        {
+          "lat": 40.7573351,
+          "lon": -73.9889226
+        },
+        {
+          "lat": 40.7572914,
+          "lon": -73.9888197
+        },
+        {
+          "lat": 40.7570979,
+          "lon": -73.9883637
+        },
+        {
+          "lat": 40.7569912,
+          "lon": -73.9881124
+        },
+        {
+          "lat": 40.7569209,
+          "lon": -73.988164
+        },
+        {
+          "lat": 40.7567556,
+          "lon": -73.9882854
+        },
+        {
+          "lat": 40.7570996,
+          "lon": -73.989096
+        },
+        {
+          "lat": 40.7571428,
+          "lon": -73.9890641
+        },
+        {
+          "lat": 40.7573351,
+          "lon": -73.9889226
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 266143298,
+      "tags": {
+        "addr:city": "New York",
+        "addr:housenumber": "234",
+        "addr:postcode": "10036",
+        "addr:street": "West 42nd Street",
+        "amenity": "cinema",
+        "brand": "AMC",
+        "brand:wikidata": "Q294721",
+        "building": "yes",
+        "height": "35",
+        "name": "AMC Empire 25",
+        "nycdoitt:bin": "1024669",
+        "opening_hours": "\"goes according to first and last movie times\"",
+        "phone": "+12123982597",
+        "website": "https://www.amctheatres.com/movie-theatres/new-york-city/amc-empire-25",
+        "wikidata": "Q15032136",
+        "wikipedia": "en:Empire Theatre (42nd Street)"
+      },
+      "geometry": [
+        {
+          "lat": 40.7565368,
+          "lon": -73.9892031
+        },
+        {
+          "lat": 40.7565538,
+          "lon": -73.9892439
+        },
+        {
+          "lat": 40.7566429,
+          "lon": -73.989459
+        },
+        {
+          "lat": 40.7568337,
+          "lon": -73.9893234
+        },
+        {
+          "lat": 40.7568271,
+          "lon": -73.989308
+        },
+        {
+          "lat": 40.7568748,
+          "lon": -73.9892722
+        },
+        {
+          "lat": 40.7568508,
+          "lon": -73.9892186
+        },
+        {
+          "lat": 40.7568307,
+          "lon": -73.9891698
+        },
+        {
+          "lat": 40.7568111,
+          "lon": -73.989122
+        },
+        {
+          "lat": 40.7567832,
+          "lon": -73.9890593
+        },
+        {
+          "lat": 40.7567354,
+          "lon": -73.9890951
+        },
+        {
+          "lat": 40.7567274,
+          "lon": -73.9890758
+        },
+        {
+          "lat": 40.7565368,
+          "lon": -73.9892031
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 266143341,
+      "tags": {
+        "addr:city": "New York",
+        "addr:housenumber": "11",
+        "addr:postcode": "10036",
+        "addr:street": "8th Avenue",
+        "alt_name": "Times Square Plaza",
+        "building": "commercial",
+        "name": "11 Times Square",
+        "nycdoitt:bin": "1087978",
+        "start_date": "2011",
+        "wikidata": "Q4547779",
+        "wikipedia": "en:Eleven Times Square"
+      },
+      "geometry": [
+        {
+          "lat": 40.7566429,
+          "lon": -73.989459
+        },
+        {
+          "lat": 40.7565538,
+          "lon": -73.9892439
+        },
+        {
+          "lat": 40.7565368,
+          "lon": -73.9892031
+        },
+        {
+          "lat": 40.7564903,
+          "lon": -73.9890917
+        },
+        {
+          "lat": 40.7562416,
+          "lon": -73.9892716
+        },
+        {
+          "lat": 40.7564849,
+          "lon": -73.9898485
+        },
+        {
+          "lat": 40.7565041,
+          "lon": -73.9898343
+        },
+        {
+          "lat": 40.7565643,
+          "lon": -73.9899775
+        },
+        {
+          "lat": 40.756655,
+          "lon": -73.9899137
+        },
+        {
+          "lat": 40.7566715,
+          "lon": -73.9899608
+        },
+        {
+          "lat": 40.756876,
+          "lon": -73.9898135
+        },
+        {
+          "lat": 40.75698,
+          "lon": -73.9897334
+        },
+        {
+          "lat": 40.7569889,
+          "lon": -73.9897228
+        },
+        {
+          "lat": 40.7569981,
+          "lon": -73.9897073
+        },
+        {
+          "lat": 40.7570017,
+          "lon": -73.9896967
+        },
+        {
+          "lat": 40.7570045,
+          "lon": -73.9896785
+        },
+        {
+          "lat": 40.7570057,
+          "lon": -73.9896595
+        },
+        {
+          "lat": 40.7570037,
+          "lon": -73.9896405
+        },
+        {
+          "lat": 40.7569969,
+          "lon": -73.9896178
+        },
+        {
+          "lat": 40.7569312,
+          "lon": -73.9894626
+        },
+        {
+          "lat": 40.7569139,
+          "lon": -73.9894222
+        },
+        {
+          "lat": 40.7568815,
+          "lon": -73.989445
+        },
+        {
+          "lat": 40.7568337,
+          "lon": -73.9893234
+        },
+        {
+          "lat": 40.7566429,
+          "lon": -73.989459
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 266143358,
+      "tags": {
+        "addr:street": "West 41st Street",
+        "building": "yes",
+        "building:part": "yes",
+        "nycdoitt:bin": "1024665",
+        "start_date": "2000"
+      },
+      "geometry": [
+        {
+          "lat": 40.7559168,
+          "lon": -73.9884898
+        },
+        {
+          "lat": 40.7562416,
+          "lon": -73.9892716
+        },
+        {
+          "lat": 40.7564903,
+          "lon": -73.9890917
+        },
+        {
+          "lat": 40.7565368,
+          "lon": -73.9892031
+        },
+        {
+          "lat": 40.7567274,
+          "lon": -73.9890758
+        },
+        {
+          "lat": 40.7567719,
+          "lon": -73.9890465
+        },
+        {
+          "lat": 40.7566833,
+          "lon": -73.9888339
+        },
+        {
+          "lat": 40.7566809,
+          "lon": -73.9888285
+        },
+        {
+          "lat": 40.7566768,
+          "lon": -73.9888188
+        },
+        {
+          "lat": 40.75667,
+          "lon": -73.988803
+        },
+        {
+          "lat": 40.756665,
+          "lon": -73.9887903
+        },
+        {
+          "lat": 40.7566534,
+          "lon": -73.9887623
+        },
+        {
+          "lat": 40.7566179,
+          "lon": -73.9886767
+        },
+        {
+          "lat": 40.7565864,
+          "lon": -73.9886009
+        },
+        {
+          "lat": 40.756552,
+          "lon": -73.988518
+        },
+        {
+          "lat": 40.7565305,
+          "lon": -73.9884663
+        },
+        {
+          "lat": 40.7565067,
+          "lon": -73.9884088
+        },
+        {
+          "lat": 40.7564611,
+          "lon": -73.988299
+        },
+        {
+          "lat": 40.7564286,
+          "lon": -73.9882212
+        },
+        {
+          "lat": 40.7564088,
+          "lon": -73.9881728
+        },
+        {
+          "lat": 40.756396,
+          "lon": -73.9881443
+        },
+        {
+          "lat": 40.7563603,
+          "lon": -73.98817
+        },
+        {
+          "lat": 40.7563462,
+          "lon": -73.9881802
+        },
+        {
+          "lat": 40.7562222,
+          "lon": -73.9882696
+        },
+        {
+          "lat": 40.756176,
+          "lon": -73.988303
+        },
+        {
+          "lat": 40.7559168,
+          "lon": -73.9884898
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 591988935,
+      "tags": {
+        "building": "roof",
+        "building:levels": "1",
+        "layer": "1"
+      },
+      "geometry": [
+        {
+          "lat": 40.7568508,
+          "lon": -73.9892186
+        },
+        {
+          "lat": 40.7568712,
+          "lon": -73.989204
+        },
+        {
+          "lat": 40.7568912,
+          "lon": -73.9891897
+        },
+        {
+          "lat": 40.7568515,
+          "lon": -73.9890931
+        },
+        {
+          "lat": 40.756833,
+          "lon": -73.9891063
+        },
+        {
+          "lat": 40.7568111,
+          "lon": -73.989122
+        },
+        {
+          "lat": 40.7568307,
+          "lon": -73.9891698
+        },
+        {
+          "lat": 40.7568508,
+          "lon": -73.9892186
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 591988945,
+      "tags": {
+        "building": "roof",
+        "building:levels": "1",
+        "layer": "1"
+      },
+      "geometry": [
+        {
+          "lat": 40.75667,
+          "lon": -73.988803
+        },
+        {
+          "lat": 40.7566953,
+          "lon": -73.9887841
+        },
+        {
+          "lat": 40.7567081,
+          "lon": -73.9887745
+        },
+        {
+          "lat": 40.7567214,
+          "lon": -73.9888054
+        },
+        {
+          "lat": 40.7567084,
+          "lon": -73.9888151
+        },
+        {
+          "lat": 40.7566833,
+          "lon": -73.9888339
+        },
+        {
+          "lat": 40.7566809,
+          "lon": -73.9888285
+        },
+        {
+          "lat": 40.7566768,
+          "lon": -73.9888188
+        },
+        {
+          "lat": 40.75667,
+          "lon": -73.988803
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 591988947,
+      "tags": {
+        "building": "roof",
+        "building:levels": "1",
+        "layer": "1"
+      },
+      "geometry": [
+        {
+          "lat": 40.7566179,
+          "lon": -73.9886767
+        },
+        {
+          "lat": 40.7566425,
+          "lon": -73.9886584
+        },
+        {
+          "lat": 40.7566592,
+          "lon": -73.9886461
+        },
+        {
+          "lat": 40.7565948,
+          "lon": -73.9884867
+        },
+        {
+          "lat": 40.7565743,
+          "lon": -73.9885011
+        },
+        {
+          "lat": 40.7565574,
+          "lon": -73.988513
+        },
+        {
+          "lat": 40.756552,
+          "lon": -73.988518
+        },
+        {
+          "lat": 40.7565864,
+          "lon": -73.9886009
+        },
+        {
+          "lat": 40.7566179,
+          "lon": -73.9886767
+        }
+      ]
+    },
+    {
+      "type": "node",
+      "id": "2716231115",
+      "tags": {
+        "addr:city": "New York",
+        "addr:housenumber": "241",
+        "addr:postcode": "10036",
+        "addr:state": "NY",
+        "addr:street": "West 42nd Street",
+        "amenity": "restaurant",
+        "branch": "Times Square",
+        "brand": "Dallas BBQ",
+        "brand:wikidata": "Q122209839",
+        "check_date": "2025-01-30",
+        "contact:facebook": "dallasbbq",
+        "contact:instagram": "dallasbbq",
+        "cuisine": "barbecue",
+        "name": "Dallas BBQ",
+        "opening_hours": "Su-Th 11:00-24:00; Fr,Sa 11:00-01:00",
+        "phone": "+1-212-221-9000",
+        "website": "https://www.dallasbbq.com/times-square"
+      },
+      "geometry": [],
+      "position": {
+        "lat": 40.7569552,
+        "lon": -73.9887186
+      }
+    },
+    {
+      "type": "node",
+      "id": "2716231259",
+      "tags": {
+        "addr:city": "New York",
+        "addr:housenumber": "247",
+        "addr:postcode": "10036",
+        "addr:state": "NY",
+        "addr:street": "West 42nd Street",
+        "amenity": "cinema",
+        "brand": "Regal Cinemas",
+        "brand:short": "Regal",
+        "brand:wikidata": "Q835638",
+        "check_date": "2025-01-30",
+        "name": "Regal E-Walk Stadium 13 & RPX",
+        "short_name": "Regal",
+        "website": "https://www.regmovies.com/theatres/regal-e-walk-4dx-rpx/1929",
+        "wikidata": "Q45104377"
+      },
+      "geometry": [],
+      "position": {
+        "lat": 40.7570477,
+        "lon": -73.9889365
+      }
+    },
+    {
+      "type": "node",
+      "id": "4708892893",
+      "tags": {
+        "addr:city": "New York",
+        "addr:housenumber": "253",
+        "addr:postcode": "10036",
+        "addr:state": "NY",
+        "addr:street": "West 42nd Street",
+        "amenity": "fast_food",
+        "branch": "Times Square",
+        "brand": "Five Guys",
+        "brand:wikidata": "Q1131810",
+        "check_date": "2025-01-30",
+        "cuisine": "burger",
+        "name": "Five Guys",
+        "name:en": "Five Guys",
+        "official_name": "Five Guys Burgers and Fries",
+        "opening_hours": "11:00-01:15",
+        "phone": "+1 212-398-2600",
+        "takeaway": "yes",
+        "website": "https://restaurants.fiveguys.com/253-west-42nd-street"
+      },
+      "geometry": [],
+      "position": {
+        "lat": 40.7571061,
+        "lon": -73.9890903
+      }
+    }
+  ]
+}

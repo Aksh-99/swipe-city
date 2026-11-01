@@ -1,0 +1,272 @@
+@import 'cesium/Build/Cesium/Widgets/widgets.css';
+#source a{color:#c5d3de}
+#debug dl{grid-template-columns:1fr 1fr;gap:8px 10px;align-items:start}#debug dt:first-of-type,#debug dd:first-of-type{grid-column:1/-1}#debug dd{margin:0;font-size:12px}#debug button{margin-top:16px}#debug .panel-title{margin-bottom:12px}
+#phone{position:absolute;right:28px;bottom:30px;width:184px;height:300px;border:3px solid #263441;border-radius:25px;background:#101b26;padding:22px 8px 17px;box-shadow:0 8px 30px #0006;overflow:hidden;z-index:2}.phone-notch{position:absolute;top:7px;left:50%;transform:translateX(-50%);width:58px;height:8px;border-radius:8px;background:#02090e}.phone-title{font-size:12px;line-height:20px;letter-spacing:.03em;margin:0 3px 5px}.north{float:right;color:#9ac8bf;font-size:12px}#phone-map{display:block;width:100%;height:214px;border-radius:9px;background:#dce4e6}.phone-caption{display:flex;align-items:center;gap:6px;font-size:12px;margin-top:6px;color:#d6ebe6}.location-dot{width:8px;height:8px;border-radius:50%;background:#21aa91}.phone-home{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);height:3px;width:52px;background:#536574;border-radius:4px}
+@media(min-width:801px){footer{left:28px;transform:none;max-width:calc(100vw - 270px);white-space:normal;line-height:1.8;padding:10px 16px}#source{bottom:120px}}
+@media(max-width:800px){#phone{right:12px;bottom:128px;width:154px;height:260px;padding-top:21px}.phone-title{font-size:12px;letter-spacing:0}.north{display:none}#phone-map{height:180px}#debug{display:none}#status{max-width:calc(100% - 36px)!important}#source{max-width:calc(100% - 190px);font-size:12px}}
+:root{font-family:Arial,Helvetica,sans-serif;color:#f0f6fa;background:#101b26;font-size:16px}*{box-sizing:border-box}body{margin:0;overflow:hidden}#world{position:absolute;inset:0}header{position:absolute;top:30px;left:32px;pointer-events:none;text-shadow:0 2px 10px #101b26}h1{font-size:29px;letter-spacing:.06em;margin:8px 0}h1 span{display:block;font-size:12px;letter-spacing:.15em;margin-top:8px;font-weight:400}.eyebrow{color:#55ebcf;font-size:12px;letter-spacing:.2em}#debug{position:absolute;top:30px;right:28px;width:280px;background:#101b26e8;border:1px solid #ffffff24;padding:20px;backdrop-filter:blur(12px);border-radius:6px}.panel-title{font-size:12px;letter-spacing:.14em;color:#55ebcf;margin-bottom:18px}dl{display:grid;grid-template-columns:1fr;gap:4px;margin:0}dt{color:#a9bccb;font-size:12px}dd{margin:0 0 11px;font-family:monospace;font-size:14px}button{background:#233442;border:1px solid #6b8397;color:white;padding:11px 12px;width:100%;border-radius:4px;font-size:14px;cursor:pointer}button:hover{background:#344e62}button:focus-visible{outline:2px solid #55ebcf}#status{position:absolute;top:140px;left:32px;max-width:430px;background:#101b26dd;border-left:3px solid #55ebcf;padding:12px 16px;font-size:14px;line-height:1.5}footer{position:absolute;bottom:48px;left:50%;transform:translateX(-50%);white-space:nowrap;background:#101b26e8;border:1px solid #ffffff24;padding:15px 22px;border-radius:6px;font-size:14px;color:#a9bccb}footer strong{color:#f0f6fa;font-size:12px}footer span{padding:0 10px;color:#55ebcf}#source{position:absolute;bottom:92px;left:32px;font-size:12px;line-height:1.6;text-shadow:0 1px 4px #000}#source span{color:#c5d3de}.cesium-viewer-bottom{bottom:2px}.cesium-credit-logoContainer{display:none}@media(max-width:800px){header{top:18px;left:18px}h1{font-size:22px}#debug{top:110px;right:12px;width:220px;padding:12px}#status{top:100px;left:18px;max-width:calc(100% - 260px)}footer{bottom:42px;font-size:12px;width:95%;white-space:normal;line-height:1.8;text-align:center}#source{left:18px;bottom:128px;width:180px}}
+#debug{padding:14px}#debug dl{gap:6px 10px}#debug button{margin-top:10px}
+@media(min-width:801px){footer{left:28px;transform:none;max-width:calc(100vw - 270px);white-space:normal;line-height:1.8;padding:10px 16px}#source{bottom:130px}}
+
+/* Polished phone shell, camera island, glass screen and metal rim. */
+#phone{border:5px solid #151519;border-radius:32px;padding:32px 5px 18px;background:#eef3f5;color:#203843;box-shadow:0 0 0 1px #919197,0 0 0 3px #313136,0 12px 32px #0009,inset 0 0 0 1px #fff8;overflow:visible}
+#phone:before,#phone:after{content:'';position:absolute;width:3px;background:linear-gradient(#98999d,#35363b);border-radius:3px;left:-8px;top:64px;height:34px}#phone:after{left:auto;right:-8px;top:86px;height:45px}
+.phone-status{position:absolute;top:10px;left:13px;right:13px;display:flex;justify-content:space-between;font-size:9px;font-weight:700;color:#18232c}
+.phone-notch{top:7px;width:60px;height:17px;background:#08090d;border-radius:12px;z-index:3;box-shadow:inset 0 0 2px #45454e}.phone-notch i{position:absolute;right:8px;top:5px;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#376282,#101c3e 55%,#05080f)}
+.phone-title{font-weight:700;margin:0 6px 4px}.north{color:#3b746d}#phone-map{height:210px;border-radius:16px 16px 8px 8px}.phone-caption{margin:6px;color:#49616b;font-size:11px}.phone-home{background:#202328;width:64px;height:4px;bottom:5px}
+@media(max-width:800px){#phone{padding-top:32px;height:270px}#phone-map{height:179px}.phone-status{font-size:8px;left:9px;right:9px}.phone-notch{width:48px}}
+
+/* Keep the actual plaza visible; diagnostics expand when needed. */
+header{top:22px;left:24px}h1{font-size:22px;margin-top:5px}.eyebrow{font-size:11px}h1 span{font-size:10px;margin-top:4px}
+#debug{top:22px;right:22px;width:222px;padding:12px;border-radius:8px}#debug .panel-title{margin:0;cursor:pointer;font-size:11px;letter-spacing:.07em}#debug[open] .panel-title{margin-bottom:12px}
+#reset{position:absolute;top:22px;right:258px;width:auto;font-size:12px;background:#101b26dc;border-color:#ffffff30;border-radius:8px;padding:12px}
+#status{top:auto;bottom:92px;left:24px;max-width:calc(100% - 265px);padding:7px 10px;font-size:12px;border-left:2px solid #55ebcf;background:#101b26a8}
+#source{bottom:132px;left:24px;font-size:10px;max-width:350px;color:#c5d3de}#source span{font-size:10px}
+footer{bottom:30px;left:24px!important;padding:10px 12px!important;font-size:12px;max-width:calc(100vw - 265px)!important}
+@media(max-width:800px){#reset{top:20px;right:12px;font-size:10px}#status{bottom:98px;max-width:calc(100% - 36px)}#source{bottom:145px;max-width:160px}footer{bottom:30px;width:calc(100% - 48px);max-width:none!important}}
+
+#red-steps{position:absolute;top:69px;right:258px;width:auto;font-size:12px;background:#8e2546e8;border:1px solid #f78ba759;border-radius:8px;padding:10px 14px}#red-steps:hover{background:#b92f57}@media(max-width:800px){#red-steps{top:61px;right:12px;font-size:10px}}
+#visit-subway{position:absolute;top:113px;right:258px;width:auto;font-size:12px;background:#174f46ed;border:1px solid #86c8ac59;border-radius:8px;padding:10px 14px}#visit-subway:hover{background:#246e5d}@media(max-width:800px){#visit-subway{top:101px;right:12px;font-size:10px}}
+#visit-shops{position:absolute;top:157px;right:258px;width:auto;font-size:12px;background:#785627ed;border:1px solid #e3c18a66;border-radius:8px;padding:10px 14px}#visit-shops:hover{background:#98723a}@media(max-width:800px){#visit-shops{top:141px;right:12px;font-size:10px}}
+#visit-hard-rock{position:absolute;top:201px;right:258px;width:auto;font-size:12px;background:#6b3031ed;border:1px solid #efb88d80;border-radius:8px;padding:10px 14px}#visit-hard-rock:hover{background:#93453b}@media(max-width:800px){#visit-hard-rock{top:181px;right:12px;font-size:10px}}
+#visit-nypd{position:absolute;top:245px;right:258px;width:auto;font-size:12px;background:#234665ed;border:1px solid #8daecf80;border-radius:8px;padding:10px 14px}#visit-nypd:hover{background:#355f87}@media(max-width:800px){#visit-nypd{top:221px;right:12px;font-size:10px}}
+
+#visit-nasdaq{position:absolute;top:289px;right:258px;width:auto;font-size:12px;background:#154b69ed;border:1px solid #72c2e080;border-radius:8px;padding:10px 14px}#visit-nasdaq:hover{background:#196b91}@media(max-width:800px){#visit-nasdaq{top:221px;right:178px;font-size:10px}}
+
+#visit-recruiting{position:absolute;top:333px;right:258px;width:auto;font-size:12px;background:#294758ed;border:1px solid #b6cbd980;border-radius:8px;padding:10px 14px}#visit-recruiting:hover{background:#3b657b}@media(max-width:800px){#visit-recruiting{top:261px;right:auto;left:18px;font-size:10px;max-width:175px}}
+#visit-lyric{position:absolute;top:377px;right:258px;width:auto;font-size:12px;background:#57432aed;border:1px solid #d4b77d80;border-radius:8px;padding:10px 14px}#visit-lyric:hover{background:#7b5b31}@media(max-width:800px){#visit-lyric{top:301px;right:auto;left:18px;font-size:10px;max-width:175px}}
+#visit-buses{position:absolute;top:421px;right:258px;width:auto;font-size:12px;background:#23546aed;border:1px solid #a9c5cf80;border-radius:8px;padding:10px 14px}#visit-buses:hover{background:#316d87}@media(max-width:800px){#visit-buses{top:341px;right:auto;left:18px;font-size:10px;max-width:175px}}
+#visit-terminal{position:absolute;top:465px;right:258px;width:auto;font-size:12px;background:#2b4168ed;border:1px solid #a4b5d580;border-radius:8px;padding:10px 14px}#visit-terminal:hover{background:#405b86}@media(max-width:800px){#visit-terminal{top:381px;right:auto;left:18px;font-size:10px;max-width:175px}}
+
+#visit-cinemas{position:absolute;top:509px;right:258px;width:auto;font-size:12px;background:#693c3eed;border:1px solid #d5afa080;border-radius:8px;padding:10px 14px}#visit-cinemas:hover{background:#8b4c43}@media(max-width:800px){#visit-cinemas{top:421px;right:auto;left:18px;font-size:10px;max-width:175px}}
+
+#visit-attractions{position:absolute;top:553px;right:258px;width:auto;font-size:12px;background:#3d456fed;border:1px solid #c7ae8880;border-radius:8px;padding:10px 14px}#visit-attractions:hover{background:#555d8f}@media(max-width:800px){#visit-attractions{top:461px;right:auto;left:18px;font-size:10px;max-width:175px}}
+#visit-new-retail{position:absolute;top:597px;right:258px;width:auto;font-size:12px;background:#633943ed;border:1px solid #e2a2aa80;border-radius:8px;padding:10px 14px}#visit-new-retail:hover{background:#85454f}@media(max-width:800px){#visit-new-retail{top:501px;right:auto;left:18px;font-size:10px;max-width:175px}}
+
+/* Keep the walking view clear; landmark shortcuts remain available. */
+#w48-update{position:absolute;right:22px;top:145px;z-index:5;display:flex;flex-direction:column;gap:6px;width:222px;padding:12px;background:#101b26ed;border:1px solid #64d6bd70;border-radius:8px;color:#bce9df;font:11px Arial,sans-serif}#w48-update button{position:static;width:100%;text-align:left;font-size:12px;padding:8px;border-radius:5px}#places[open]~#w48-update{display:none}@media(max-width:800px){#w48-update{right:12px;top:165px;width:180px}}
+#places{position:absolute;top:78px;right:22px;width:222px;z-index:5;background:#101b26ed;border:1px solid #ffffff30;border-radius:8px;color:#e2edf2;font:12px Arial,sans-serif;padding:12px}
+#places summary{cursor:pointer;font-weight:600}
+#places .places-list{display:flex;flex-direction:column;gap:7px;margin-top:12px;max-height:52vh;overflow:auto}
+#places button{position:static;top:auto;left:auto;right:auto;width:100%;max-width:none;text-align:left;margin:0;font-size:12px;padding:9px 10px;border-radius:6px}
+#debug[open]~#places{top:390px}
+@media(max-width:800px){#places{top:102px;right:12px;width:180px}#places .places-list{max-height:42vh}}
+
+#character-panel{position:absolute;top:112px;left:24px;z-index:5;display:flex;flex-direction:column;gap:7px;width:205px;padding:11px 13px;background:#101b26e8;border:1px solid #ffffff30;border-radius:8px;color:#e2edf2;font:12px Arial,sans-serif}
+#character-panel label{font-size:10px;letter-spacing:.10em;text-transform:uppercase;color:#a7c4c4}
+#character-select{width:100%;color:#e4f2f0;background:#1b2e3b;border:1px solid #56777b;border-radius:5px;padding:7px;font:12px Arial,sans-serif;cursor:pointer}
+#character-select:focus-visible{outline:2px solid #64d6bd;outline-offset:3px}
+@media(max-width:800px){#character-panel{top:114px;left:18px;width:165px;padding:9px}}
+
+#multiplayer{position:absolute;top:205px;left:24px;width:245px;z-index:6;background:#101b26ed;border:1px solid #ffffff30;border-radius:8px;padding:12px;color:#e2edf2;font:12px Arial,sans-serif}
+#multiplayer summary{cursor:pointer;font-weight:600;display:flex;justify-content:space-between;gap:10px}
+#room-count{color:#76d9c4;font-size:11px;font-weight:400}
+.room-content{margin-top:13px;max-height:calc(100vh - 370px);overflow:auto}
+#multiplayer label{display:block;font-size:11px;color:#b0c9cb;margin:11px 0 6px}
+#multiplayer input{width:100%;min-width:0;padding:8px;color:#f1f6f5;background:#182b36;border:1px solid #56777b;border-radius:5px;font:13px Arial,sans-serif}
+#multiplayer input:focus-visible{outline:2px solid #64d6bd;outline-offset:2px}
+#multiplayer button{font-size:12px;padding:9px;margin-top:9px;border-radius:5px}
+#multiplayer button:disabled{opacity:.5;cursor:wait}
+#room-create{background:#23594f;border-color:#6fae9b}
+.room-join-row{display:flex;gap:7px}.room-join-row #room-code{width:128px;letter-spacing:.13em}.room-join-row #room-join{width:auto;margin:0;flex:1}
+.room-hint{font-size:11px;line-height:1.5;color:#a2b8bc;margin-bottom:0}
+.room-code-display{font-size:12px;color:#b0c9cb}.room-code-display strong{font-size:22px;letter-spacing:.12em;color:#f4fcf9;display:block;margin-top:5px}
+#room-connection{font-size:11px;color:#76d9c4;line-height:1.4;margin:8px 0}
+#room-roster{list-style:none;padding:0;margin:12px 0;font-size:11px;color:#d6e3e4;line-height:1.5}
+#room-roster li{padding:5px 0;border-bottom:1px solid #ffffff15}
+#room-leave{background:transparent;border-color:#7c8084;color:#d1dbdd}
+#room-error{color:#f0b0a6;font-size:11px;line-height:1.5;margin:8px 0 0}#room-error:empty{display:none}
+#room-notice{color:#76d9c4;font-size:11px;line-height:1.5;margin:8px 0 0}#room-notice:empty{display:none}
+@media(max-width:800px){#multiplayer{top:200px;left:18px;width:180px;padding:9px}.room-content{max-height:calc(100vh - 370px)}.room-join-row #room-code{width:97px}.room-code-display strong{font-size:19px}.room-hint{font-size:10px}}
+#multiplayer{width:290px}#room-stage{font-size:15px;margin:16px 0 6px}#room-progress{font-size:18px;font-weight:700;color:#f0f8f4;margin:8px 0}#room-start{background:#23594f;border-color:#6fae9b;font-weight:700;letter-spacing:.05em}#room-roster li{border-left:3px solid var(--player-color);padding:7px 8px;margin:5px 0}#multiplayer [hidden]{display:none!important}#multiplayer-debug{position:absolute;right:22px;bottom:155px;width:222px;z-index:7;padding:12px;background:#101b26ed;border:1px solid #ffffff30;border-radius:8px;font:11px Arial,sans-serif}#multiplayer-debug summary{cursor:pointer;color:#76d9c4;font-weight:600}#multiplayer-debug dl{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}#multiplayer-debug dd{margin:0;font-size:12px;text-align:right}#multiplayer-debug dt{font-size:11px}@media(max-width:800px){#multiplayer{width:225px}#multiplayer-debug{left:18px;right:auto;bottom:175px;width:205px}#multiplayer-debug:not([open]){width:190px}}
+
+/* Vehicle door travel shares the game's compact night UI. */
+#character-panel{width:225px}#character-panel label{font-size:14px;letter-spacing:0;text-transform:none}#character-panel select{font-size:14px;width:100%}
+#multiplayer{top:300px}.room-content{max-height:calc(100vh - 390px)}
+#transport-prompt{position:absolute;left:50%;bottom:145px;transform:translateX(-50%);z-index:9;width:max-content;max-width:calc(100vw - 50px);display:flex;gap:14px;align-items:center;background:#101b26f2;color:#edf7f6;border:1px solid #91c5b9;border-radius:8px;padding:12px 16px;font-size:16px;line-height:1.5;box-shadow:0 8px 24px #0008}
+#transport-prompt[hidden],#transport-prompt button[hidden]{display:none}#transport-prompt button{width:auto;flex:none;font-size:14px;padding:9px 14px}#transport-prompt button:disabled{opacity:.5}
+#transport-fade{position:absolute;inset:0;pointer-events:none;z-index:8;background:#03080f;opacity:0;transition:opacity .16s ease}#transport-fade.active{opacity:.88}
+@media(max-width:800px){#character-panel{width:225px}#multiplayer{top:290px}.room-content{max-height:calc(100vh - 420px)}#transport-prompt{bottom:80px;max-width:calc(100vw - 24px);font-size:14px;padding:10px;gap:8px}}
+@media(prefers-reduced-motion:reduce){#transport-fade{transition:none}}
+
+/* Keep the full-area map visible above the phone's emergency-call control. */
+#phone{height:auto}
+#phone-call-911{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;margin-top:8px;padding:10px 8px;background:#b72736;border:1px solid #9f1d2b;border-radius:13px;color:#fff;font-size:13px;font-weight:700}
+#phone-call-911:hover{background:#97202d}
+#phone-call-911 svg,#phone-end-call svg{width:18px;height:18px;flex:none;fill:currentColor}
+#phone-emergency{position:absolute;inset:32px 5px 18px;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px 10px;border-radius:16px;background:linear-gradient(160deg,#183d4d,#0f242d);color:#fff;text-align:center}
+#phone-emergency[hidden]{display:none}
+#phone-emergency h2{margin:0;font-size:36px;font-weight:500;letter-spacing:.03em}
+.phone-call-name{margin:0;font-size:13px}
+#phone-call-status{margin:4px 0 12px;font-size:11px;line-height:1.6;color:#c1d8df}
+#phone-call-status strong{display:block;color:#80d7c2;font-weight:600}
+#phone-end-call{width:48px;min-height:48px;display:grid;place-items:center;background:#dc3447;border:0;border-radius:50%;padding:12px}
+#phone-end-call:hover{background:#f64b5e}
+#phone-end-call svg{transform:rotate(135deg);width:22px;height:22px}
+.phone-end-label{font-size:11px;color:#d4e2e5}
+#phone button:focus-visible{outline:3px solid #087f6b;outline-offset:3px}
+#phone-emergency button:focus-visible{outline-color:#94e7d3}
+@media(max-width:800px){#phone-call-911{font-size:12px}.phone-caption{font-size:10px;gap:4px;margin:6px 2px}.phone-call-name{font-size:12px}}
+
+/* Manson's phone uses an operational dispatch screen over the same district. */
+#phone{background:#132631;color:#e0edf1}
+.phone-status{color:#d5e5eb}.phone-title,.north{color:#d5e5eb}#phone-map{background:#1b3643;border:1px solid #426171}.phone-caption{color:#b2cbd5}.phone-home{background:#dce7eb}
+#transport-access{display:block;padding:8px;border:1px solid #56777b;border-radius:5px;color:#9bddcb;font-size:14px;background:#1b2e3b}
+#phone-call-hint{margin:6px 2px 0;font-size:12px;line-height:1.35;color:#b2cbd5}#phone-call-hint:empty{display:none}
+#phone[data-mode="police"]{width:222px;border-color:#111a22}
+#phone[data-mode="police"] .phone-title{font-size:14px;letter-spacing:.06em}
+#phone[data-mode="police"] .north{font-size:12px;letter-spacing:0}
+#phone[data-mode="police"] #phone-map{height:255px}
+#phone-dispatch-bar{display:flex;justify-content:space-between;align-items:center;margin:2px 4px 8px;font-size:12px;color:#81d3c0}
+#phone-alert-count{color:#ff7e90;font-size:12px;font-weight:600}
+#phone-dispatch-status{font-size:12px;line-height:1.4;margin:8px 4px 5px;color:#c2d7df}
+#phone-dispatch-list{list-style:none;margin:0 4px;padding:0;font-size:14px;line-height:1.5;color:#ffa5b1}
+#phone-dispatch-list li{padding:3px 0;border-top:1px solid #ff344e30}
+#phone [hidden]{display:none!important}
+.dispatch-map-alert{animation:dispatch-blink .9s ease-in-out infinite}
+@keyframes dispatch-blink{0%,100%{opacity:1}50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.dispatch-map-alert{animation:none}}
+@media(max-width:800px){#phone[data-mode="police"]{width:188px}#phone[data-mode="police"] #phone-map{height:213px}#phone[data-mode="police"] .phone-title{font-size:12px}.phone-status{font-size:9px}}
+
+/* One server-timed match clock, visible in civilian and dispatch phones. */
+#phone-match-timer{display:flex;align-items:center;justify-content:space-between;gap:6px;min-height:38px;margin:4px 4px 8px;padding:5px 8px;border:1px solid #547988;border-radius:10px;background:#1d3b49}
+#phone-timer-label{font-size:11px;line-height:1.2;color:#c8dce4}
+#phone-time-left{font-size:23px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:-.04em;color:#e9fbff}
+#phone-match-timer[data-state="urgent"],#phone-match-timer[data-state="ended"]{border-color:#dc6376;background:#492530}
+#phone-match-timer[data-state="urgent"] #phone-time-left,#phone-match-timer[data-state="ended"] #phone-time-left{color:#ff9cab}
+#phone-match-timer[data-state="ended"] #phone-timer-label{color:#ffd4dc}
+#phone-emergency{top:104px}
+@media(max-width:800px){#phone-match-timer{margin:4px 2px 8px;padding:5px 6px}#phone-time-left{font-size:21px}#phone-timer-label{font-size:10px}}
+
+/* Witnessing happens through the camera; the phone reviews the appearance. */
+#report-reticle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:9px;height:9px;border:1px solid #e8f7ffbd;border-radius:50%;box-shadow:0 0 4px #000;z-index:2;pointer-events:none}
+#report-prompt{position:absolute;left:50%;top:calc(50% + 55px);transform:translateX(-50%);width:min(330px,calc(100vw - 36px));padding:12px 16px;background:#112733eb;border:1px solid #93bac780;border-radius:14px;z-index:3;text-align:center;box-shadow:0 6px 20px #0008}
+#report-prompt strong,#report-description{display:block;font-size:14px;line-height:1.4}#report-description{margin:5px 0;color:#c6dce5}
+#report-open{display:block;margin:8px auto 0;min-height:40px;padding:8px 12px;background:#214b5e;border-color:#5b8292;font-size:14px}
+#report-reticle[hidden],#report-prompt[hidden]{display:none}
+#phone-suspect{margin:8px 2px 0;padding:9px 8px;border:1px solid #4c7a8d;border-radius:10px;background:#1c3d4c}
+#phone-suspect-title{display:block;font-size:12px;color:#a7c9d8}#phone-suspect-description{margin:5px 0 0;font-size:14px;line-height:1.35;color:#edf7fa}
+#phone-suspect-detail{margin:6px 0 0;font-size:12px;line-height:1.3;color:#b5cfdb}
+#phone-call-detail{display:block;font-size:14px;line-height:1.4}
+#phone[data-mode="police"]{width:250px}#phone-dispatch-list{max-height:220px;overflow-y:auto;overscroll-behavior:contain}
+#phone-dispatch-list .phone-report{padding:10px 0;border-top:1px solid #ff64704d;color:#dcebf1;font-size:14px;line-height:1.35}
+.phone-report-heading{color:#ff91a3;font-size:12px;letter-spacing:.08em}.phone-report p{margin:5px 0}.phone-report-kind,.phone-report-age,.phone-report-time{font-size:12px;color:#b4ccd7}.phone-report-description{display:block;margin:7px 0;color:#fff0f3;font-size:14px}
+@media(max-width:800px){#phone[data-mode="police"]{width:218px}#phone-dispatch-list{max-height:165px}#report-prompt{top:calc(50% + 40px);width:260px}#phone-call-hint{font-size:12px}}
+@media(max-height:740px){#phone-map{height:150px}#phone[data-mode="police"] #phone-map{height:170px}#phone-dispatch-list{max-height:120px}}
+
+/* Private round objectives and short world interactions use the night HUD. */
+#round-role{position:absolute;top:20px;left:50%;transform:translateX(-50%);z-index:8;width:330px;max-width:calc(100vw - 40px);padding:12px 16px;background:#0c1824e8;border:1px solid #8aa6b84d;border-radius:12px;box-shadow:0 8px 25px #0005;color:#edf8fa;pointer-events:none}
+#round-role-title{font-size:14px;letter-spacing:.10em;color:#8ac9f7}#round-role[data-role=THIEF] #round-role-title{color:#f3c48a}#round-role[data-role=PEDESTRIAN] #round-role-title{color:#8ae0ce}
+#round-money{float:right;font-size:17px}#round-objective,#round-cooldown{margin:7px 0 0;font-size:14px;line-height:1.4}#round-cooldown{color:#ffb3ac}
+#round-intro{position:absolute;top:25%;left:50%;transform:translateX(-50%);z-index:11;width:460px;max-width:calc(100vw - 32px);padding:24px;background:#0c1824f2;border:1px solid #7b9eb370;border-top:3px solid #8ac9f7;border-radius:14px;box-shadow:0 16px 55px #0009;color:#eef7fb}
+#round-intro[data-role=THIEF]{border-top-color:#f3c48a}#round-intro[data-role=PEDESTRIAN]{border-top-color:#8ae0ce}#round-intro h2{font-size:25px;letter-spacing:.03em;margin:0 0 14px}#round-intro p{font-size:16px;line-height:1.55;margin:10px 0}#round-intro-detail{color:#b6cbd8}#round-dismiss{width:auto;min-width:100px;margin-top:10px}
+#round-toast{position:absolute;top:115px;left:50%;transform:translateX(-50%);z-index:10;padding:12px 18px;width:max-content;max-width:calc(100vw - 40px);font-size:16px;line-height:1.5;background:#163429f2;border:1px solid #8dddac80;border-radius:10px;color:#e4ffe9;box-shadow:0 8px 30px #0008}#round-toast[data-kind=wrongful_arrest],#round-toast[data-kind=interrupted]{background:#44252af2;border-color:#ee9c9c80;color:#ffe0d9}
+#interaction-prompt{position:absolute;left:50%;bottom:145px;transform:translateX(-50%);z-index:10;display:flex;align-items:center;gap:12px;width:max-content;max-width:calc(100vw - 40px);padding:12px 16px;border:1px solid #adc1d270;border-radius:12px;background:#0c1824f2;color:#f2f7fa;box-shadow:0 8px 25px #0007}
+#interaction-label{font-size:16px}#interaction-detail{font-size:14px;color:#c0d1de;line-height:1.4;margin:4px 0 0}#interaction-hold{width:auto;min-width:64px;touch-action:none;font-size:14px}
+#interaction-progress{position:relative;width:44px;height:44px;flex:none}#interaction-progress svg{width:44px;height:44px;transform:rotate(-90deg)}#interaction-progress circle{fill:none;stroke-width:3;stroke:#96d7c4}.ring-track{stroke:#486070!important}#interaction-progress span{position:absolute;inset:0;display:grid;place-items:center;font-size:17px;font-weight:700}
+#round-result{position:absolute;inset:0;z-index:20;display:grid;place-items:center;background:#030913b5;backdrop-filter:blur(5px);padding:20px;pointer-events:none}
+.round-result-card{pointer-events:auto;width:460px;max-width:100%;max-height:calc(100dvh - 40px);overflow:auto;text-align:center;padding:34px 28px;background:#0d1b29f5;border:1px solid #6c97b178;border-top:3px solid #82c7fb;border-radius:16px;box-shadow:0 25px 80px #0008}
+#round-result[data-winner=THIEF] .round-result-card{border-top-color:#f3c48a}.round-result-kicker{font-size:12px;letter-spacing:.12em;color:#a4b8c7}.round-result-card h2{font-size:38px;letter-spacing:.04em;margin:24px 0 18px}.round-result-card p{font-size:16px;line-height:1.55;color:#c7d9e3}#round-result-money{display:block;font-size:22px;margin:22px 0}#round-rematch{margin-top:10px;min-height:46px;font-size:16px;font-weight:700;background:#23594f;border-color:#85bdab}#round-rematch:disabled{opacity:.5;cursor:wait}#round-rematch-status{font-size:14px;margin-bottom:0}
+#round-role[hidden],#round-intro[hidden],#round-toast[hidden],#interaction-prompt[hidden],#round-result[hidden],#round-money[hidden],#round-cooldown[hidden],#round-rematch[hidden]{display:none!important}
+.phone-report-claim{display:flex;align-items:center;gap:6px;margin-top:7px;font-size:14px;line-height:1.4}.phone-report-claim input{accent-color:#a62635;flex:none;width:17px;height:17px;margin:0}
+body.in-match #multiplayer:not([open]){top:22px}body.in-match #character-panel{display:none}body.in-match #places,body.in-match #red-steps{display:none}body.in-match #report-prompt{bottom:240px}
+@media(max-width:1100px){#round-role{top:115px;width:300px}#round-toast{top:205px}}
+@media(max-width:800px){#round-role{top:78px;left:18px;transform:none;width:calc(100vw - 36px)}#round-toast{top:182px;font-size:14px}#round-intro{top:25%;padding:20px}#round-intro h2{font-size:22px}#interaction-prompt{bottom:155px;padding:10px;gap:8px;width:calc(100vw - 30px)}#interaction-label{font-size:14px}#interaction-detail{font-size:14px}.round-result-card{padding:26px 20px}.round-result-card h2{font-size:30px}body.in-match #multiplayer:not([open]){top:auto;bottom:95px;left:18px;width:190px}body.in-match #report-prompt{bottom:260px}}
+@media(max-height:650px){#round-intro{top:16%;max-height:65vh;overflow:auto}#round-role{top:15px;left:50%;transform:translateX(-50%);width:300px}#round-toast{top:105px}#interaction-prompt{bottom:100px}.round-result-card h2{margin:12px 0}.round-result-card{padding:20px}}
+
+#phone-wallet{display:grid;grid-template-columns:1fr auto;gap:5px;margin:8px 4px;padding:10px;background:#193b3b;border:1px solid #527f79;border-radius:10px;font-size:14px;color:#cbe5df}#phone-wallet-balance{color:#f2fff7;font-size:18px}#phone-wallet-loss{grid-column:1/-1;color:#ff9a9a;font-size:14px}#phone-wallet[hidden],#phone-wallet-loss[hidden],body.is-thief .report-help{display:none!important}#round-toast[data-kind=wallet_loss]{border-color:#c47276;color:#ffc7c7}
+#round-toast[data-kind=false_report]{border-color:#d48464;color:#ffd6bd}#round-awards{display:grid;gap:10px;margin:18px 0}.round-award{text-align:left;padding:14px 16px;border:1px solid #baa76f75;border-radius:10px;background:#b3923614}.round-award>strong{font-size:14px;letter-spacing:.06em;color:#f3d48d}.round-award p{margin:6px 0;font-size:16px}.round-award>span{font-size:14px;color:#cfdeb9}#round-result-reward{color:#abe8c5;font-weight:600}#round-awards[hidden],#round-result-reward[hidden]{display:none!important}
+
+#w48-scene-check{position:absolute;left:24px;bottom:175px;z-index:7;padding:7px 10px;border-radius:5px;background:#102a25ed;color:#b9e8d2;font:11px Arial,sans-serif;max-width:calc(100vw - 280px)}body[data-startup-error=true] #w48-scene-check{background:#642e2e;color:#fff}@media(max-width:800px){#w48-scene-check{left:18px;bottom:235px;max-width:calc(100vw - 195px)}}
+/* MTA phone app: keep the street map visible while planning. */
+#phone-mta-open{display:flex;align-items:center;gap:7px;width:100%;margin:4px 0 6px;padding:7px 8px;min-height:34px;background:#133c70;color:#fff;border:1px solid #659bd4;border-radius:9px;font-size:12px;font-weight:700}
+.mta-icon{display:grid;place-items:center;background:#fff;color:#154d98;width:27px;height:23px;border-radius:5px;font-size:10px;font-weight:900}
+#phone-mta{padding:8px;background:#102031;border:1px solid #48719a;border-radius:9px;margin-bottom:6px;font-size:11px;line-height:1.4}
+#phone-mta label{display:block;font-weight:bold;margin-bottom:4px}#mta-street{width:100%;font:inherit;padding:7px 3px;background:#193c56;color:#fff;border:1px solid #7a9fb5;border-radius:5px}#mta-result{margin:7px 0;color:#e4eef9}#phone-mta small{display:block;font-size:10px;color:#b6cfe6}#mta-clear{font-size:11px;min-height:28px;padding:4px 8px;margin:0 0 7px;background:#263e52;color:#fff;border:1px solid #7090ab;border-radius:5px}
+.mta-board-blink{animation:mta-blink .85s ease-in-out infinite}.mta-board-blink circle{fill:#f2b52f;stroke:#fff5c0;stroke-width:6}.mta-board-blink text{fill:#162539}.mta-destination circle{stroke:#66caff;stroke-width:7;fill:#0a4c95}
+@keyframes mta-blink{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){.mta-board-blink{animation:none}}
+#phone:has(#phone-mta:not([hidden])){max-height:calc(100dvh - 76px);overflow-y:auto;scrollbar-width:thin}#phone:has(#phone-mta:not([hidden])) #phone-map{height:170px}
+
+/* The playable view keeps the phone and keyboard instruction box clear. */
+body:not(.home-open) #game-shell>header,
+#debug,#places,#character-panel,#w48-update,#w48-scene-check,#multiplayer-debug,
+#red-steps,#reset,[id^="visit-"],#home-return{display:none!important}
+#phone #multiplayer{position:relative;inset:auto;width:100%;margin:6px 0;padding:8px;z-index:15;background:#122631;border:1px solid #496675;border-radius:8px;font-size:11px}
+#phone #multiplayer>summary{font-size:11px;cursor:pointer;display:flex;justify-content:space-between;gap:5px;color:#d6efef}
+#phone #multiplayer[open]{position:absolute;top:100px;left:6px;right:6px;bottom:18px;width:auto;margin:0;overflow:auto;background:#101f2cf7;box-shadow:0 5px 22px #0009}
+#phone #multiplayer .room-content{max-height:none;overflow:visible}#phone #multiplayer .room-hint{font-size:10px;line-height:1.5}#phone #multiplayer button{font-size:11px;padding:9px}#phone #multiplayer input{max-width:100%;font-size:12px}#phone #multiplayer .room-join-row{grid-template-columns:minmax(0,1fr) auto}#phone #multiplayer #room-code{width:100%}#phone #multiplayer #room-progress{font-size:14px}#phone #multiplayer #room-stage{font-size:13px}#phone #multiplayer #room-roster{padding-left:18px}#phone #multiplayer #room-count{font-size:10px;white-space:nowrap}
+#interaction-hold,#report-open{display:none!important}
+/* Fixed iPhone-like 390:844 frame. Apps scroll inside the display. */
+#phone,#phone[data-mode="police"],#phone:has(#phone-mta:not([hidden])){width:226px!important;height:489px!important;aspect-ratio:390/844;padding:0!important;right:22px;bottom:105px;border:6px solid #111318;border-radius:36px;background:linear-gradient(150deg,#19334c,#123c4b 55%,#071725);overflow:hidden!important;max-height:none!important;box-shadow:0 0 0 1px #82919c,0 0 0 3px #292c32,0 12px 35px #0009;color:#f2f7fb}
+#phone>.phone-status{top:13px;left:16px;right:14px;font-size:9px;z-index:6;color:#fff}#phone>.phone-notch{top:8px;width:69px;height:20px;border-radius:18px;z-index:7}#phone>.phone-title{display:none}.iphone-screen{position:absolute;inset:42px 9px 22px;display:flex;flex-direction:column;gap:6px;overflow:hidden}
+#phone #phone-match-timer{flex:none;margin:0;padding:7px 9px;min-height:36px;font-size:9px;border-radius:10px;background:#ffffff0b}#phone #phone-time-left{font-size:20px}#phone #phone-timer-label{font-size:9px;max-width:90px}.phone-app-bar{display:flex;align-items:center;gap:9px;min-height:29px;flex:none}.phone-app-bar[hidden]{display:none}.phone-app-bar button{width:auto;padding:4px 0;border:0;background:transparent;color:#8ed4ff;font-size:11px}.phone-app-bar strong{font-size:12px}
+#phone-apps{flex:1;background:radial-gradient(ellipse at 65% 80%,#1d787033,transparent 70%)}#phone-apps[hidden]{display:none}.phone-home-heading{text-align:center;font-size:22px;font-weight:600;margin:26px 0 30px;letter-spacing:-.04em}.phone-home-heading span{display:block;font-size:10px;color:#9abfcf;font-weight:400;letter-spacing:0;margin-top:8px}.phone-app-grid{display:grid;grid-template-columns:1fr 1fr;gap:23px 20px;padding:0 18px}
+#phone .phone-app-icon,#phone #phone-mta-open.phone-app-icon{display:flex;flex-direction:column;align-items:center;gap:7px;width:100%;padding:0;margin:0;background:transparent;border:0;border-radius:0;min-height:0;color:white}.phone-app-icon>span{display:grid;place-items:center;width:57px;height:57px;border-radius:14px;box-shadow:0 3px 10px #0003}.phone-app-icon svg{width:42px;height:42px}.phone-app-icon small{font-size:10px;font-weight:400}.app-mta>span{background:#0656ac;font:bold 18px Arial;letter-spacing:-1px}.app-maps>span{background:#88c78b}.app-phone>span{background:linear-gradient(#4be078,#18a946)}.app-camera>span{background:linear-gradient(#adb7c4,#758390)}
+.phone-app-pane{position:relative;flex:none;overflow:auto;min-height:0;font-size:11px;scrollbar-width:thin}.phone-app-pane[hidden],.phone-map-pane[hidden]{display:none!important}.phone-map-pane{flex:1;min-height:0;display:flex;flex-direction:column;gap:4px}.phone-map-pane #phone-map,#phone[data-mode="police"] .phone-map-pane #phone-map{height:100%!important;min-height:0;flex:1;width:100%;border-radius:9px}.phone-map-pane .phone-caption{font-size:8px;line-height:1.4;flex:none;margin:0}.phone-app-pane[data-pane=mta]{max-height:170px}.phone-app-pane #phone-mta{margin:0;font-size:10px;padding:7px}.phone-app-pane[data-pane=phone],.phone-app-pane[data-pane=camera]{flex:1}.phone-app-pane h3{font-size:14px;margin:8px 0 14px}#phone-app-title{display:block;color:#91b4c5;font-size:9px;letter-spacing:.1em;margin-bottom:10px}#phone #phone-call-911{font-size:13px;padding:12px 6px;min-height:42px}#phone #phone-call-hint,#phone #phone-dispatch-status{font-size:10px;line-height:1.5}#phone #phone-suspect{font-size:10px;padding:7px}#phone #phone-suspect p{font-size:10px}#phone #phone-emergency{inset:0;padding:10px;z-index:10}#phone #phone-wallet{font-size:10px;padding:7px;margin:7px 0}#phone #phone-wallet-balance{font-size:13px}
+#phone .phone-home{position:absolute;left:50%;bottom:7px;transform:translateX(-50%);width:65px;height:4px;min-height:4px;padding:0;border:0;background:#dce5ed;border-radius:5px;z-index:20}
+.phone-camera-view{position:relative;height:210px;border:1px solid #65828c;background:linear-gradient(140deg,#172c3b,#071219);display:grid;place-items:center;overflow:hidden;border-radius:7px}.phone-camera-view>span{font-size:11px;text-align:center;padding:14px;color:#a9bfc9}.phone-camera-view img{width:100%;height:100%;object-fit:contain}.phone-camera-view img[hidden]{display:none}.phone-camera-view:after{content:'';position:absolute;inset:15px;border:1px solid #ffffff25;pointer-events:none}#phone-camera-status{text-align:center;font-size:10px;color:#9db4c5}#phone #phone-shutter{display:block;width:46px;height:46px;padding:0;border:3px solid #dce2e8;border-radius:50%;background:#fff;color:#fff;margin:12px auto;font-size:26px;box-shadow:inset 0 0 0 3px #1b2e3d}#phone-photo-save{display:block;text-align:center;color:#95d1ff;font-size:11px}#phone-photo-save[hidden]{display:none}
+/* Compact session card, independent of the phone. */
+#multiplayer,body.in-match #multiplayer:not([open]){position:absolute;top:18px;left:18px;bottom:auto;right:auto;width:242px;padding:12px 14px;background:#0e1d29e8;border:1px solid #55708275;border-radius:10px;font:12px Arial;z-index:8;backdrop-filter:blur(8px)}#multiplayer>summary{display:flex;justify-content:space-between;list-style:none;font-size:11px;font-weight:bold;pointer-events:none}#multiplayer>summary::-webkit-details-marker{display:none}#multiplayer .room-content{max-height:50vh;overflow:auto}#multiplayer .room-code-display{margin-top:12px;font-size:10px;display:flex;align-items:center;justify-content:space-between}#multiplayer .room-code-display strong{font:700 23px monospace;letter-spacing:.08em}#multiplayer #room-stage{font-size:12px;margin:9px 0;color:#b8d4df}#multiplayer #room-progress,#multiplayer #room-roster,#multiplayer #room-start-hint,#multiplayer .room-hint{display:none}#multiplayer #room-connection{font-size:10px;margin:5px 0}#multiplayer button{font-size:11px;padding:8px;min-height:30px;margin:4px 0}#multiplayer #room-copy{background:transparent;color:#99c4df;border:0;padding:3px 0;min-height:20px;text-align:left}#multiplayer #room-leave{background:#48282e70;border-color:#95626a;color:#ffd0d2}#multiplayer #room-error,#multiplayer #room-notice{font-size:10px;margin:5px 0}#multiplayer #room-error:empty,#multiplayer #room-notice:empty{display:none}
+@media(max-height:700px){#phone,#phone[data-mode="police"]{transform:scale(.83);transform-origin:bottom right;bottom:88px;right:16px}}@media(max-width:600px){#phone,#phone[data-mode="police"]{transform:scale(.78);transform-origin:bottom right;bottom:115px;right:12px}#multiplayer,body.in-match #multiplayer:not([open]){top:12px;left:12px;width:200px;font-size:11px}#multiplayer .room-code-display strong{font-size:20px}}
+
+#multiplayer>.room-card-heading{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:700;color:#c2dbe6}
+
+#room-movement-note{font:10px/1.5 Arial;color:#d7c69a;margin:7px 0}#room-movement-note[hidden]{display:none}#world canvas:focus{outline:none}
+#phone .iphone-message-banner{position:absolute;z-index:40;top:42px;left:8px;right:8px;width:calc(100% - 16px);border:1px solid #ffffff55;border-radius:15px;background:#e7eaf2ee;color:#10131a;box-shadow:0 8px 25px #0006;padding:12px;text-align:left;backdrop-filter:blur(18px);font-size:11px;line-height:1.4}#phone .iphone-message-banner[hidden]{display:none}#phone .iphone-message-banner strong,#phone .iphone-message-banner span{display:block}#phone .iphone-message-banner strong:before{content:'●';color:#25b65a;margin-right:7px}.phone-messages{margin-top:20px}.phone-message{display:block;width:100%;padding:10px!important;text-align:left;background:#ffffff15!important;border:1px solid #ffffff20!important;border-radius:10px!important;margin:7px 0!important;color:#e7edf4;font-size:10px!important;line-height:1.45}.phone-message strong,.phone-message span{display:block}.phone-message strong{color:#fff;margin-bottom:3px}.phone-photo-jobs p{font-size:10px;line-height:1.4;padding:7px;background:#ffffff10;border-radius:6px}
+#phone-apps{overflow:auto;min-height:0;scrollbar-width:thin}
+#phone .iphone-message-banner{top:8px;left:6px;right:6px;width:calc(100% - 12px);display:flex;align-items:flex-start;gap:9px;padding:11px 10px!important;border-radius:16px;background:rgba(236,239,246,.94)!important;color:#17191f!important;border:1px solid #ffffff90!important;box-shadow:0 8px 24px #0005;text-align:left;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;animation:iphone-notification-drop .38s cubic-bezier(.18,.85,.3,1)}#phone .iphone-message-banner[hidden]{display:none!important}#phone .iphone-notification-icon{display:grid;place-items:center;width:29px;height:29px;flex:0 0 29px;border-radius:8px;background:linear-gradient(#61e87a,#1eb846);margin-top:9px}#phone .iphone-notification-icon svg{width:23px;height:23px}#phone .iphone-notification-content{display:block;min-width:0;flex:1}#phone .iphone-notification-meta{font-size:8px;line-height:1.5;color:#696d75;letter-spacing:.035em;margin-bottom:3px}#phone .iphone-message-banner strong{font-size:12px;line-height:1.4;margin-bottom:2px}#phone .iphone-message-banner strong:before{content:none}#phone .iphone-notification-content>span:last-child{font-size:11px;line-height:1.4}#phone-apps .phone-messages{display:none}@keyframes iphone-notification-drop{from{opacity:0;transform:translateY(-130%)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){#phone .iphone-message-banner{animation:none}}
+
+#round-dead{position:absolute;top:30%;left:50%;transform:translateX(-50%);z-index:19;width:420px;max-width:calc(100vw - 40px);padding:28px;text-align:center;border:2px solid #ff394e;border-radius:14px;background:#680d1aee;color:#fff0f2;box-shadow:0 0 70px #c0122855;pointer-events:none}#round-dead strong{font-size:36px;letter-spacing:.06em}#round-dead p{font-size:17px;line-height:1.5}#round-dead[hidden],#shoot-reticle[hidden]{display:none!important}#shoot-reticle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:28px;color:#fff;pointer-events:none;text-shadow:0 1px 4px #000;z-index:5}#round-toast[data-kind=shot],#round-toast[data-kind=dead]{background:#681422ef;border-color:#ff5066;color:#fff0f2}
+
+#round-death-notice{position:absolute;top:190px;left:50%;transform:translateX(-50%);z-index:21;max-width:calc(100vw - 40px);padding:14px 22px;border-radius:10px;background:#681422ef;border:1px solid #ff5066;color:#fff0f2;font-size:18px;pointer-events:none}#officer-shoot{position:absolute;right:30px;bottom:160px;z-index:12;padding:14px 20px;background:#6f2431;color:white;border-color:#fa7c8e}#round-death-notice[hidden],#officer-shoot[hidden]{display:none!important}
+
+#police-map-travel{flex:none;padding:7px 2px;font-size:10px;line-height:1.4}#police-map-travel[hidden]{display:none!important}#police-map-status{margin:0 0 6px;color:#d4e8f5}#police-map-travel label{display:block;margin-bottom:4px;color:#fff}#police-map-destination{width:100%;font:inherit;padding:6px 2px;border:1px solid #739ab8;border-radius:6px;background:#17364c;color:#fff}#police-map-go{width:100%;min-height:28px;margin-top:5px;padding:5px;font-size:11px;background:#195eb4;border:1px solid #85bdf1;color:#fff}#police-map-go:disabled{opacity:.45}.police-map-car{cursor:pointer}.police-map-car[aria-disabled=true]{cursor:default}.police-map-source rect{stroke:#ffdd75;stroke-width:6}.police-map-car:focus rect{stroke:#ffdd75;stroke-width:5}#phone[data-mode=police] .phone-home{display:none}#phone[data-mode=police] .phone-caption{font-size:8px}
+
+/* Central notifications live outside the phone and stack without overlap. */
+#game-notifications{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,calc(100vw - 600px));max-height:80vh;overflow:auto;display:flex;flex-direction:column;gap:12px;z-index:50;pointer-events:none}
+#game-notifications>section,#game-notifications>div,#game-notifications>.iphone-message-banner{position:relative;inset:auto;transform:none;margin:0;width:100%;max-width:100%;box-sizing:border-box;flex-shrink:0;text-align:center;pointer-events:auto}
+#game-notifications>[hidden]{display:none!important}#game-notifications:empty{display:none}
+#game-notifications>.iphone-message-banner{padding:16px;border-radius:14px;border:1px solid #c4d7df;background:#e7edf5;color:#17222b;font:14px/1.5 Arial;box-shadow:0 8px 30px #0008}
+#game-notifications .iphone-notification-meta{font-size:10px;color:#596a78}#game-notifications .iphone-notification-icon{display:none}#game-notifications .iphone-notification-content{display:grid;gap:5px}
+#multiplayer.match-active,body.in-match #multiplayer.match-active{width:auto;padding:0;border:0;background:none;backdrop-filter:none;box-shadow:none}
+#multiplayer.match-active>.room-card-heading,#multiplayer.match-active #room-active>:not(#room-leave),#multiplayer.match-active #room-notice,#multiplayer.match-active #room-error{display:none!important}
+#multiplayer.match-active .room-content{overflow:visible;max-height:none}#multiplayer.match-active #room-leave{margin:0;padding:10px 16px;background:#172b37;border:1px solid #698491}
+@media(max-width:900px){#game-notifications{width:min(420px,calc(100vw - 32px));max-height:85vh}body:has(#game-notifications>:not([hidden])) #phone,body:has(#game-notifications>:not([hidden])) #multiplayer{visibility:hidden}}
+#officer-shoot{left:50%;right:auto;bottom:90px;transform:translateX(-50%);width:auto;min-width:110px}#round-toast[data-kind=officer_defamation]{background:#681422ef;border-color:#ff5066;color:#fff0f2}
+
+/* Keep the camera's capture control inside its phone viewport. */
+#phone .phone-app-pane[data-pane=camera]:not([hidden]){display:flex;flex-direction:column;gap:6px;overflow:hidden;min-height:0;padding-bottom:2px}
+#phone .phone-app-pane[data-pane=camera]>.phone-messages{display:none}
+#phone .phone-photo-jobs{flex:none;max-height:76px;overflow:auto}#phone .phone-photo-jobs:empty{display:none}#phone .phone-photo-jobs p{margin:0 0 4px}
+#phone .phone-camera-view{flex:1;min-height:80px;height:auto;max-height:210px}#phone #phone-camera-status{flex:none;max-height:35px;overflow:auto;line-height:1.4;margin:2px 0}
+#phone .phone-camera-actions{position:relative;display:flex;flex:none;align-items:center;justify-content:center;min-height:54px;width:100%}#phone .phone-camera-actions #phone-shutter{position:static;flex:none;width:46px;height:46px;min-height:46px;margin:0 auto;box-sizing:border-box}#phone .phone-camera-actions #phone-photo-save{position:absolute;right:0;bottom:2px;width:58px;line-height:1.4;font-size:9px}
+
+/* Zoomed weapon aim, shown only while aiming. */
+#shoot-reticle{width:14px;height:14px;border:2px solid #ffffffb0;border-radius:50%;font-size:0;box-shadow:0 0 0 1px #0008,0 1px 5px #0009;background:#0002}
+#shoot-reticle[data-state=ready]{border-color:#ffd67d;background:#ffd67d33;box-shadow:0 0 0 3px #f9c75833,0 1px 5px #0009}
+#shoot-aim-help{position:absolute;left:50%;bottom:85px;transform:translateX(-50%);z-index:6;max-width:300px;padding:6px 10px;border-radius:8px;background:#101d28d9;border:1px solid #ffffff30;color:#e6edf0;font:12px/1.4 Arial;pointer-events:none;text-align:center}#shoot-aim-help[data-state=ready]{color:#ffe4a7;border-color:#ffd67d99}
+#shoot-target-ring{position:absolute;transform:translate(-50%,-50%);width:42px;height:42px;border:2px solid #ffd67d;border-radius:50%;box-shadow:0 0 0 4px #ffd67d22,0 1px 5px #000a;z-index:5;pointer-events:none}#shoot-aim-help[hidden],#shoot-target-ring[hidden],#shoot-aim-toggle[hidden]{display:none!important}
+#shoot-scope{position:fixed;inset:0;pointer-events:none;z-index:4;overflow:hidden}#shoot-scope[hidden]{display:none!important}.shoot-scope-lens{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(78vw,78vh);height:min(78vw,78vh);border:5px solid #1a2429;border-radius:50%;box-shadow:0 0 0 100vmax #050709f5,inset 0 0 30px #0009;outline:1px solid #8b999c88}.shoot-scope-lens:after{content:'';position:absolute;inset:5px;border:1px solid #c1d6d333;border-radius:50%}
+body.weapon-aiming #phone,body.weapon-aiming #multiplayer{visibility:hidden}body.weapon-aiming #shoot-aim-help{bottom:auto;top:calc(50% + min(29vw,29vh));max-width:330px}body.weapon-aiming #shoot-reticle{width:8px;height:8px;background:#fff9;border-width:1px}
+#shoot-aim-toggle{position:absolute;left:24px;bottom:105px;width:auto;min-width:110px;padding:10px 16px;z-index:12;border-radius:9px;background:#142935e8;border-color:#80989e}
+/* Square camera preview and exported image share the same framing. */
+#phone .phone-photo-jobs{max-height:44px}#phone .phone-camera-view{flex:none;align-self:center;width:180px;height:180px;max-width:100%;max-height:none;min-height:180px;aspect-ratio:1;position:relative}#phone .phone-camera-actions{margin-top:auto}
+#phone-camera-preview,#phone-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}#phone-photo{z-index:1}.phone-camera-view>span{position:relative;z-index:2;background:#11232b99;border-radius:8px;margin:12px}.phone-camera-view:after{z-index:3;inset:0;border:0!important;background:linear-gradient(to right,transparent 33%,#ffffff55 33%,#ffffff55 calc(33% + 1px),transparent calc(33% + 1px),transparent 66%,#ffffff55 66%,#ffffff55 calc(66% + 1px),transparent calc(66% + 1px)),linear-gradient(to bottom,transparent 33%,#ffffff55 33%,#ffffff55 calc(33% + 1px),transparent calc(33% + 1px),transparent 66%,#ffffff55 66%,#ffffff55 calc(66% + 1px),transparent calc(66% + 1px));pointer-events:none}
+
+/* Messages stays inside the phone; five home icons fit without extending the frame. */
+#phone .phone-home-heading{margin:16px 0 18px}#phone .phone-app-grid{gap:16px 20px}
+#phone .app-messages>span{background:linear-gradient(#5be572,#1cae43)}
+#phone .phone-app-pane[data-pane=messages]{flex:1;min-height:0;overflow:auto;padding:10px 8px;border-radius:12px;background:#eef1f6;color:#17212d;scrollbar-width:thin}
+#phone .phone-messages-pane h3{font-size:17px;margin:0 0 5px;letter-spacing:-.03em}
+#phone .phone-messages-summary{font-size:10px;color:#5a6778;margin:0 0 10px}
+#phone .phone-messages-empty{font-size:11px;line-height:1.6;color:#5a6778;padding:12px 0}
+#phone .phone-photo-message{padding:10px;margin:0 0 9px;border-radius:12px;background:white;box-shadow:0 1px 3px #10203010}
+#phone .phone-photo-message>strong{font-size:12px;color:#17212d}#phone .phone-photo-message>p{font-size:11px;line-height:1.5;margin:6px 0;color:#263648}
+#phone .phone-photo-message-status{display:block;font-size:10px;color:#187548;line-height:1.5}
+#phone .phone-photo-message>button{width:100%;min-height:29px;margin:8px 0 0;padding:6px;border:0;border-radius:8px;background:#e3efff;color:#1263c7;font-size:11px;box-shadow:none}
+
+.app-photos>span{background:linear-gradient(#f4c16b,#d28573)}
+.phone-app-pane[data-pane="photos"]{overflow-y:auto;min-height:0;flex:1;padding:8px;background:#edf2f5;color:#172430;border-radius:8px}
+.phone-app-pane[data-pane="photos"] h3{margin:4px 0 8px}.phone-album-status{font-size:11px;color:#556571}
+.phone-album-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.phone-album-grid button{padding:0;border:0;background:transparent;cursor:pointer}.phone-album-grid img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:5px}
+.phone-album-detail img{width:100%;aspect-ratio:1;object-fit:contain;display:block;margin:10px 0}.phone-album-detail button,.phone-album-detail a{display:inline-block;padding:8px;border:0;border-radius:6px;background:#dceaff;color:#155ca1;font-size:12px;cursor:pointer}

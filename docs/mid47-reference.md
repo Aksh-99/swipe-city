@@ -1,0 +1,5 @@
+# W47 continuation from the four 7:31–7:32 PM views
+
+North side: the brown louvered parking frontage and projecting red PARK sign, Brooklyn Chop House black/gold fascia and menu board, and the separate cream Barrymore theatre/marquee. South side: Lena Horne’s purple/gold SIX display and bulb-lined projecting marquee, street shed and upper scaffolding with blue stair flights; then Trecolori, Glass House Tavern and Outsiders signage/fire-escape details.
+
+Every facade uses the original source wall plane. A 1,407-triangle finish covers the selected street-facing volumes and setbacks to their full source height; upper office portions retain a glass finish. Scenes use original source massing, not replacement buildings. Side assignment and approximate frontage segmentation follow the supplied visual sequence; these are modeled interpretations rather than exact scanned replicas. Parked cars remain on their district spacing grid. Tests check source fit, distinct landmark signage, material startup and clear walking routes. The Biltmore full-height coverage correction is included in the same version.

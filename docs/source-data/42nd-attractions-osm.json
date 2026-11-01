@@ -1,0 +1,187 @@
+{
+  "source": "https://www.openstreetmap.org/api/0.6/map?bbox=-73.9911,40.7560,-73.9880,40.7582",
+  "retrieved": "2026-10-04",
+  "license": "\u00a9 OpenStreetMap contributors, ODbL",
+  "elements": [
+    {
+      "type": "way",
+      "id": 586476446,
+      "tags": {
+        "addr:housenumber": "234",
+        "addr:postcode": "10036",
+        "addr:state": "NY",
+        "addr:street": "West 42nd Street",
+        "check_date:opening_hours": "2024-09-06",
+        "fee": "yes",
+        "name": "Madame Tussauds New York",
+        "opening_hours": "Mo-Fr 10:00-19:00; Sa,Su 10:00-21:00",
+        "tourism": "museum",
+        "website": "https://www.madametussauds.com/new-york/",
+        "wheelchair": "yes",
+        "wikidata": "Q21903395",
+        "wikipedia": "en:Madame Tussauds New York"
+      },
+      "geometry": [
+        {
+          "lat": 40.75638,
+          "lon": -73.9884976
+        },
+        {
+          "lat": 40.7565067,
+          "lon": -73.9884088
+        },
+        {
+          "lat": 40.7564611,
+          "lon": -73.988299
+        },
+        {
+          "lat": 40.7564286,
+          "lon": -73.9882212
+        },
+        {
+          "lat": 40.7564088,
+          "lon": -73.9881728
+        },
+        {
+          "lat": 40.756396,
+          "lon": -73.9881443
+        },
+        {
+          "lat": 40.7563603,
+          "lon": -73.98817
+        },
+        {
+          "lat": 40.7563462,
+          "lon": -73.9881802
+        },
+        {
+          "lat": 40.7562222,
+          "lon": -73.9882696
+        },
+        {
+          "lat": 40.756176,
+          "lon": -73.988303
+        },
+        {
+          "lat": 40.7559168,
+          "lon": -73.9884898
+        },
+        {
+          "lat": 40.7560313,
+          "lon": -73.9887566
+        },
+        {
+          "lat": 40.7561457,
+          "lon": -73.9886739
+        },
+        {
+          "lat": 40.7561313,
+          "lon": -73.9886392
+        },
+        {
+          "lat": 40.7562065,
+          "lon": -73.9885848
+        },
+        {
+          "lat": 40.7562187,
+          "lon": -73.9886143
+        },
+        {
+          "lat": 40.75638,
+          "lon": -73.9884976
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 591988954,
+      "tags": {
+        "addr:housenumber": "234",
+        "addr:postcode": "10036",
+        "addr:state": "NY",
+        "addr:street": "West 42nd Street",
+        "amenity": "restaurant",
+        "brand": "Dave & Buster's",
+        "brand:wikidata": "Q5228205",
+        "cuisine": "american",
+        "leisure": "amusement_arcade",
+        "name": "Dave & Buster's",
+        "opening_hours": "Mo-Th 10:00-01:00, Fr-Sa 10:00-02:00, Su 10:00-24:00",
+        "phone": "+1-646-495-2015",
+        "website": "https://www.daveandbusters.com/locations/new-york-city-times-square"
+      },
+      "geometry": [
+        {
+          "lat": 40.7564912,
+          "lon": -73.9887656
+        },
+        {
+          "lat": 40.7564253,
+          "lon": -73.9886069
+        },
+        {
+          "lat": 40.756552,
+          "lon": -73.988518
+        },
+        {
+          "lat": 40.7565864,
+          "lon": -73.9886009
+        },
+        {
+          "lat": 40.7566179,
+          "lon": -73.9886767
+        },
+        {
+          "lat": 40.7564912,
+          "lon": -73.9887656
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 591988959,
+      "tags": {
+        "addr:housenumber": "234",
+        "addr:postcode": "10036",
+        "addr:state": "NY",
+        "addr:street": "West 42nd Street",
+        "amenity": "restaurant",
+        "brand": "Applebee's Neighborhood Grill & Bar",
+        "brand:wikidata": "Q621532",
+        "cuisine": "american",
+        "name": "Applebee's",
+        "official_name": "Applebee's Neighborhood Grill & Bar",
+        "opening_hours": "Su-We 07:00-01:00; Th-Fr 07:00-02:00",
+        "phone": "+1-212-391-7414",
+        "website": "https://restaurants.applebees.com/en-us/ny/new-york/234-w.-42nd-st.-95017",
+        "website:menu": "https://www.applebees.com/en/menu?StoreNumber=95017&action=viewmenu"
+      },
+      "geometry": [
+        {
+          "lat": 40.7566179,
+          "lon": -73.9886767
+        },
+        {
+          "lat": 40.7564912,
+          "lon": -73.9887656
+        },
+        {
+          "lat": 40.7565383,
+          "lon": -73.9888791
+        },
+        {
+          "lat": 40.756665,
+          "lon": -73.9887903
+        },
+        {
+          "lat": 40.7566534,
+          "lon": -73.9887623
+        },
+        {
+          "lat": 40.7566179,
+          "lon": -73.9886767
+        }
+      ]
+    }
+  ]
+}

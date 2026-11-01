@@ -1,0 +1,44 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {createRoomsHandler} from '../server/rooms.js';import {createTestDatabase} from './d1-test-helper.js';import {teamCounts} from '../src/team-rules.js';import {copyPlayerState} from '../src/room-protocol.js';
+async function fixture(count){
+ let time=100000;const store=createTestDatabase(),handler=createRoomsHandler({now:()=>time,chooseRole:()=>0}),members=[];let code,match;
+ const post=async(i,action,extra={})=>{const url=i===null?'/api/rooms':`/api/rooms/${code}/${action}`,r=await handler(new Request('https://game.test'+url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...(i===null?{}:{token:members[i]?.sessionToken,matchId:match}),...extra})}),{DB:store.db});return {status:r.status,...await r.json()};};
+ for(let i=0;i<count;i++){const m=await post(i===0?null:i,'join',{name:'Player '+(i+1),characterId:'explorer',hidden:true});assert.equal(m.status,201,JSON.stringify(m));members.push(m);code=m.roomCode;await post(i,'ready',{hidden:true});}
+ const start=()=>post(0,'start').then(r=>{match=r.matchId;return r;});
+ const sync=i=>{const row=store.sql.prepare('SELECT state,state_revision,sequence FROM ts_members WHERE player_id=?').get(members[i].yourId);return post(i,'sync',{hidden:true,revision:row.state_revision,sequence:row.sequence+1,state:copyPlayerState(JSON.parse(row.state))});};
+ const place=(i,p)=>{const row=store.sql.prepare('SELECT state FROM ts_members WHERE player_id=?').get(members[i].yourId),s=JSON.parse(row.state);s.position=p;s.speed=0;store.sql.prepare('UPDATE ts_members SET state=?,sequence=sequence+1 WHERE player_id=?').run(JSON.stringify(s),members[i].yourId);};
+ const wallet=(i,value)=>{const row=store.sql.prepare('SELECT anchor_state FROM ts_rooms WHERE code=?').get(code),a=JSON.parse(row.anchor_state);a._round.wallets[members[i].yourId]=value;store.sql.prepare('UPDATE ts_rooms SET anchor_state=? WHERE code=?').run(JSON.stringify(a),code);};
+ const shoot=(i,target,shotId=crypto.randomUUID())=>post(i,'interact',{command:'begin',kind:'shoot',targetId:members[target].yourId,shotId});
+ const teams=()=>{const r=JSON.parse(store.sql.prepare('SELECT anchor_state FROM ts_rooms WHERE code=?').get(code).anchor_state)._round;return {police:r.policeIds.map(id=>members.findIndex(m=>m.yourId===id)),thieves:r.thiefIds.map(id=>members.findIndex(m=>m.yourId===id)),peds:members.map((_,i)=>i).filter(i=>!r.policeIds.includes(members[i].yourId)&&!r.thiefIds.includes(members[i].yourId))};};
+ return {store,members,teams,post,start,sync,place,wallet,shoot,advance:ms=>time+=ms,get time(){return time;},close:()=>store.close()};
+}
+for(const count of [4,7,8,11,12,15,16,19,20])test(`${count} players receive exact scaled teams and $500 without exposing thief identities`,async()=>{
+ const f=await fixture(count);try{const start=await f.start();assert.equal(start.status,200);const views=await Promise.all(f.members.map((_,i)=>f.sync(i))),expected=teamCounts(count);assert.equal(views.filter(v=>v.yourRound.role==='POLICE').length,expected.officers);assert.equal(views.filter(v=>v.yourRound.role==='THIEF').length,expected.thieves);assert.equal(views.filter(v=>v.yourRound.role==='PEDESTRIAN').length,expected.pedestrians);assert(views.every(v=>v.yourRound.wallet===500));assert.equal(start.players.filter(p=>p.characterId==='pedestrian').length,expected.officers);assert(!JSON.stringify(start.players).includes('thiefIds'));assert.equal(new Set(start.players.map(p=>p.state.position.join(','))).size,count);}finally{f.close();}
+});
+test('minimum 4 and maximum 20 are enforced by the shared database',async()=>{const small=await fixture(3);try{assert.equal((await small.start()).code,'LOBBY_NOT_READY');}finally{small.close();}const full=await fixture(20);try{assert.equal((await full.post(20,'join',{characterId:'tourist'})).code,'ROOM_FULL');}finally{full.close();}});
+test('wrong officer shot charges $100, freezes only that officer for 30 seconds and still broadcasts the gunshot',async()=>{
+ const f=await fixture(8);try{await f.start();const {police,peds}=f.teams(),[o,other]=police,v=peds[0];f.place(o,[0,0,.17]);f.place(v,[0,3,.17]);const hit=await f.shoot(o,v);assert.equal(hit.status,200);assert.equal(hit.yourRound.wallet,400);assert.equal(hit.yourRound.penaltyUntil,f.time+30000);assert.equal(hit.yourRound.penaltyKind,'officer_defamation');assert.equal((await f.sync(other)).yourRound.penaltyUntil,0);assert.equal((await f.sync(v)).yourRound.wallet,500);assert.equal((await f.sync(v)).gunshots.length,1);f.advance(29999);assert.equal((await f.shoot(o,v)).status,409);f.advance(1);assert.equal((await f.shoot(o,v)).status,200);}finally{f.close();}
+});
+test('each officer can catch a different thief; catching one does not finish a two-thief round',async()=>{
+ const f=await fixture(8);try{await f.start();const {police:[a,b],thieves:[c,d]}=f.teams();for(const i of [a,b,c,d])f.place(i,[i,0,.17]);const first=await f.shoot(a,c);assert.equal(first.status,200);assert.equal(first.roundResult,null);assert((await f.sync(c)).yourRound.caught);assert.equal((await f.post(c,'respawn')).status,429);const last=await f.shoot(b,d);assert.equal(last.roundResult.winner,'POLICE');assert.equal(last.roundResult.reason,'all_caught');}finally{f.close();}
+});
+test('all clients receive the same named death notice for a fatal hit',async()=>{
+ const f=await fixture(8);try{await f.start();const {thieves:[t],peds:[v]}=f.teams();f.place(t,[0,0,.17]);f.place(v,[0,3,.17]);f.wallet(v,99);assert.equal((await f.shoot(t,v)).status,200);const views=await Promise.all(f.members.map((_,i)=>f.sync(i)));for(const view of views){assert.equal(view.deathNotices.length,1);assert.equal(view.deathNotices[0].playerId,f.members[v].yourId);assert.equal(view.deathNotices[0].name,'Player '+(v+1));}assert(views[v].yourRound.dead);}finally{f.close();}
+});
+test('officer can fire into empty space with one shared sound, no wallet penalty, cooldown and idempotency',async()=>{
+ const f=await fixture(4);try{await f.start();const {police:[o],peds:[p]}=f.teams(),shotId=crypto.randomUUID();const fire=()=>f.post(o,'interact',{command:'begin',kind:'shoot',targetId:null,shotId});
+ const result=await fire();assert.equal(result.status,200);assert.equal(result.gunshots.length,1);assert.equal(result.yourRound.wallet,500);assert.equal(result.yourRound.penaltyUntil,0);assert.equal((await f.sync(p)).gunshots[0].id,shotId);
+ assert.equal((await fire()).gunshots.length,1);assert.equal((await f.post(o,'interact',{command:'begin',kind:'shoot',targetId:null,shotId:crypto.randomUUID()})).code,'SHOT_COOLDOWN');
+ }finally{f.close();}
+});
+test('thief can fire into empty space with one shared sound, no wallet penalty, cooldown and idempotency',async()=>{
+ const f=await fixture(4);try{await f.start();const {thieves:[o],peds:[p]}=f.teams(),shotId=crypto.randomUUID();const fire=()=>f.post(o,'interact',{command:'begin',kind:'shoot',targetId:null,shotId});
+ const result=await fire();assert.equal(result.status,200);assert.equal(result.gunshots.length,1);assert.equal(result.yourRound.wallet,500);assert.equal(result.yourRound.penaltyUntil,0);assert.equal((await f.sync(p)).gunshots[0].id,shotId);
+ assert.equal((await fire()).gunshots.length,1);assert.equal((await f.post(o,'interact',{command:'begin',kind:'shoot',targetId:null,shotId:crypto.randomUUID()})).code,'SHOT_COOLDOWN');
+ }finally{f.close();}
+});
+test('start scatters players, keeps police at the station, and reconnect/reset reuse saved spawn positions',async()=>{
+ const f=await fixture(20);try{const a=await f.start(),{police,peds,thieves}=f.teams(),{RANDOM_SPAWN_POINTS:D}=await import('../server/match-rules.js');const civ=[...peds,...thieves];for(let i=0;i<police.length;i++)assert.deepEqual(a.players[police[i]].state.position,D.officers[i]);for(let i=0;i<civ.length;i++)for(let j=0;j<i;j++){const p=a.players[civ[i]].state.position,q=a.players[civ[j]].state.position;assert(Math.hypot(p[0]-q[0],p[1]-q[1])>=40);}const repeated=await f.start();assert.deepEqual(repeated.players.map(p=>p.state.position),a.players.map(p=>p.state.position));for(const i of [police[0],peds[0]]){const resumed=await f.post(i,'join');assert.deepEqual(resumed.self.state.position,a.players[i].state.position);const reset=await f.post(i,'respawn');assert.deepEqual(reset.players[i].state.position,a.players[i].state.position);}}
+ finally{f.close();}
+});
+test('accepted officer gunshots reach all twenty clients, including every team and the shooter',async()=>{const f=await fixture(20);try{await f.start();const {police:[officer]}=f.teams(),shotId=crypto.randomUUID();assert.equal((await f.post(officer,'interact',{command:'begin',kind:'shoot',targetId:null,shotId})).status,200);for(let i=0;i<20;i++){const view=await f.sync(i);assert(view.gunshots.some(s=>s.id===shotId));}}finally{f.close();}});

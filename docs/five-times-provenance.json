@@ -1,0 +1,85 @@
+{
+  "reference": {
+    "filename": "Screenshot 2026-10-04 at 12.04.48 AM.png",
+    "sha256": "f7ac764d6f8eb13d37a9c9468064f1438172c0af074a51034d7ce1e0c71e3ab0",
+    "use": "Visual reference for architectural geometry, colors and sign layout only. Screenshot pixels are not embedded; no Google Maps imagery was fetched."
+  },
+  "scope": "W42 frontage east of the existing Madame Tussauds additions, the southwest W42/Seventh corner of 5 Times Square, and 25 m of its Seventh Avenue return.",
+  "sources": [
+    {
+      "url": "https://www.miniso.com/brand/news_85.html",
+      "publisher": "MINISO",
+      "supports": "MINISO's first-floor flagship store at 5 Times Square, opened in May 2023. The red interior and shelving are authored reference interpretations."
+    },
+    {
+      "url": "https://snadisplays.com/projects/5-times-square/",
+      "publisher": "SNA Displays",
+      "supports": "Six-piece display system, nominal corner-wrap size, slanted top and surrounding horizontal screens. The source city geometry determines the actual corner location; the page's southeast-corner wording is inconsistent with that geography."
+    },
+    {
+      "url": "https://data.ny.gov/Transportation/MTA-Subway-Entrances-and-Exits-2024/i9wp-a4ja",
+      "archive": "public/data/subway-entrances-mta.json",
+      "supports": "Raw easement row72, entrance/exit at 40.7561323,-73.9875149. This row has no authored underground stair aperture; its approach remains unobstructed."
+    },
+    {
+      "archive": "public/data/streets-osm.json",
+      "license": "OpenStreetMap contributors, ODbL",
+      "supports": "W42/Seventh sidewalk alignment and crossings."
+    },
+    {
+      "url": "https://github.com/JoeThunyathep/NYC3D_CesiumJS",
+      "commit": "df20a24582520dd856e56e99ae44e3ff43ab3269",
+      "supports": "Unchanged surveyed building footprints, source walls and roofs."
+    }
+  ],
+  "placement": {
+    "config": "public/data/five-times.json",
+    "facadeSections": 14,
+    "sourceFitRays": 1386,
+    "sourceFitMisses": 0,
+    "maxRecordedFitResidualMeters": 0.00136099,
+    "skinOffsetMeters": 0.16,
+    "cornerENU": [-145.176636, -224.230865, 0],
+    "cornerShape": "Original sharp oblique corner retained. W42 setbacks are separate source planes, not bridged by new building volume.",
+    "maximumAuthoredFacadeTopMeters": 40,
+    "lowNeighborTopsMeters": [21.4, 12.67],
+    "cornerDisplayHeightMeters": 25.197,
+    "cornerDisplayNominalWidthsMeters": [12.319, 7.518],
+    "displayAdaptations": "Offset sign planes meet outside the actual sharp corner. The W42 main horizontal panel is 14.706 m wide; the shorter separate oblique panel is reduced to 5.95 m. No screen spans across a source wall setback.",
+    "scaffoldSections": 16,
+    "scaffoldLengthMeters": 103.472770777,
+    "scaffoldRoofBaseMeters": 5.15,
+    "reservedMtaApproachStations": [224.3, 230.45],
+    "reservedMtaBridgeMinimumUndersideMeters": 5.2,
+    "sourceGeometryModified": false
+  },
+  "details": [
+    "MINISO-style red-lit display glazing, shelving, vertical/horizontal lettering and silver frames",
+    "Two joined tall blue/white corner screens, four surrounding blue campaign panels and seven existing poster advertisements",
+    "Dark glass facade grid and shallow silver bands, bounded by each actual source roof",
+    "I-beam scaffold decks, steel uprights, braces above walking clearance, framed mesh rails and underside lights",
+    "Four silver bollards, four red barriers and clipped pavement aprons",
+    "Visit new stores starts at the corner; phone map includes a named marker"
+  ],
+  "performance": {
+    "newStaticPrimitives": 9,
+    "physicalRenderVertices": 74412,
+    "collisionTriangles": 4012,
+    "signAtlas": [2048, 2048],
+    "newCityTiles": 0,
+    "newDownloadedTextures": 0,
+    "perFrameGeometryUpdates": 0
+  },
+  "verification": [
+    "Source fits and facade orientation using original source BVHs",
+    "Walking/running in both directions on all new covered routes and the full museum-to-Seventh connection",
+    "Visit point, doorway approaches, closed doors, bollards, barriers, uprights and camera headroom",
+    "Clear MTA easement approach, overhead-only bridge and adjacent crossing traversal",
+    "Billboard planes meet at the projecting corner; actual Cesium constructors and native Canvas atlas rendering"
+  ],
+  "limitations": [
+    "Exterior interpretation, not a photographic reconstruction or a current tenant/construction survey. Source geometry controls the footprint and proportions; authored details follow the supplied reference.",
+    "The CITYWIDE blue campaign uses original illustrative artwork and fictional copy. Display windows are scenery; no shop interiors or subway network are added.",
+    "Browser/WebGL visual verification and live FPS measurement were unavailable."
+  ]
+}

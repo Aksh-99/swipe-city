@@ -1,0 +1,102 @@
+{
+  "created": "2026-10-03",
+  "scope": "Authored Paramount portal texture plus official brand marks for the Hard Rock Cafe block at 1501 Broadway.",
+  "references": [
+    {
+      "role": "Visual design reference only; no photograph pixels cropped, copied, or bundled",
+      "file": "Screenshot 2026-10-03 at 2.48.30 PM.png"
+    },
+    {
+      "role": "Visual design reference only; no photograph pixels cropped, copied, or bundled",
+      "file": "Screenshot 2026-10-03 at 2.49.27 PM.png"
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/storefronts/paramount-portal.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "source": "Built-in image_gen image generation",
+      "prompt": "Use case: product-mockup\nAsset type: photorealistic architectural façade texture for a 3D Times Square game\nPrimary request: Create one flat, orthographic front elevation of the historic Paramount Building's tall ornate entrance arch at 1501 Broadway, New York. This is newly authored architectural artwork, not a photograph crop. Portrait 2:3 aspect ratio, 1024×1536 or similar.\nSubject: A single monumental rounded-top arch occupying the central 85% of width, with grey limestone/stone surround richly carved in dense Beaux-Arts floral scrollwork, acanthus leaves and a large symmetrical ornamental crest at the top. Deeply recessed bronze-black gridded reflective window glazing inside the arch. The arch is tall and broad, full-height vertical jambs below semicircular crown, with thin black bronze mullions following the arch curvature. Within its lower-middle upper glazing, a smaller centered circular/oval bronze medallion with a plain dark center (no lettering), surrounded by concentric moldings. Lower quarter has dark bronze framed entrance doors and glass transoms. Flat horizontal stone course joints continue in narrow strips at left and right outside the ornate jambs.\nStyle: Ultra-realistic architectural material capture, highly detailed natural stone relief, convincing weathered grey stone and subtle blue-grey dark window reflections, bronze frames. Soft neutral daylight with gentle dimensional contact shadows in carvings.\nComposition: Perfectly straight-on elevation with parallel vertical and horizontal edges. Entire arch and lower entrance visible. Fill the image; no exterior scene, no surrounding building windows, no sky, no ground. Tight rectangular facade panel. Symmetrical. The top 10% is plain stone above the decorative crest for separately modeled lettering.\nConstraints: NO text, NO letters, NO numbers, NO logo, NO Paramount lettering, NO Hard Rock sign, NO canopy, NO marquee, NO street, NO people, NO vehicle, NO shop merchandise, NO UI, NO map watermark. Not a poster or illustration. Do not use dramatic perspective or angled lighting. Entire rectangle opaque; no transparency.",
+      "notes": "Newly generated front elevation texture. Architectural interpretation, not a surveyed reconstruction; no text, logos, canopy, crowds, or street pixels from reference. Geometry and signs rendered separately."
+    },
+    {
+      "path": "public/storefronts/hard-rock-logo.png",
+      "width": 163,
+      "height": 100,
+      "mode": "RGBA",
+      "sourceUrl": "https://cafe.hardrock.com/files/templates/1732/logoHRC02.png",
+      "sourcePage": "https://cafe.hardrock.com/new-york/",
+      "notes": "Official white Hard Rock Cafe logo with transparency, original bytes."
+    },
+    {
+      "path": "public/storefronts/hard-rock-logo-color.png",
+      "width": 163,
+      "height": 100,
+      "mode": "RGBA",
+      "sourceUrl": "https://cafe.hardrock.com/files/templates/1732/logoHRC01.png",
+      "sourcePage": "https://cafe.hardrock.com/new-york/",
+      "notes": "Official dark Hard Rock Cafe logo with transparency, original bytes."
+    },
+    {
+      "path": "public/storefronts/taco-bell-logo.png",
+      "width": 512,
+      "height": 62,
+      "mode": "RGB",
+      "sourceUrl": "https://a.mktgcdn.com/p/_BNy4OXE7yJD77l64m0y0IPiV3QyVSwSBwrf9-XsdS4/512x62.webp",
+      "sourcePage": "https://locations.tacobell.com/ny/new-york/1501-broadway.html",
+      "notes": "Official horizontal Taco Bell wordmark, lossless format conversion from downloaded WebP to PNG; opaque white background."
+    },
+    {
+      "path": "public/storefronts/paramount-script.svg",
+      "width": 850,
+      "height": 234,
+      "viewBox": "24.8 28.8 85 23.4",
+      "sourcePage": "https://www.paramount.com/",
+      "sourceElement": "Inline SVG in the Paramount Pictures featured brand tile",
+      "notes": "Native vector editing: retained the two script subpaths from the logo's compound silhouette path and three letter-counter paths; omitted the mountain, stars, and Pictures text. Original outlines unchanged, fill set white, evenodd winding preserves counters, viewBox tightened around wordmark. No raster tracing."
+    },
+    {
+      "path": "public/storefronts/hard-rock-interiors.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "source": "Built-in image_gen image generation",
+      "prompt": "Use case: product-mockup\nAsset type: 3-column photorealistic storefront interior texture atlas for a Times Square walking game\nPrimary request: Create ONE image exactly 1536×1024 with THREE equally wide, full-height rectangular panels side by side. Each panel is exactly one-third of image width (512 pixels wide), with straight vertical boundaries at x=512 and x=1024. No margins, gutters, border, decorative frame, dividing bars, text labels, or alignment marks. Each panel is a separate frontal interior view through clear storefront display glass.\nLEFT THIRD (x 0–511): A warm rock memorabilia restaurant/cafe interior, richly lit amber and red, framed electric guitars and gold records on the back walls, subtle red neon strips, dark stained timber, brass rails, leather booths and small dining tables, welcoming high-end Times Square restaurant atmosphere. There are no people.\nMIDDLE THIRD (x 512–1023): A rock merchandise shop display with black band-style shirts on clean hangers and display torsos, caps on shelves, a few guitars, folded shirts and lit merchandise cubbies, warm amber spot lighting, dark wood and black steel. Apparel graphic motifs may be abstract, but absolutely no legible writing, artist names, trademarks, or band logos.\nRIGHT THIRD (x 1024–1535): A modern purple-accent quick-service taco restaurant interior with stainless service counter, self-service digital ordering kiosks, bright rectangular menu lightboxes with abstract food images and unreadable details, purple wall strips, contemporary stools and bright practical restaurant lighting. No people.\nStyle: Authored photorealistic retail interior imagery, realistic glass reflections kept minimal, physically believable materials, bright enough to read clearly as window textures at street level.\nComposition: All THREE equal-width columns must remain separate full-height interior views with distinct designs. Straight-on flat camera outside each window, vertical lines parallel, no angled storefront facade, no panoramic scene connecting stores. Each view should feel like a shallow interior seen through a flat window plane.\nConstraints: No readable text, no logos, no words, no external building, no street or sidewalk, no vehicles, no people, no watermark, no Google imagery, no UI, no visible window frames. Fill every pixel with interior imagery.",
+      "panels": [
+        {
+          "column": 0,
+          "uvRange": [
+            0,
+            0.3333333333333333
+          ],
+          "subject": "Warm rock memorabilia cafe"
+        },
+        {
+          "column": 1,
+          "uvRange": [
+            0.3333333333333333,
+            0.6666666666666666
+          ],
+          "subject": "Rock merchandise display shop"
+        },
+        {
+          "column": 2,
+          "uvRange": [
+            0.6666666666666666,
+            1
+          ],
+          "subject": "Purple-accent quick-service taco restaurant"
+        }
+      ],
+      "notes": "Authored photorealistic imagery with three distinct equally wide columns. No readable signs, people, exterior street, Google photograph pixels, or frames. Use each one-third UV region independently."
+    }
+  ],
+  "implementationNotes": {
+    "portalMedallionUV": "Approximately (0.5, 0.555) in bottom-origin texture UV; blank medallion for separate 1501 lettering.",
+    "paramountAspect": 3.6324786324786325,
+    "hardRockLogos": "Both official assets are small but are clean alpha masks for emissive facade signs. No clean separate Hard Rock script vector was found.",
+    "brands": "Brand marks remain owned by their respective owners and are used only to identify the modeled real storefronts."
+  }
+}

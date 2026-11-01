@@ -1,0 +1,524 @@
+{
+  "source": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_m.zip",
+  "retrieved": "2026-10-03",
+  "stops": [
+    {
+      "stop_id": "400936",
+      "stop_name": "6 AV/W 42 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.755109",
+      "stop_lon": " -73.983786",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M7",
+          "0",
+          "HARLEM 147 ST via 6 AV via AMSTERDAM"
+        ]
+      ]
+    },
+    {
+      "stop_id": "400938",
+      "stop_name": "6 AV/W 47 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.758290",
+      "stop_lon": " -73.981468",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M7",
+          "0",
+          "HARLEM 147 ST via 6 AV via AMSTERDAM"
+        ]
+      ]
+    },
+    {
+      "stop_id": "400950",
+      "stop_name": "7 AV/W 54 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.763718",
+      "stop_lon": " -73.981405",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "1",
+          "41 ST via BROADWAY/7 AV"
+        ],
+        [
+          "M7",
+          "1",
+          "14 ST via COLUMBUS via 7 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "401239",
+      "stop_name": "8 AV/W 52 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.763788",
+      "stop_lon": " -73.984867",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "0",
+          "WEST HARLEM 129 ST via BROADWAY"
+        ],
+        [
+          "M20",
+          "0",
+          "LINCOLN CENTER 66 ST via 8 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "401851",
+      "stop_name": "W 42 ST/8 AV",
+      "stop_desc": "",
+      "stop_lat": "  40.757575",
+      "stop_lon": " -73.990464",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M42",
+          "1",
+          "WEST SIDE PIER 12 AV CROSSTOWN"
+        ]
+      ]
+    },
+    {
+      "stop_id": "403132",
+      "stop_name": "6 AV/W 50 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.759771",
+      "stop_lon": " -73.980381",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M7",
+          "0",
+          "HARLEM 147 ST via 6 AV via AMSTERDAM"
+        ]
+      ]
+    },
+    {
+      "stop_id": "403239",
+      "stop_name": "W 42 ST/8 AV",
+      "stop_desc": "",
+      "stop_lat": "  40.757191",
+      "stop_lon": " -73.989904",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M42",
+          "0",
+          "EAST SIDE U N-1 AV CROSSTOWN"
+        ]
+      ]
+    },
+    {
+      "stop_id": "403240",
+      "stop_name": "W 42 ST/7 AV",
+      "stop_desc": "",
+      "stop_lat": "  40.756259",
+      "stop_lon": " -73.987735",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M42",
+          "0",
+          "EAST SIDE U N-1 AV CROSSTOWN"
+        ]
+      ]
+    },
+    {
+      "stop_id": "403241",
+      "stop_name": "W 42 ST/BROADWAY",
+      "stop_desc": "",
+      "stop_lat": "  40.755466",
+      "stop_lon": " -73.985721",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M42",
+          "0",
+          "EAST SIDE U N-1 AV CROSSTOWN"
+        ]
+      ]
+    },
+    {
+      "stop_id": "403242",
+      "stop_name": "W 42 ST/6 AV",
+      "stop_desc": "",
+      "stop_lat": "  40.754535",
+      "stop_lon": " -73.983640",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M42",
+          "0",
+          "EAST SIDE U N-1 AV CROSSTOWN"
+        ]
+      ]
+    },
+    {
+      "stop_id": "403552",
+      "stop_name": "8 AV/W 39 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.755175",
+      "stop_lon": " -73.991135",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M20",
+          "0",
+          "LINCOLN CENTER 66 ST via 8 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "403797",
+      "stop_name": "7 AV/W 50 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.760853",
+      "stop_lon": " -73.983568",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M20",
+          "1",
+          "SOUTH FERRY via 7 AV via BAT PK CITY"
+        ],
+        [
+          "M7",
+          "1",
+          "14 ST via COLUMBUS via 7 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "403830",
+      "stop_name": "W 42 ST/AV OF THE AMERICAS",
+      "stop_desc": "",
+      "stop_lat": "  40.754994",
+      "stop_lon": " -73.984277",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M42",
+          "1",
+          "WEST SIDE PIER 12 AV CROSSTOWN"
+        ]
+      ]
+    },
+    {
+      "stop_id": "404043",
+      "stop_name": "6 AV/W 45 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.757030",
+      "stop_lon": " -73.982378",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M7",
+          "0",
+          "HARLEM 147 ST via 6 AV via AMSTERDAM"
+        ]
+      ]
+    },
+    {
+      "stop_id": "404052",
+      "stop_name": "8 AV/W 41 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.756182",
+      "stop_lon": " -73.990405",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M20",
+          "0",
+          "LINCOLN CENTER 66 ST via 8 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "404153",
+      "stop_name": "7 AV/W 42 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.755694",
+      "stop_lon": " -73.987208",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "1",
+          "41 ST via BROADWAY/7 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "404846",
+      "stop_name": "8 AV/W 49 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.761902",
+      "stop_lon": " -73.986239",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "0",
+          "WEST HARLEM 129 ST via BROADWAY"
+        ],
+        [
+          "M20",
+          "0",
+          "LINCOLN CENTER 66 ST via 8 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "404870",
+      "stop_name": "8 AV/W 42 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.757537",
+      "stop_lon": " -73.989470",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "0",
+          "WEST HARLEM 129 ST via BROADWAY"
+        ],
+        [
+          "M20",
+          "0",
+          "LINCOLN CENTER 66 ST via 8 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "405292",
+      "stop_name": "7 AV/W 49 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.760601",
+      "stop_lon": " -73.983615",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "1",
+          "41 ST via BROADWAY/7 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "405294",
+      "stop_name": "7 AV/W 53 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.762679",
+      "stop_lon": " -73.982234",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M20",
+          "1",
+          "SOUTH FERRY via 7 AV via BAT PK CITY"
+        ]
+      ]
+    },
+    {
+      "stop_id": "405295",
+      "stop_name": "7 AV/W 52 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.762459",
+      "stop_lon": " -73.982389",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "1",
+          "41 ST via BROADWAY/7 AV"
+        ],
+        [
+          "M7",
+          "1",
+          "14 ST via COLUMBUS via 7 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "405297",
+      "stop_name": "7 AV/W 44 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.757476",
+      "stop_lon": " -73.985927",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "1",
+          "41 ST via BROADWAY/7 AV"
+        ],
+        [
+          "M20",
+          "1",
+          "SOUTH FERRY via 7 AV via BAT PK CITY"
+        ],
+        [
+          "M7",
+          "1",
+          "14 ST via COLUMBUS via 7 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "405374",
+      "stop_name": "W 41 ST/8 AV",
+      "stop_desc": "",
+      "stop_lat": "  40.756549",
+      "stop_lon": " -73.990123",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "0",
+          "WEST HARLEM 129 ST via BROADWAY"
+        ]
+      ]
+    },
+    {
+      "stop_id": "405549",
+      "stop_name": "W 42 ST/7 AV",
+      "stop_desc": "",
+      "stop_lat": "  40.756311",
+      "stop_lon": " -73.987403",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M42",
+          "1",
+          "WEST SIDE PIER 12 AV CROSSTOWN"
+        ]
+      ]
+    },
+    {
+      "stop_id": "405592",
+      "stop_name": "8 AV/W 46 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.759936",
+      "stop_lon": " -73.987677",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M104",
+          "0",
+          "WEST HARLEM 129 ST via BROADWAY"
+        ],
+        [
+          "M20",
+          "0",
+          "LINCOLN CENTER 66 ST via 8 AV"
+        ]
+      ]
+    },
+    {
+      "stop_id": "450045",
+      "stop_name": "7 AV/W 41 ST",
+      "stop_desc": "",
+      "stop_lat": "  40.755498",
+      "stop_lon": " -73.987324",
+      "zone_id": "",
+      "stop_url": "",
+      "location_type": "0",
+      "parent_station": "",
+      "routes": [
+        [
+          "M20",
+          "1",
+          "SOUTH FERRY via 7 AV via BAT PK CITY"
+        ],
+        [
+          "M7",
+          "1",
+          "14 ST via COLUMBUS via 7 AV"
+        ]
+      ]
+    }
+  ]
+}

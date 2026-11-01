@@ -1,0 +1,4 @@
+import fs from 'node:fs';const path='public/characters/african_fem.glb',b=fs.readFileSync(path),n=b.readUInt32LE(12),g=JSON.parse(b.subarray(20,20+n)),bin=b.subarray(28+n),chunks=[];let pieces=[],length=0,index=1;const buffers=[g.buffers[1]];
+function finish(){if(!pieces.length)return;const name='african_fem-part'+(index-1)+'.bin';fs.writeFileSync('public/characters/'+name,Buffer.concat(pieces));buffers.push({uri:name,byteLength:length});pieces=[];length=0;index++;}
+for(const v of g.bufferViews){const e=v.extensions?.EXT_meshopt_compression,from=e??v,start=from.byteOffset??0,data=bin.subarray(start,start+from.byteLength);if(length+data.length>20000000)finish();from.buffer=index;from.byteOffset=length;pieces.push(data);length+=data.length;if(e)v.buffer=0;}
+finish();g.buffers=buffers;fs.writeFileSync('public/characters/african_fem.gltf',JSON.stringify(g));fs.unlinkSync(path);

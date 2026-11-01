@@ -1,0 +1,103 @@
+{
+  "references": [
+    {
+      "filename": "Screenshot 2026-10-03 at 8.51.04 PM.png",
+      "sha256": "d2a4fc25e49a5b4fd7b83b7e7455de42c3fa4e0fc70e422c4306c24291f7d177",
+      "use": "Visual reference only. Screenshot pixels are not embedded, cropped into textures or retrieved from Google."
+    },
+    {
+      "filename": "image(4).png",
+      "sha256": "507690b35bc4b4399c8cea10bdc6d75a7faa9d796bd87747dbc5c330ad8746cf",
+      "use": "Visual reference only. Screenshot pixels are not embedded, cropped into textures or retrieved from Google."
+    },
+    {
+      "filename": "image(5).png",
+      "sha256": "a583ce2d1cf07b8359bb05bc19c99be873dad69dd3c875c6297e2434ad09fef4",
+      "use": "Visual reference only. Screenshot pixels are not embedded, cropped into textures or retrieved from Google."
+    }
+  ],
+  "scope": "Reference-inspired exterior architecture on 1472, 1501 and 1515 Broadway, within the existing Times Square section. Fictional shop names are explicitly permitted by the user. No new gameplay, NPCs, vehicles, navigable interiors or city tiles.",
+  "sources": [
+    {
+      "url": "https://www.durst.org/news_items/723/",
+      "publisher": "The Durst Organization",
+      "supports": "H&M at northeast corner Broadway/W42; 108 by 42 foot curved corner screen and 78 by 60 foot Broadway screen."
+    },
+    {
+      "url": "https://www2.hm.com/en_us/customer-service/shopping-at-hm/store-locator/usa/new-york-city/4-times-square/us0400.html",
+      "publisher": "H&M",
+      "supports": "1472 Broadway / 4 Times Square address."
+    },
+    {
+      "url": "https://www.bubbagump.com/location/bubba-gump-new-york-ny/",
+      "publisher": "Bubba Gump",
+      "supports": "Restaurant at 1501 Broadway."
+    },
+    {
+      "url": "https://locations.raisingcanes.com/ny/new-york/1501-broadway",
+      "publisher": "Raising Cane’s",
+      "supports": "Adjacent restaurant at 1501 Broadway."
+    },
+    {
+      "url": "https://slgreen.com/properties/1515-broadway/",
+      "publisher": "SL Green",
+      "supports": "Separate 1515 Broadway building between W44 and W45, Minskoff Theatre and retail podium."
+    },
+    {
+      "archive": "docs/source-data/avenue-osm.json",
+      "license": "© OpenStreetMap contributors, ODbL",
+      "supports": "4 Times Square footprint and H&M address node."
+    },
+    {
+      "url": "https://github.com/JoeThunyathep/NYC3D_CesiumJS",
+      "commit": "df20a24582520dd856e56e99ae44e3ff43ab3269",
+      "supports": "Unchanged original building triangle meshes and collision."
+    }
+  ],
+  "placement": {
+    "avenue": "19 original wall facets, including 17 curved facets and two straight returns. Maximum source fit residual 0.00145 m. Main curved LED dimensions 32.9184 by 12.8016 m. The Nasdaq west return is shortened to 8.75 m so the two reference finishes do not overlap. Its original curved MarketSite tower and W43 facade remain.",
+    "broadway": "Six independently verified source planes at 1501 and 1515 Broadway, including the chamfer, recessed entrance and 26.93 m podium setback. Maximum sampled residual below 0.0004 m. Keep the original W44 street gap. Replace the prior generic north 1501 storefront and 1515 neighboring skin."
+  },
+  "details": [
+    "Avenue red lettering, warm display-window imagery, metal floor bands and mullions, continuous LED fashion collage, five secondary screen groups, two projecting entrance canopies, eight stainless posts",
+    "Harbor Shrimp and Crispy Co. fictional restaurant names on the original north 1501 facade; existing Hard Rock entrance, masonry and curb posts retained",
+    "Two red/blue corner sign panels with seafood seals, warm upper restaurant windows and a framed sidewalk advertising kiosk",
+    "Five fictional 1515 retail fronts, glass grid, gold theatrical screen, multiple movie/fashion/food advertisements, chamfer screen, ticket-window return and eleven additional stainless posts",
+    "Visit new stores cycles 1501, 1515 and Avenue; phone-map labels for each"
+  ],
+  "art": {
+    "file": "public/billboards/avenue-fashion-collage.png",
+    "method": "built-in image_gen",
+    "sourceGeneratedFile": "generated_images/exec-9cdd580f-cc8f-4b56-97af-20d5e23bb7a1.png",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "sha256": "348ad2165ac59fb312cd876fe4bb7135b5ea9dff7e1b4f48f3686688191792fc",
+    "prompt": "Use case: ads-marketing\nAsset type: flat panoramic LED billboard texture for a large curved Times Square fashion screen.\nPrimary request: create original edge-to-edge fashion and beauty catalog artwork, 3072 by 1024 pixels or a high-resolution exact 3:1 panoramic canvas. Dense, tasteful collage of approximately 30 differently sized rectangular editorial photo panels, with thin, clean white gutters. Fill the entire wide canvas with the collage.\nSubject: fictional diverse adult fashion models in everyday red, white, black, striped, pastel-green clothing, plus smaller still-life panels featuring shoes, handbags, sunglasses, cosmetics, and fabric closeups. Mix full-body fashion photos, waist-up portraits, detailed accessories and product photos. All people must clearly be adults.\nStyle/medium: crisp photorealistic premium high-street fashion editorial and catalog photography; polished magazine art direction with varied panel sizes and photographic crops. Bright off-white studio backgrounds, some soft foliage-green details. Balanced density across the full width, suitable to read as a lively fashion mosaic from street distance.\nColor palette: bright off-white base, strong red accents, black, dark denim blue, soft pastel green and foliage green.\nLighting/mood: clean bright studio daylight, inviting and contemporary, clear details with natural skin texture.\nText: none.\nConstraints: this is ONLY the flat finished advertising artwork, without perspective or any surrounding scene. No billboard hardware, building, storefront, streets, city, sky or outer mockup. No logos, brand marks, lettering, words, numerals, captions, watermarks or celebrity likenesses. No sexualized styling. Do not imitate any existing brand identity. Preserve a dense irregular grid of roughly 25 to 35 photographic rectangles separated by thin white gutters, with no large blank areas.",
+    "otherArtwork": "Code-native Canvas lettering/seals/theatrical graphic and existing authored advertising/window atlases."
+  },
+  "performance": {
+    "newStaticPrimitives": 17,
+    "newRenderVertices": 69714,
+    "newCollisionTriangles": 2288,
+    "signAtlasSizes": [
+      [
+        2048,
+        1024
+      ],
+      [
+        2048,
+        2048
+      ]
+    ],
+    "newCityTiles": 0,
+    "perFrameGeometryUpdates": 0
+  },
+  "limitations": [
+    "Reference-guided exterior interpretation, not a photographic or surveyed reconstruction. Source data governs the real footprint, setback and roof envelope.",
+    "Store names, campaigns, storefront splits, decorative dimensions and interior window imagery are fictional/authored.",
+    "Materials use static night shading and image-based window/screen emission rather than ray-traced light.",
+    "Native Canvas and actual Cesium Material/Primitive constructors checked. Browser/WebGL visual QA and live FPS measurement unavailable."
+  ]
+}

@@ -1,0 +1,8 @@
+# Billboard artwork provenance
+
+Built-in image generation tool; project asset: public/billboards/two47-reference-atlas.png.
+Input reference: Screenshot 2026-10-19 at 8.05.40 PM.png.
+
+## Final prompt
+
+Use case: ads-marketing. Asset type: a flat billboard texture atlas for a Times Square browser game. The attached image is a reference, not the output composition. Recreate only the visible advertising artwork as a clean 2 by 2 square texture atlas, with exactly four equal edge-to-edge square quadrants, no margins, no environment, no perspective, no poles, no buildings, no UI. Top-left quadrant: vivid Coca-Cola red with the exact white script text 'Coca-Cola' at top and a tall white classic bottle silhouette centered below. Keep all important content in the narrow central third of this quadrant so it can be cropped to a tall sign. Top-right quadrant: the white fashion campaign seen in the screenshot, photorealistic adult woman wearing a bright turquoise floral sunhat and matching turquoise floral outfit, clean pure white studio background, elegant editorial fashion pose, no additional text. Bottom-left quadrant: the pictured white theatre advertisement, exact large black text 'THE BOOK OF MORMON' with a friendly adult man in white shirt and black tie ringing a doorbell, a gold vertical stripe at the right reading 'HELLO!'. Bottom-right quadrant: a clean white campaign with small exact blue text 'Join' near upper center and bold exact blue text 'BED BATH & BEYOND' near bottom center. Flat luminous advertisement artwork, crisp printed type and realistic photography, strong clean colors. Match the reference artwork closely. The output is only this four-panel flat atlas.

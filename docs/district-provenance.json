@@ -1,0 +1,16 @@
+{
+  "scope": "Remaining Times Square street fronts, W42–W49, Sixth–Eighth Avenues",
+  "geometry": "Original NYC building triangles and OSM road/sidewalk centerlines remain unmodified. prepare-district.mjs ray-fits frontage finishes at four elevations and three horizontal positions, rejects existing landmark fronts, and validates sidewalk clearance.",
+  "visualReferences": [
+    "User-provided Times Square and W42 photographs in this conversation",
+    "https://www.timessquarenyc.org/",
+    "https://www.rownyc.com/",
+    "https://www.carminesnyc.com/locations/times-square",
+    "https://www.elchontour.de/Foto/NewYork/2025MidtownSouth/NYC202543.jpg"
+  ],
+  "authoredDetails": "Generic retail names, storefront finishes, advertisement selection, temporary scaffold placement and lamp shapes are reference-guided scenery, not a surveyed current reconstruction. No reference screenshot pixels or Google Maps data are embedded.",
+  "preservation": "Previously customized landmark planes and existing general billboard planes are excluded from new frontage placement. Existing landmark modules, controls, buses, subway entrances and street widths remain intact.",
+  "performance": "Static materials and shared atlas primitives, no per-frame facade work or dynamic lights. City buildings remain streamed 3D Tiles; only a bounded district detail layer is resident.",
+  "bryantParkLimitation": "The requested 3 Bryant Park public plaza is documented by https://www.abbnyc.com/3-bryant-park-plaza and https://www.mdeas.com/the-cubes. The older NYC source contains a podium in the modern opening. This update does not remove that source geometry or claim to reproduce the full through-block plaza. It remains pending a compatible source correction or newer source mesh.",
+  "verificationLimit": "Node physics, source-fit and real Cesium construction tests and production build. No browser WebGL image or measured live FPS verification in this environment."
+}

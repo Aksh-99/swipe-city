@@ -1,0 +1,7 @@
+# W47 / Broadway Morgan Stanley and W / Dos Caminos
+
+Uses the three October 19 8:00:40, 8:00:58 and 8:01:11 supplied references. The two first views use August 2022 campaign imagery; the third shows the April 2026 restaurant and W entrance. The selected composition uses the blue/purple campaign layout, the newer restaurant entrance detailing, and sidewalk scaffolding on the Broadway restaurant return. Morgan Stanley is on the north side; W/Dos Caminos is south. Source ray fitting follows the west side of Broadway, avoiding the east-of-plaza buildings.
+
+Morgan Stanley: silver curtain-wall finish over the full original source volume, a 16-facet cylindrical blue LED corner with continuous image coordinates, independent blue display/ribbon frames, Starbucks fascia, silver bollards, blue/yellow umbrella food cart and signal mast. W: silver podium panels, red vertical fins and W entrance, Dos Caminos fascia, shallow lobby canopy, American flag, separately framed white/blue rewards screens, narrow jewelry display, and Broadway sidewalk scaffolding. Art is a code-authored reference interpretation, not a copy of the photographed campaigns.
+
+Source planes and source heights are retained. The adjoining midblock finish now ends before these corner frontages. The prior W46 American Eagle/T-Mobile installation remains independent. Tests cover source fit, curved display continuity, material startup, finite geometry, and pedestrian clearance with district parking. Live browser comparison remains unavailable.

@@ -1,0 +1,1082 @@
+[
+  {
+    "path": "public/assets/lyric/cursed-child-logo.png",
+    "size": 367852
+  },
+  {
+    "path": "public/audio/female-car-hit.mp3",
+    "size": 45302
+  },
+  {
+    "path": "public/audio/female-car-hit.wav",
+    "size": 522146
+  },
+  {
+    "path": "public/audio/gunshot.mp3",
+    "size": 48109
+  },
+  {
+    "path": "public/audio/gunshot.wav",
+    "size": 517318
+  },
+  {
+    "path": "public/audio/iphone-message.wav",
+    "size": 586858
+  },
+  {
+    "path": "public/audio/male-car-hit.mp3",
+    "size": 78720
+  },
+  {
+    "path": "public/audio/male-car-hit.wav",
+    "size": 377934
+  },
+  {
+    "path": "public/billboards/atlas.webp",
+    "size": 560846
+  },
+  {
+    "path": "public/billboards/avenue-fashion-collage.webp",
+    "size": 508944
+  },
+  {
+    "path": "public/billboards/disney-building-led.webp",
+    "size": 351238
+  },
+  {
+    "path": "public/billboards/doughnuts48-prompt.md",
+    "size": 950
+  },
+  {
+    "path": "public/billboards/doughnuts48.webp",
+    "size": 200918
+  },
+  {
+    "path": "public/billboards/east46-express-atlas.webp",
+    "size": 302484
+  },
+  {
+    "path": "public/billboards/marriott-front-campaigns.webp",
+    "size": 353970
+  },
+  {
+    "path": "public/billboards/marriott-side-sneaker.webp",
+    "size": 209382
+  },
+  {
+    "path": "public/billboards/portrait-atlas.webp",
+    "size": 642356
+  },
+  {
+    "path": "public/billboards/renaissance48-mormon.webp",
+    "size": 178206
+  },
+  {
+    "path": "public/billboards/renaissance48-prompt.md",
+    "size": 971
+  },
+  {
+    "path": "public/billboards/seventh49-reference-atlas.webp",
+    "size": 267986
+  },
+  {
+    "path": "public/billboards/tsx47-panoramic-campaigns.webp",
+    "size": 427654
+  },
+  {
+    "path": "public/billboards/tsx47-reference-atlas.webp",
+    "size": 556698
+  },
+  {
+    "path": "public/billboards/two47-campaigns-v2.webp",
+    "size": 351176
+  },
+  {
+    "path": "public/billboards/two47-reference-atlas.webp",
+    "size": 265200
+  },
+  {
+    "path": "public/billboards/w46-eagle-tmobile-atlas.webp",
+    "size": 421430
+  },
+  {
+    "path": "public/characters/.asian.glb.Oe7mLF",
+    "size": 4456448
+  },
+  {
+    "path": "public/characters/.asian.glb.RGIrTy",
+    "size": 2883584
+  },
+  {
+    "path": "public/characters/.indian-meshy.glb.4KumW0",
+    "size": 1835008
+  },
+  {
+    "path": "public/characters/.indian-meshy.glb.R2sqDf",
+    "size": 3145728
+  },
+  {
+    "path": "public/characters/.white_male_officer-meshy.glb.0X2MnO",
+    "size": 5767168
+  },
+  {
+    "path": "public/characters/.white_male_officer.glb.Loh5PE",
+    "size": 1048576
+  },
+  {
+    "path": "public/characters/african-meshy.glb",
+    "size": 8625396
+  },
+  {
+    "path": "public/characters/african.glb",
+    "size": 8173564
+  },
+  {
+    "path": "public/characters/african.webp",
+    "size": 4588
+  },
+  {
+    "path": "public/characters/african_fem-meshy.glb",
+    "size": 8505384
+  },
+  {
+    "path": "public/characters/african_fem-part0.bin",
+    "size": 19946429
+  },
+  {
+    "path": "public/characters/african_fem-part1.bin",
+    "size": 11621435
+  },
+  {
+    "path": "public/characters/african_fem.gltf",
+    "size": 3128
+  },
+  {
+    "path": "public/characters/african_fem.webp",
+    "size": 4306
+  },
+  {
+    "path": "public/characters/african_fem_officer-meshy.glb",
+    "size": 8719160
+  },
+  {
+    "path": "public/characters/african_fem_officer.glb",
+    "size": 12666660
+  },
+  {
+    "path": "public/characters/african_officer-meshy.glb",
+    "size": 8098488
+  },
+  {
+    "path": "public/characters/african_officer.glb",
+    "size": 11141420
+  },
+  {
+    "path": "public/characters/asian-meshy.glb",
+    "size": 7819576
+  },
+  {
+    "path": "public/characters/asian.glb",
+    "size": 6687260
+  },
+  {
+    "path": "public/characters/asian.webp",
+    "size": 4842
+  },
+  {
+    "path": "public/characters/asian_fem-meshy.glb",
+    "size": 15197740
+  },
+  {
+    "path": "public/characters/asian_fem.glb",
+    "size": 7275052
+  },
+  {
+    "path": "public/characters/asian_fem.webp",
+    "size": 3366
+  },
+  {
+    "path": "public/characters/asian_fem_officer-meshy.glb",
+    "size": 17190096
+  },
+  {
+    "path": "public/characters/asian_fem_officer.glb",
+    "size": 6809976
+  },
+  {
+    "path": "public/characters/asian_officer-meshy.glb",
+    "size": 8232688
+  },
+  {
+    "path": "public/characters/asian_officer.glb",
+    "size": 7995056
+  },
+  {
+    "path": "public/characters/bald-meshy.glb",
+    "size": 12779656
+  },
+  {
+    "path": "public/characters/bald.glb",
+    "size": 6409184
+  },
+  {
+    "path": "public/characters/bald.webp",
+    "size": 5016
+  },
+  {
+    "path": "public/characters/bald_officer-meshy.glb",
+    "size": 6253848
+  },
+  {
+    "path": "public/characters/bald_officer.glb",
+    "size": 8241560
+  },
+  {
+    "path": "public/characters/blonde-meshy.glb",
+    "size": 12028600
+  },
+  {
+    "path": "public/characters/blonde.glb",
+    "size": 8759456
+  },
+  {
+    "path": "public/characters/blonde.webp",
+    "size": 3346
+  },
+  {
+    "path": "public/characters/blonde_officer-meshy.glb",
+    "size": 8070500
+  },
+  {
+    "path": "public/characters/blonde_officer.glb",
+    "size": 11418304
+  },
+  {
+    "path": "public/characters/geometry-integrity.json",
+    "size": 6627
+  },
+  {
+    "path": "public/characters/indian-meshy.glb",
+    "size": 15746676
+  },
+  {
+    "path": "public/characters/indian.glb",
+    "size": 4511232
+  },
+  {
+    "path": "public/characters/indian.webp",
+    "size": 3040
+  },
+  {
+    "path": "public/characters/indian_fem-meshy.glb",
+    "size": 6907268
+  },
+  {
+    "path": "public/characters/indian_fem.glb",
+    "size": 9839428
+  },
+  {
+    "path": "public/characters/indian_fem.webp",
+    "size": 4976
+  },
+  {
+    "path": "public/characters/indian_fem_officer-meshy.glb",
+    "size": 8586768
+  },
+  {
+    "path": "public/characters/indian_fem_officer.glb",
+    "size": 11174948
+  },
+  {
+    "path": "public/characters/indian_officer-meshy.glb",
+    "size": 15863040
+  },
+  {
+    "path": "public/characters/indian_officer.glb",
+    "size": 7636476
+  },
+  {
+    "path": "public/characters/irish-meshy.glb",
+    "size": 8111868
+  },
+  {
+    "path": "public/characters/irish.glb",
+    "size": 9710828
+  },
+  {
+    "path": "public/characters/irish.webp",
+    "size": 4826
+  },
+  {
+    "path": "public/characters/irish_officer-meshy.glb",
+    "size": 8074008
+  },
+  {
+    "path": "public/characters/irish_officer.glb",
+    "size": 10357268
+  },
+  {
+    "path": "public/characters/white_male-meshy.glb",
+    "size": 7949376
+  },
+  {
+    "path": "public/characters/white_male.glb",
+    "size": 7353268
+  },
+  {
+    "path": "public/characters/white_male.webp",
+    "size": 4670
+  },
+  {
+    "path": "public/characters/white_male_officer-meshy.glb",
+    "size": 14931540
+  },
+  {
+    "path": "public/characters/white_male_officer.glb",
+    "size": 5650668
+  },
+  {
+    "path": "public/data/42nd-attractions.json",
+    "size": 4598
+  },
+  {
+    "path": "public/data/african-motion.json",
+    "size": 1940083
+  },
+  {
+    "path": "public/data/african_fem-motion.json",
+    "size": 1971267
+  },
+  {
+    "path": "public/data/african_fem_officer-motion.json",
+    "size": 1937085
+  },
+  {
+    "path": "public/data/african_officer-motion.json",
+    "size": 1908849
+  },
+  {
+    "path": "public/data/asian-motion.json",
+    "size": 1973316
+  },
+  {
+    "path": "public/data/asian_fem-motion.json",
+    "size": 1315450
+  },
+  {
+    "path": "public/data/asian_fem_officer-motion.json",
+    "size": 1961877
+  },
+  {
+    "path": "public/data/asian_officer-motion.json",
+    "size": 1902656
+  },
+  {
+    "path": "public/data/avenue-infill.json",
+    "size": 29253
+  },
+  {
+    "path": "public/data/avenue.json",
+    "size": 8655
+  },
+  {
+    "path": "public/data/bald-motion.json",
+    "size": 1315943
+  },
+  {
+    "path": "public/data/bald_officer-motion.json",
+    "size": 1282864
+  },
+  {
+    "path": "public/data/barclays49.json",
+    "size": 48749
+  },
+  {
+    "path": "public/data/biltmore47-skin.json",
+    "size": 82622
+  },
+  {
+    "path": "public/data/biltmore47.json",
+    "size": 2371
+  },
+  {
+    "path": "public/data/blonde-motion.json",
+    "size": 361526
+  },
+  {
+    "path": "public/data/blonde_officer-motion.json",
+    "size": 1968910
+  },
+  {
+    "path": "public/data/broadway-retail.json",
+    "size": 3523
+  },
+  {
+    "path": "public/data/bryant-park.json",
+    "size": 442
+  },
+  {
+    "path": "public/data/bus-stops.json",
+    "size": 13928
+  },
+  {
+    "path": "public/data/carve47.json",
+    "size": 1440
+  },
+  {
+    "path": "public/data/cinema-block.json",
+    "size": 8570
+  },
+  {
+    "path": "public/data/collision/b/4/6.b3dm.bin",
+    "size": 72792
+  },
+  {
+    "path": "public/data/collision/b/4/7.b3dm.bin",
+    "size": 215640
+  },
+  {
+    "path": "public/data/collision/b/5/6.b3dm.bin",
+    "size": 189000
+  },
+  {
+    "path": "public/data/collision/b/6/6.b3dm.bin",
+    "size": 93312
+  },
+  {
+    "path": "public/data/collision/c/10/12.b3dm.bin",
+    "size": 305856
+  },
+  {
+    "path": "public/data/collision/c/10/13.b3dm.bin",
+    "size": 260028
+  },
+  {
+    "path": "public/data/collision/c/10/14.b3dm.bin",
+    "size": 316188
+  },
+  {
+    "path": "public/data/collision/c/11/12.b3dm.bin",
+    "size": 296100
+  },
+  {
+    "path": "public/data/collision/c/11/13.b3dm.bin",
+    "size": 255384
+  },
+  {
+    "path": "public/data/collision/c/11/14.b3dm.bin",
+    "size": 330444
+  },
+  {
+    "path": "public/data/collision/c/12/12.b3dm.bin",
+    "size": 281880
+  },
+  {
+    "path": "public/data/collision/c/12/13.b3dm.bin",
+    "size": 285984
+  },
+  {
+    "path": "public/data/collision/c/12/14.b3dm.bin",
+    "size": 351216
+  },
+  {
+    "path": "public/data/collision/c/8/12.b3dm.bin",
+    "size": 297900
+  },
+  {
+    "path": "public/data/collision/c/8/13.b3dm.bin",
+    "size": 132048
+  },
+  {
+    "path": "public/data/collision/c/8/14.b3dm.bin",
+    "size": 221184
+  },
+  {
+    "path": "public/data/collision/c/9/12.b3dm.bin",
+    "size": 307836
+  },
+  {
+    "path": "public/data/collision/c/9/13.b3dm.bin",
+    "size": 301968
+  },
+  {
+    "path": "public/data/collision/c/9/14.b3dm.bin",
+    "size": 209304
+  },
+  {
+    "path": "public/data/collision/d/16/27.b3dm.bin",
+    "size": 75312
+  },
+  {
+    "path": "public/data/collision/d/17/24.b3dm.bin",
+    "size": 85680
+  },
+  {
+    "path": "public/data/collision/d/17/26.b3dm.bin",
+    "size": 78120
+  },
+  {
+    "path": "public/data/collision/d/24/25.b3dm.bin",
+    "size": 145224
+  },
+  {
+    "path": "public/data/corner47-skin.json",
+    "size": 168521
+  },
+  {
+    "path": "public/data/corner47.json",
+    "size": 1582
+  },
+  {
+    "path": "public/data/corner49-ne.json",
+    "size": 11858
+  },
+  {
+    "path": "public/data/corner49-sw.json",
+    "size": 20097
+  },
+  {
+    "path": "public/data/district-parking.json",
+    "size": 224552
+  },
+  {
+    "path": "public/data/district.json",
+    "size": 333127
+  },
+  {
+    "path": "public/data/east42.json",
+    "size": 85828
+  },
+  {
+    "path": "public/data/east44-props.json",
+    "size": 1042
+  },
+  {
+    "path": "public/data/east45.json",
+    "size": 13478
+  },
+  {
+    "path": "public/data/east46.json",
+    "size": 4211
+  },
+  {
+    "path": "public/data/fdny-theta48.json",
+    "size": 48876
+  },
+  {
+    "path": "public/data/five-times.json",
+    "size": 49547
+  },
+  {
+    "path": "public/data/five48.json",
+    "size": 40398
+  },
+  {
+    "path": "public/data/grace-plaza.json",
+    "size": 41702
+  },
+  {
+    "path": "public/data/hard-rock-food-row.json",
+    "size": 13884
+  },
+  {
+    "path": "public/data/hoodie-motion.json",
+    "size": 149276
+  },
+  {
+    "path": "public/data/hyatt48.json",
+    "size": 105040
+  },
+  {
+    "path": "public/data/indian-motion.json",
+    "size": 1938277
+  },
+  {
+    "path": "public/data/indian_fem-motion.json",
+    "size": 1315983
+  },
+  {
+    "path": "public/data/indian_fem_officer-motion.json",
+    "size": 1908359
+  },
+  {
+    "path": "public/data/indian_officer-motion.json",
+    "size": 1314115
+  },
+  {
+    "path": "public/data/irish-motion.json",
+    "size": 1747832
+  },
+  {
+    "path": "public/data/irish_officer-motion.json",
+    "size": 1974574
+  },
+  {
+    "path": "public/data/jaywalking-crossings.json",
+    "size": 21360
+  },
+  {
+    "path": "public/data/krispy48.json",
+    "size": 1801
+  },
+  {
+    "path": "public/data/landmarks.json",
+    "size": 38779
+  },
+  {
+    "path": "public/data/lyric-theatre.json",
+    "size": 2662
+  },
+  {
+    "path": "public/data/marriott-corner.json",
+    "size": 1190
+  },
+  {
+    "path": "public/data/marriott-front.json",
+    "size": 290223
+  },
+  {
+    "path": "public/data/match-spawns.json",
+    "size": 80329
+  },
+  {
+    "path": "public/data/mcdonalds-corner.json",
+    "size": 1294
+  },
+  {
+    "path": "public/data/mid47-skin.json",
+    "size": 325100
+  },
+  {
+    "path": "public/data/mid47.json",
+    "size": 948
+  },
+  {
+    "path": "public/data/mms-whole.json",
+    "size": 78761
+  },
+  {
+    "path": "public/data/morgan48.json",
+    "size": 59050
+  },
+  {
+    "path": "public/data/nasdaq.json",
+    "size": 9213
+  },
+  {
+    "path": "public/data/north42.json",
+    "size": 21119
+  },
+  {
+    "path": "public/data/npc-pedestrians.json",
+    "size": 1947
+  },
+  {
+    "path": "public/data/nyc/b/4/6.b3dm",
+    "size": 208680
+  },
+  {
+    "path": "public/data/nyc/b/4/7.b3dm",
+    "size": 614524
+  },
+  {
+    "path": "public/data/nyc/b/5/6.b3dm",
+    "size": 538268
+  },
+  {
+    "path": "public/data/nyc/b/6/6.b3dm",
+    "size": 267040
+  },
+  {
+    "path": "public/data/nyc/c/10/12.b3dm",
+    "size": 874504
+  },
+  {
+    "path": "public/data/nyc/c/10/13.b3dm",
+    "size": 747820
+  },
+  {
+    "path": "public/data/nyc/c/10/14.b3dm",
+    "size": 911880
+  },
+  {
+    "path": "public/data/nyc/c/11/12.b3dm",
+    "size": 849060
+  },
+  {
+    "path": "public/data/nyc/c/11/13.b3dm",
+    "size": 733028
+  },
+  {
+    "path": "public/data/nyc/c/11/14.b3dm",
+    "size": 950956
+  },
+  {
+    "path": "public/data/nyc/c/12/12.b3dm",
+    "size": 809428
+  },
+  {
+    "path": "public/data/nyc/c/12/13.b3dm",
+    "size": 820016
+  },
+  {
+    "path": "public/data/nyc/c/12/14.b3dm",
+    "size": 1003024
+  },
+  {
+    "path": "public/data/nyc/c/8/12.b3dm",
+    "size": 853696
+  },
+  {
+    "path": "public/data/nyc/c/8/13.b3dm",
+    "size": 385120
+  },
+  {
+    "path": "public/data/nyc/c/8/14.b3dm",
+    "size": 643712
+  },
+  {
+    "path": "public/data/nyc/c/9/12.b3dm",
+    "size": 882496
+  },
+  {
+    "path": "public/data/nyc/c/9/13.b3dm",
+    "size": 875108
+  },
+  {
+    "path": "public/data/nyc/c/9/14.b3dm",
+    "size": 606204
+  },
+  {
+    "path": "public/data/nyc/d/16/27.b3dm",
+    "size": 219820
+  },
+  {
+    "path": "public/data/nyc/d/17/24.b3dm",
+    "size": 247484
+  },
+  {
+    "path": "public/data/nyc/d/17/26.b3dm",
+    "size": 227276
+  },
+  {
+    "path": "public/data/nyc/d/24/25.b3dm",
+    "size": 416416
+  },
+  {
+    "path": "public/data/nyc/manifest.json",
+    "size": 7385
+  },
+  {
+    "path": "public/data/nyc/tileset.json",
+    "size": 7414
+  },
+  {
+    "path": "public/data/nypd-plaza.json",
+    "size": 10838
+  },
+  {
+    "path": "public/data/office-grid.json",
+    "size": 618
+  },
+  {
+    "path": "public/data/one-times-wrap.json",
+    "size": 4410
+  },
+  {
+    "path": "public/data/paramount-north.json",
+    "size": 1730
+  },
+  {
+    "path": "public/data/play-area.json",
+    "size": 3232
+  },
+  {
+    "path": "public/data/police-vehicles.json",
+    "size": 21501
+  },
+  {
+    "path": "public/data/port-authority.json",
+    "size": 18890
+  },
+  {
+    "path": "public/data/recruiting-station.json",
+    "size": 4891
+  },
+  {
+    "path": "public/data/renaissance48.json",
+    "size": 20051
+  },
+  {
+    "path": "public/data/report-streets.json",
+    "size": 32743
+  },
+  {
+    "path": "public/data/rockefeller48.json",
+    "size": 27063
+  },
+  {
+    "path": "public/data/shop-addresses-nyc.json",
+    "size": 104174
+  },
+  {
+    "path": "public/data/shubert-alley.json",
+    "size": 2528
+  },
+  {
+    "path": "public/data/sixth46-parking.json",
+    "size": 4221
+  },
+  {
+    "path": "public/data/sixth46.json",
+    "size": 4830
+  },
+  {
+    "path": "public/data/sixth47.json",
+    "size": 34519
+  },
+  {
+    "path": "public/data/south42-transit.json",
+    "size": 12279
+  },
+  {
+    "path": "public/data/storefronts.json",
+    "size": 22930
+  },
+  {
+    "path": "public/data/street-details.json",
+    "size": 25309
+  },
+  {
+    "path": "public/data/street-vendors.json",
+    "size": 14379
+  },
+  {
+    "path": "public/data/streets-osm.json",
+    "size": 728965
+  },
+  {
+    "path": "public/data/streetscape.json",
+    "size": 79001
+  },
+  {
+    "path": "public/data/studios.json",
+    "size": 6069
+  },
+  {
+    "path": "public/data/subway-entrances-mta.json",
+    "size": 54309
+  },
+  {
+    "path": "public/data/superdry49.json",
+    "size": 20739
+  },
+  {
+    "path": "public/data/touro-frontage.json",
+    "size": 2361
+  },
+  {
+    "path": "public/data/transport-portals.json",
+    "size": 46190
+  },
+  {
+    "path": "public/data/tsx47.json",
+    "size": 112176
+  },
+  {
+    "path": "public/data/two47-skin.json",
+    "size": 42359
+  },
+  {
+    "path": "public/data/two47.json",
+    "size": 2770
+  },
+  {
+    "path": "public/data/w46-billboard-corners.json",
+    "size": 2043
+  },
+  {
+    "path": "public/data/w46-scaffold.json",
+    "size": 428
+  },
+  {
+    "path": "public/data/west45-corners.json",
+    "size": 665
+  },
+  {
+    "path": "public/data/west45.json",
+    "size": 11612
+  },
+  {
+    "path": "public/data/west46-parking.json",
+    "size": 20623
+  },
+  {
+    "path": "public/data/west46.json",
+    "size": 14789
+  },
+  {
+    "path": "public/data/west48.json",
+    "size": 301460
+  },
+  {
+    "path": "public/data/white_male-motion.json",
+    "size": 1940394
+  },
+  {
+    "path": "public/data/white_male_officer-motion.json",
+    "size": 1907675
+  },
+  {
+    "path": "public/favicon.svg",
+    "size": 186
+  },
+  {
+    "path": "public/home/swipe-city-night-v2.webp",
+    "size": 325908
+  },
+  {
+    "path": "public/home/swipe-city-night.webp",
+    "size": 256926
+  },
+  {
+    "path": "public/licenses/touro-font-license.txt",
+    "size": 2006
+  },
+  {
+    "path": "public/reference48/firehouse.webp",
+    "size": 412042
+  },
+  {
+    "path": "public/reference48/theta-shop.webp",
+    "size": 628880
+  },
+  {
+    "path": "public/storefronts/disney-wordmark.svg",
+    "size": 13396
+  },
+  {
+    "path": "public/storefronts/east45-pub-facades.webp",
+    "size": 686844
+  },
+  {
+    "path": "public/storefronts/food-menu-photos.webp",
+    "size": 332606
+  },
+  {
+    "path": "public/storefronts/gap-displays.webp",
+    "size": 385186
+  },
+  {
+    "path": "public/storefronts/hard-rock-interiors.webp",
+    "size": 571100
+  },
+  {
+    "path": "public/storefronts/hard-rock-logo-color.webp",
+    "size": 3524
+  },
+  {
+    "path": "public/storefronts/hard-rock-logo.webp",
+    "size": 3300
+  },
+  {
+    "path": "public/storefronts/hersheys-atlas.webp",
+    "size": 417504
+  },
+  {
+    "path": "public/storefronts/krispy48-atlas.webp",
+    "size": 418190
+  },
+  {
+    "path": "public/storefronts/krispy48-prompt.md",
+    "size": 1399
+  },
+  {
+    "path": "public/storefronts/mms-interior-atlas.webp",
+    "size": 535858
+  },
+  {
+    "path": "public/storefronts/mms-reference.webp",
+    "size": 95418
+  },
+  {
+    "path": "public/storefronts/paramount-portal.webp",
+    "size": 580730
+  },
+  {
+    "path": "public/storefronts/paramount-script.svg",
+    "size": 7790
+  },
+  {
+    "path": "public/storefronts/retail-interiors-atlas.webp",
+    "size": 480588
+  },
+  {
+    "path": "public/storefronts/taco-bell-logo.webp",
+    "size": 5036
+  },
+  {
+    "path": "public/storefronts/touro-campaign.svg",
+    "size": 903
+  },
+  {
+    "path": "public/storefronts/west46-maison-platinum-picnic.webp",
+    "size": 400404
+  },
+  {
+    "path": "public/storefronts/west46-theatre-posters.webp",
+    "size": 535552
+  },
+  {
+    "path": "public/storefronts/window-atlas.webp",
+    "size": 741876
+  },
+  {
+    "path": "public/traffic/black.glb",
+    "size": 949860
+  },
+  {
+    "path": "public/traffic/blue.glb",
+    "size": 949860
+  },
+  {
+    "path": "public/traffic/red.glb",
+    "size": 949860
+  },
+  {
+    "path": "public/traffic/silver.glb",
+    "size": 949860
+  },
+  {
+    "path": "public/traffic/suv.glb",
+    "size": 967056
+  },
+  {
+    "path": "public/traffic/taxi.glb",
+    "size": 973380
+  },
+  {
+    "path": "public/traffic/van.glb",
+    "size": 965820
+  },
+  {
+    "path": "public/trees/README.md",
+    "size": 873
+  },
+  {
+    "path": "public/trees/green.bin",
+    "size": 1199488
+  },
+  {
+    "path": "public/trees/green.json",
+    "size": 1793
+  },
+  {
+    "path": "public/trees/maple.bin",
+    "size": 1339408
+  },
+  {
+    "path": "public/trees/maple.json",
+    "size": 1793
+  }
+]

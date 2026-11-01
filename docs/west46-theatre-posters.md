@@ -1,0 +1,7 @@
+# W46 theatre continuation
+
+Built-in image generation tool, reference-guided poster atlas saved at `public/storefronts/west46-theatre-posters.png`. The theatre architecture, canopies, bulbs and signs are separate 3D geometry. This is generated poster artwork, not a claim of an exact reproduction of the original campaigns.
+
+Final prompt:
+
+Use case: ads-marketing. Asset type: three equal width theatre poster cells in one 3:1 wide atlas for a Times Square game. Supplied screenshots are references for the theater poster designs, not edit targets. Strictly three equally sized square cells edge-to-edge, each a front-facing flat print with no perspective, no surrounding architecture or people. Left cell: Broadway HAMILTON inspired poster, antique amber gold and black, one black silhouette standing atop a five-point black star with a raised arm, exact readable title 'HAMILTON'. Middle cell: 'DEATH BECOMES HER' theatrical poster, elegant pale pink flowing serif lettering on deep aubergine purple, tall glamorous woman in a dramatic magenta red gown, soft pink smoky light, small warm footlights. Right cell: 'STRANGER THINGS' small red top title and large ivory 'THE FIRST SHADOW', red glowing ominous clockwork doorway against deep black, 1950s theatrical mystery atmosphere. These three images are facade poster texture assets. No borders between cells, no map controls or other UI, no cars, no photos of the street. Keep each design entirely inside its own exact one third cell.

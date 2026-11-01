@@ -1,0 +1,100 @@
+{
+  "landmarks": [
+    "Dave & Buster’s",
+    "Madame Tussauds New York"
+  ],
+  "address": "234 West 42nd Street, New York, NY 10036",
+  "references": [
+    {
+      "filename": "Screenshot 2026-10-03 at 8.27.53 PM.png",
+      "sha256": "3b03b424fc1c93c2bd24060decb5af2d50d711ad89c259cfc4c94c22b60cdc0c",
+      "use": "Visual reference only. Screenshot pixels are not embedded, cropped into textures, or retrieved from Google."
+    },
+    {
+      "filename": "Screenshot 2026-10-03 at 8.28.22 PM.png",
+      "sha256": "ba80b9fda215e1b340e9812c19ec4a27ae0b0bdb32d398dcb0cc4a5e5227b375",
+      "use": "Visual reference only. Screenshot pixels are not embedded, cropped into textures, or retrieved from Google."
+    },
+    {
+      "filename": "Screenshot 2026-10-03 at 8.28.45 PM.png",
+      "sha256": "1c732dd553b3aa56065a22c18a746d489f7411ea1fa31759fdfb2f94b120d9f9",
+      "use": "Visual reference only. Screenshot pixels are not embedded, cropped into textures, or retrieved from Google."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.daveandbusters.com/us/en/about/locations/new-york-city-times-square",
+      "publisher": "Dave & Buster’s",
+      "supports": "Official Times Square venue address and third-floor location."
+    },
+    {
+      "url": "https://www.madametussauds.com/new-york/plan-your-day/before-you-visit/getting-here/",
+      "publisher": "Madame Tussauds",
+      "supports": "Official address on W42 between Seventh and Eighth Avenues."
+    },
+    {
+      "url": "https://assets.cushmanwakefield.com/-/pmedia/247290/6/234-west-42nd-street--cw-brochure-ripleys-2025.pdf",
+      "publisher": "Cushman & Wakefield",
+      "supports": "234 W42 retail complex, Liberty Theater and Dave & Buster’s upper-level adjacency."
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-73.9911,40.7560,-73.9880,40.7582",
+      "archive": "docs/source-data/42nd-attractions-osm.json",
+      "license": "© OpenStreetMap contributors, ODbL",
+      "wayIds": [
+        591988954,
+        586476446,
+        591988959
+      ],
+      "supports": "Dave & Buster’s, Madame Tussauds and Applebee’s relative footprints/order."
+    },
+    {
+      "url": "https://github.com/JoeThunyathep/NYC3D_CesiumJS",
+      "commit": "df20a24582520dd856e56e99ae44e3ff43ab3269",
+      "supports": "Unchanged original NYC building geometry and triangle collision."
+    }
+  ],
+  "placement": {
+    "method": "Seven thin facade sections fitted to source walls at multiple widths/heights; 0.16 m outward offset. Original source roofs constrain all wall finishes. This corrects the earlier generic Dave/Madame nameplates to mapped tenant order.",
+    "maxFitResidualMeters": 0.0011,
+    "entranceStationing": {
+      "Dave & Buster’s": 123.2,
+      "Madame Tussauds": 151.3
+    },
+    "finishedStreetRangeMeters": [
+      101.4,
+      167.1
+    ]
+  },
+  "details": [
+    "Large shallow blue/orange oval Dave & Buster’s sign, metal rims and brackets",
+    "Two-sided EAT / DRINK / PLAY / WATCH projecting blade",
+    "Bronze/red glazed frontage, glass doors and Liberty Diner canopy lettering",
+    "Gold/violet segmented Madame Tussauds blade on gold supports",
+    "Curved stainless canopy with red soffit, red entrance portal and branded medallion",
+    "Authored fixed silver hand sculpture with shaped palm, four fingers, thumb, joints and nails",
+    "Six panels from existing fictional movie/retail atlases",
+    "Extended south sidewalk and curb, eight concrete barriers and two stainless bollards",
+    "Visit shortcut and phone-map pins for both attractions"
+  ],
+  "scope": "Exterior-only scenery in the existing Times Square city section. Original NYC tiles unchanged. No new characters, interiors, vehicles or gameplay systems.",
+  "approximations": [
+    "Facade dimensions, sign proportions, canopy profile, sculpture and lighting are authored interpretations of the photographs, not a surveyed or photographic reconstruction.",
+    "The Madame Tussauds hand is a simplified static sculpture.",
+    "Liberty Diner finish follows the supplied historic photo reference; it does not assert current operating tenants.",
+    "Advertising reuses fictional scenery rather than current attraction promotions.",
+    "Roof/wall shapes follow the historical NYC dataset, which can differ from present-day buildings."
+  ],
+  "performance": {
+    "primitives": 9,
+    "vertices": 95364,
+    "collisionTriangles": 570,
+    "signAtlasSize": [
+      2048,
+      2048
+    ],
+    "additionalCityTiles": 0,
+    "perFrameUpdates": 0
+  },
+  "verification": "Multi-height source wall fitting, walking/running both directions with surrounding city/street/landmark obstacles, visit spawn and doorway access, concrete/stainless obstacle collision, under-canopy camera clearance, real Cesium Primitive/Material construction, native Canvas drawing and production build. Browser/WebGL visual QA and live FPS measurements unavailable."
+}

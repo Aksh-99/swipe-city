@@ -1,0 +1,11 @@
+# Express, gift shops, stalls and construction
+
+Based on supplied 8:01:42 and 8:02:07 PM screenshots. Geometry is fitted to original NYC wall planes on the east side of Broadway / W46. Express has cream stone, brass window trim, arched upper windows and corner screen facets with continuous artwork coordinates. The opposite side has red brick, gift/luggage signage, stock displays and the gold-framed Beautiful poster. Finishes follow the original source surfaces at full height.
+
+Four curbside vendor stalls, two stationary orange telescopic work lifts and two construction cranes are included as 3D geometry. Each crane has a four-leg braced mast, triangulated jib, counterweights, cabin, suspended cable and hook. Crane base is inside the work zone; jib and hook are above pedestrian height. Static solid footprints and pedestrian lanes are checked against source collision. No gameplay transport interaction is added.
+
+The generated artwork is a reference-guided reconstruction. Built-in image generation saved the integrated asset at `public/billboards/east46-express-atlas.png`. Live WebGL visual verification is unavailable.
+
+## Final image prompt
+
+Use case: ads-marketing. Asset type: three exactly equal vertical square cells in one wide 3:1 texture atlas for a Times Square game. The two attached street screenshots are architectural and graphic references, not edit targets. No architecture in the resulting atlas; flat front-on artwork only. Left third: EXPRESS fashion campaign with two fully clothed adult women in white summer dresses against a pale gray stone street background, large white 'EXPRESS' across the bottom, sophisticated editorial retail photograph. Middle third: luminous bright azure blue digital advertising with ocean-like curved blue waves and subtle white central text 'Clear Channel Outdoor'. Right third: gold-framed theatre poster on black with the title 'Beautiful' in large elegant ivory lettering, small line 'The Carole King Musical', a woman wearing a blue dress seated at a black grand piano against amber light, golden border inset. Each design entirely within its own exact equal third. No UI, no Google Maps overlays, no street context, no watermark. Maintain clean legible text and the broad composition and colors visible in the references.

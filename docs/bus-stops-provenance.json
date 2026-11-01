@@ -1,0 +1,34 @@
+{
+  "created": "2026-10-03",
+  "scope": "Seven user-requested Times Square bus-stop areas with seven stationary exterior vehicles. No transit simulation, live arrivals, boarding, drivers, traffic AI or driving controls.",
+  "references": [
+    {
+      "url": "https://www.mta.info/developers",
+      "dataset": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_m.zip",
+      "archive": "docs/source-data/times-square-bus-stops.json",
+      "use": "MTA Manhattan static GTFS stops and route associations, retrieved October 3, 2026. Only a small area extract is retained. Temporary detours and real-time operation are outside this scenic prototype."
+    },
+    {
+      "url": "https://urbansherpatravel.com/trip-schedule/",
+      "use": "Confirms New Victory Theatre, 209 W42, as the Times Square pickup. OurBus wording also follows the user's supplied scene specification."
+    },
+    {
+      "url": "https://www.bigbustours.com/en/new-york/routes",
+      "use": "Confirms sightseeing Stop 1 at 7th Avenue / W48, outside M&M's World. The requested 723 7th Avenue is the operator's listed business address."
+    },
+    {
+      "url": "https://www.openstreetmap.org/copyright",
+      "use": "Existing OSM road centerlines, direction and sidewalk paths used to fit all seven curb positions.",
+      "license": "Open Database License; © OpenStreetMap contributors"
+    }
+  ],
+  "locationNotes": {
+    "mta-44": "Verified stop 405297, 7 AV/W 44 ST, serves M7, M20 and M104 in the retrieved feed; all three appear on the pole.",
+    "mta-42": "Requested M7/M20 stop outside the Times Square-42 St/NYPD area is represented as a scenic stop on the adjacent southbound 7th Avenue curb. Current GTFS instead lists M7/M20 at 7 AV/W 41 ST (450045) and M104 at 7 AV/W 42 ST (404153). This pole is not asserted to be a current surveyed stop.",
+    "mta-47": "Requested M20/M104 stop by Duffy Square is a scenic placement. No W47 stop for those routes was found in the retrieved feed. The bus sits on southbound 7th Avenue, outside the pedestrian plaza; its waiting route uses the existing opening in the crowd-control rails.",
+    "m42-seventh": "Verified westbound stop 405549, W 42 ST/7 AV. User-provided adjacent theater/address names are approximate area references.",
+    "m42-broadway": "Verified eastbound stop 403241, W 42 ST/BROADWAY, near the Knickerbocker side."
+  },
+  "assets": "All vehicle meshes, NYC-style pole signs, bus pictograms, route lettering and glass materials are authored in native code. No external vehicle model, photograph, scraped map imagery or generated raster asset is included. Branding is typeset interpretation; vehicles are not exact scans of a specific fleet model or current assignment.",
+  "dimensions": "Approximate realistic exterior envelopes: 12.2 × 2.55 × 3.35 m city bus; 13.7 × 2.55 × 3.72 m motorcoach; 12.0 × 2.55 × 4.18 m open-top double-decker. Locations are fitted against original NYC3D buildings, mapped sidewalks/crossings and all existing scene colliders."
+}

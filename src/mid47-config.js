@@ -1,0 +1,5 @@
+import raw from '../public/data/mid47.json' with {type:'json'};export const MID47=raw;
+export const MID47_SECTIONS=[[-1,60,89,'brick'],[-1,89,125,'lena'],[-1,125,143,'trecolori'],[-1,143,159,'tavern'],[-1,159,183,'outsiders'],[-1,183,185,'brick'],[1,99,120,'garage'],[1,120,146,'chophouse'],[1,146,184,'barrymore']];
+export function mid47Local(p){const x=p[0]-raw.origin[0],y=p[1]-raw.origin[1];return {t:x*raw.east[0]+y*raw.east[1],d:x*raw.north[0]+y*raw.north[1]};}
+export function mid47Replaces(f){const q=mid47Local(f.center);return(q.d>0?q.t>=98&&q.t<=206:q.t>=59&&q.t<=216)&&Math.abs(q.d)>6&&Math.abs(q.d)<68;}
+export const MID47_FRONTS=MID47_SECTIONS.flatMap(([side,lo,hi,style])=>raw.fronts.filter(f=>f.side===side&&f.t1>lo&&f.t0<hi).map(f=>{const low=Math.max(lo,f.t0),high=Math.min(hi,f.t1),t=(low+high)/2,q=mid47Local(f.center),r=[-f.normal[1],f.normal[0]],dot=r[0]*raw.east[0]+r[1]*raw.east[1],x=(t-q.t)/dot;return {...f,id:style+'-'+side,style,t0:low,t1:high,center:[f.center[0]+r[0]*x,f.center[1]+r[1]*x,0],width:(high-low)/Math.abs(dot)-.06};}));

@@ -1,0 +1,100 @@
+{
+  "mode": "built-in imagegen",
+  "reference": "User-supplied screenshot; design reference only, not distributed.",
+  "billboard": {
+    "path": "public/billboards/disney-building-led.png",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "aspectRatio": "3:1",
+    "prompt": "Use case: ads-marketing.\nAsset type: standalone panoramic billboard artwork for a Times Square game facade, final canvas 1536 x 512 pixels, 3:1 aspect ratio, opaque.\nInput image: reference only for the supplied billboard's dark blue/teal palette, vertical graphic ribbons, and the portrait-left arrangement. Create completely new advertising artwork; do not reproduce the screenshot or any building.\nPrimary request: a polished fictional fashion/lifestyle advertisement. A beautiful adult woman in an editorial beauty portrait occupies the LEFT QUARTER, shown from shoulders up. Across the remaining three quarters, glossy flowing vertical ribbons in dark navy, cobalt blue and teal create an elegant dimensional background.\nText (verbatim): large bold elegant white text \"MAKE EVERY MOMENT\" across the right three quarters, with smaller white \"STAND OUT\" beneath. Keep every letter sharp and fully readable, no extra text.\nStyle: premium contemporary Times Square campaign, photographic portrait, lustrous abstract graphic design, crisp print-ready digital artwork.\nComposition: perfectly straight-on flat rectangular artwork, full bleed; woman entirely confined mostly to left quarter, copy clear on right.\nConstraints: return ONLY the authored advertisement itself; no building, no facade, no glass, no frame, no street, no objects in front, no UI, no maps, no Google marks, no watermark, no other logos or copy.",
+    "qa": "Visually inspected. Exact copy MAKE EVERY MOMENT / STAND OUT is correct; portrait left, abstract blue ribbons; no facade or UI."
+  },
+  "interiors": {
+    "path": "public/storefronts/retail-interiors-atlas.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "panels": [
+      {
+        "name": "fashion",
+        "box": [
+          0,
+          0,
+          512,
+          1024
+        ]
+      },
+      {
+        "name": "plush toys",
+        "box": [
+          512,
+          0,
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "sneakers",
+        "box": [
+          1024,
+          0,
+          1536,
+          1024
+        ]
+      }
+    ],
+    "prompt": "Use case: product-mockup.\nAsset type: ONE three-column texture atlas for a game storefront, final canvas 1536 x 1024 pixels. The canvas consists of exactly THREE equal portrait panels, each 512 pixels wide and 1024 pixels tall, arranged side by side. The boundaries are exactly at x=512 and x=1024. No gutters, no margin, no borders, no text.\nPrimary request: three original, fictional, unbranded, high-quality photorealistic retail shop interiors. Each column is ONE full-height independent interior scene, perfectly full bleed and stopping cleanly at its column edges.\nLEFT COLUMN: fashion retail boutique interior, elegant mannequins with casual clothing, tidy clothing racks and shelving, warm gold ceiling lights, polished floor, inviting depth.\nCENTER COLUMN: cute plush and toy shop interior, pastel illuminated shelves filled with generic plush animals and original unbranded toys, cheerful soft pink and mint accents, inviting depth, retail floor visible.\nRIGHT COLUMN: sneaker shop interior, clean premium wall displays with unbranded sneakers, lit shoe plinths, organized shoe shelves, crisp retail lighting, inviting depth.\nComposition: straight-on eye-level view into each interior. Mannequins allowed only in fashion shop. No people.\nConstraints: there is NO Disney content or other branded content anywhere. No famous characters, logos, words, shop names, signage, labels, typography, exterior buildings, doors, window frames, window mullions, streets, UI, screenshot elements, watermark. Only the three fictional interior scenes.",
+    "qa": "Visually inspected three fictional unbranded interiors, no people or exterior architecture. Intended equal divisions at x=512 and x=1024. Thin generated dark separators occupy approximately x=510..512 and x=1023..1025; use conservative interior crops below to omit separators.",
+    "safeInteriorCrops": [
+      {
+        "name": "fashion",
+        "box": [
+          0,
+          0,
+          510,
+          1024
+        ]
+      },
+      {
+        "name": "plush toys",
+        "box": [
+          514,
+          0,
+          1023,
+          1024
+        ]
+      },
+      {
+        "name": "sneakers",
+        "box": [
+          1027,
+          0,
+          1536,
+          1024
+        ]
+      }
+    ]
+  },
+  "blockedDisneyAtlas": {
+    "prompt": "Use case: stylized-concept.\nAsset type: ONE square 2x2 texture atlas for a game storefront, final canvas ideally 1536 x 1536 pixels.\nInput image: reference only for the colorful seasonal Mickey-and-pumpkin window illustration near the lower middle. Create newly authored imagery; do not copy the screenshot. Other interiors are original fictional retail environments.\nPrimary request: a square texture atlas comprising EXACTLY FOUR equal square panels in a 2 by 2 grid. The vertical boundary is exactly at 50% of canvas width. The horizontal boundary is exactly at 50% of canvas height. NO GUTTERS, no margin, no borders. Each panel is one independent full-bleed scene and stops cleanly at the center splits.\nTOP LEFT: vivid Disney seasonal window artwork, polished colorful illustration with Mickey Mouse and Minnie Mouse, one big smiling Mickey-shaped orange jack-o-lantern pumpkin with round black ears as centerpiece, playful colorful autumn motifs and curling vines against dark purple background. No typography.\nTOP RIGHT: high-quality photorealistic fashion retail interior, elegant mannequins and well-organized clothing racks and shelving, warm gold lights, polished floor, inviting boutique perspective, no human people.\nBOTTOM LEFT: high-quality photorealistic cute plush and toy shop interior, pastel illuminated shelves filled with plush animals and toys, cheerful soft pink and mint accents, retail floor visible, no human people.\nBOTTOM RIGHT: high-quality photorealistic sneaker shop interior, clean premium wall displays full of sneakers, lit shoe plinths and organized shoe shelves, crisp retail lighting, no human people.\nComposition: entire scene visible separately in each quadrant, straight-on eye-level interior perspective for the three retail scenes; artwork fully fills first quadrant. Crisp detailed commercial-quality texture painting and photography.\nConstraints: ONLY these four scenes, exact center splits. No window mullions, no window frames, no doors, no exterior shop names, no exterior architecture, no people in the three retail interiors, no streets, no screenshot elements, no UI, no maps, no Google marks, no watermark, no written labels, no typography.",
+    "status": "No output; single request blocked by imagegen safety system at output stage, category other. Not retried.",
+    "requestId": "d574b4f6-35ba-4db0-ae9b-ce2ef81a565a"
+  },
+  "wordmark": {
+    "svg": "public/storefronts/disney-wordmark.svg",
+    "svgSource": "https://thewaltdisneycompany.com/",
+    "svgNotes": "Exact Disney letter subpaths extracted from the official inline header logo. No glyph geometry changed; other The/Walt/Company letter paths omitted. ViewBox tightened to retained geometry. Visually verified; fill #121212 can be recolored.",
+    "svgViewBox": "38.4974 16.9687 69.5026 30.3507",
+    "pngSource": "https://static-mh.content.disney.io/matterhorn/assets/goc/disney_logo_dark@2x-45d70f7dd57b.png",
+    "pngReferencingPage": "https://www.disney.com/",
+    "pngDimensions": [
+      190,
+      80
+    ],
+    "pngNotes": "Downloaded exact public asset linked by official Disney.com homepage. Indexed PNG includes alpha transparency. Official asset provenance verified; no license grant assessed.",
+    "project_note": "The official Disney letter geometry is preserved; intrinsic SVG dimensions are 1536 by 671 and the scene material colors it red."
+  }
+}

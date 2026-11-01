@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {focusGameCanvas} from '../src/game-focus.js';
+test('clicking the scene releases phone/input focus and returns movement keys to the canvas',()=>{const calls=[];const canvas={focus:options=>calls.push(['focus',options])};focusGameCanvas(canvas,{activeElement:{blur:()=>calls.push(['blur'])}});assert.deepEqual(calls,[['blur'],['focus',{preventScroll:true}]]);calls.length=0;focusGameCanvas(canvas,{activeElement:canvas});assert.deepEqual(calls,[['focus',{preventScroll:true}]]);});

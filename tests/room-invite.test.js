@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {withoutUnavailableRoom} from '../src/room-invite.js';
+test('expired invite recovery drops only the failed room while preserving other navigation parameters',()=>{assert.equal(withoutUnavailableRoom('https://city.test/?update=current&room=L8AHRB#phone','L8AHRB'),'https://city.test/?update=current#phone');assert.equal(withoutUnavailableRoom('https://city.test/?room=ABC234','L8AHRB'),'https://city.test/?room=ABC234');});
